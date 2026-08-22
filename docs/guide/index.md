@@ -5,6 +5,7 @@
 ## 先弄清楚你要做什么
 
 - 不确定从哪入手？→ [如何选择使用路径](/guide/choose-your-path)
+- 不知道昇腾能干嘛？→ [昇腾还能怎么玩：应用玩法](/guide/use-cases)
 - 第一次拿到智算服务器？→ [从零到上手：7 步走](/guide/seven-steps)
 - 想看全局？→ [昇腾软硬件全景](/guide/ascend-landscape)
 - 想先了解这个仓库能怎么帮你？→ [认识 AscendMate](/guide/what-is-ascendmate)

@@ -20,6 +20,7 @@ const sidebarGuide = [
     text: '快速开始',
     items: [
       { text: '认识 AscendMate', link: '/guide/what-is-ascendmate' },
+      { text: '昇腾还能怎么玩：应用玩法', link: '/guide/use-cases' },
       { text: '如何选择使用路径', link: '/guide/choose-your-path' },
       { text: '从零到上手：7 步走', link: '/guide/seven-steps' },
       { text: '硬件与软件全景', link: '/guide/ascend-landscape' },
@@ -30,6 +31,11 @@ const sidebarGuide = [
 // 部署基础路径：GitHub Pages 子路径部署(如 /ascendmate/)时通过环境变量 VITE_BASE 注入
 // 本地开发 / 自定义域名根路径时留空即可
 const base = process.env.VITE_BASE || '/'
+
+// GitHub 仓库地址：上传 GitHub 后将 ASCENDMATE_GITHUB 设为你的仓库主页地址即可
+// 例如 https://github.com/<你的用户名>/ascendmate
+const repo = process.env.ASCENDMATE_GITHUB || 'https://github.com/<你的用户名>/ascendmate'
+const editPrefix = `${repo.replace(/\/+$/, '')}/edit/main/docs/`
 
 export default defineConfig({
   title: 'AscendMate · 昇腾一指禅',
@@ -72,14 +78,14 @@ export default defineConfig({
       next: '下一篇',
     },
     editLink: {
-      pattern: 'https://github.com/your-org/ascendmate/edit/main/docs/:path',
+      pattern: `${editPrefix}:path`,
       text: '在 GitHub 上编辑此页',
     },
     lastUpdated: {
       text: '最后更新',
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-org/ascendmate' },
+      { icon: 'github', link: repo },
     ],
     sidebar: {
       '/guide/': sidebarGuide,

@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/your-org/ascendmate">GitHub</a> ·
-  <b>在线文档站</b> ·
+  <a href="https://github.com/&lt;你的用户名&gt;/ascendmate">GitHub</a> ·
+  <b>在线文档站（GitHub Pages 自动部署）</b> ·
   <a href="CONTRIBUTING.md">参与贡献</a>
 </p>
 
