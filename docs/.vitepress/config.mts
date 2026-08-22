@@ -47,7 +47,10 @@ export default defineConfig({
     lineNumbers: true,
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#c7000b' }],
+    ['meta', { name: 'theme-color', content: '#e0212b' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }],
+    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/ascendmate.svg' }],
     ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 华为' }],
   ],

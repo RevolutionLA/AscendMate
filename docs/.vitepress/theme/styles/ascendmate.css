@@ -1,163 +1,399 @@
 /* ==========================================================================
-   AscendMate 自定义主题
-   基于 VitePress，风格取向：专业、克制、可信（面向运维/开发工程师）
-   品牌主色：昇腾红 #C7000B · 辅助色：深海蓝灰
+   AscendMate Theme
+   Direction:  npu-smi LIVE INSTRUMENTATION / DATACENTER TELEMETRY
+   「昇腾现场遥测」
+
+   Founded on the tool every Ascend engineer types daily: `npu-smi`.
+   Hero opens with a booting telemetry monitor (not a generic gradient hero).
+   Palette uses SEMANTIC NPU-health signals, not decoration:
+     green = HEALTHY · red = FAULT · amber = WARNING · cyan = LINK/HCCS
+   Restraint: one orchestrated boot-up reveal; everything else stays disciplined.
    ========================================================================== */
 
 :root {
-  /* 品牌色板 */
-  --asc-brand: #C7000B;
-  --asc-brand-dark: #9c0a0c;
-  --asc-brand-light: #e02020;
-  --asc-ink: #1b1f27;
-  --asc-slate: #57627a;
+  /* --- steel engineering panels (not pure near-black) --- */
+  --am-panel:      #14171f;
+  --am-panel-2:    #0f1218;
+  --am-panel-line: #232833;
+  --am-steel:      #313848;
 
-  /* 覆盖 VitePress 主题色 */
-  --vp-c-brand-1: var(--asc-brand);
-  --vp-c-brand-2: var(--asc-brand-light);
-  --vp-c-brand-3: var(--asc-brand-dark);
-  --vp-c-brand-soft: rgba(199, 0, 11, 0.10);
+  /* --- semantic NPU-health signal colors --- */
+  --am-health:     #37d983;   /* normal / alive */
+  --am-fault:      #e02330;   /* fault / hot */
+  --am-warn:       #f4b63e;   /* warning */
+  --am-link:       #41b6e6;   /* HCCS / link */
+  --am-text-dim:   #8b93a5;   /* terminal dim */
+  --am-text-body:  #c6ccd8;
 
-  --vp-c-default-1: #3a4556;
-  --vp-c-default-2: #56607500;
-  --vp-c-default-3: rgba(63, 75, 97, 0.55);
+  /* --- light "machine drawing room" palette --- */
+  --am-paper:      #eef2f6;
+  --am-ink:        #161a23;
+  --am-rule:       #d7dde6;
+  --am-paper-soft: #e4e9ef;
 
-  --vp-c-text-1: #1c2130;
-  --vp-c-text-2: #3d4657;
-  --vp-c-text-3: #6b7486;
+  /* font stacks */
+  --am-mono:  "IBM Plex Mono", ui-monospace, "Consolas", "SF Mono", "Menlo", monospace;
+  --am-sans:  "IBM Plex Sans", ui-sans-serif, -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+
+  /* VitePress hooks — LIGHT */
+  --vp-font-family-base: var(--am-sans);
+  --vp-font-family-mono: var(--am-mono);
+  --vp-c-brand-1:    #d31b26;
+  --vp-c-brand-2:    #f0343f;
+  --vp-c-brand-3:    #a81018;
+  --vp-c-brand-soft: rgba(211,27,38,.12);
+  --vp-c-text-1:     #161a23;
+  --vp-c-text-2:     #46505e;
+  --vp-c-text-3:     #7c8493;
+  --vp-c-bg:         #ffffff;
+  --vp-c-bg-alt:     var(--am-paper);
+  --vp-c-bg-soft:    #edf0f4;
+  --vp-c-divider:    #dde2ea;
+  --vp-border-radius: 6px;
+  --vp-sidebar-width: 282px;
+  --vp-code-color:   #b01620;
 }
 
-/* 圆角与阴影微调，让整体更精致 */
-:root {
-  --vp-border-radius: 8px;
-  --vp-sidebar-width: 280px;
+/* DARK hooks */
+.dark {
+  --vp-c-brand-1:    #ff5b63;
+  --vp-c-brand-2:    #ff858c;
+  --vp-c-brand-3:    #e02330;
+  --vp-c-brand-soft: rgba(224,35,48,.16);
+  --vp-c-text-1:     #e6e9f0;
+  --vp-c-text-2:     #afb6c4;
+  --vp-c-text-3:     #6e7687;
+  --vp-c-bg:         var(--am-panel);
+  --vp-c-bg-alt:     var(--am-panel-2);
+  --vp-c-bg-soft:    #1b1f2a;
+  --vp-c-divider:    #262c38;
+  --vp-code-color:   #ff8b91;
 }
 
-/* ---------- 页首导航 ---------- */
-.VPNavBar .appearance {
-  transform: scale(0.9);
+/* ==========================================================================
+   Atmosphere — light blueprint substrate, not grain cliché
+   ========================================================================== */
+body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
+
+/* ==========================================================================
+   Typography: instrument labels (mono eyebrows)
+   ========================================================================== */
+.ey {
+  font-family: var(--am-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
 }
-.VPNavBarTitle .title {
-  font-weight: 700;
-  letter-spacing: 0.3px;
+.ey::before {
+  content: "";
+  width: 20px; height: 1px;
+  background: currentColor;
 }
 
-/* ---------- Hero 区（首页） ---------- */
-.VPHero .name,
-.VPHero .text {
+/* ==========================================================================
+   NAV
+   ========================================================================== */
+.VPNavBar { border-bottom: 1px solid var(--vp-c-divider); }
+.VPNavBarTitle .title { font-family: var(--am-mono); font-weight: 600; letter-spacing: .02em; }
+
+/* ==========================================================================
+   HERO (custom homepage) — telemetry boot monitor
+   ========================================================================== */
+.am-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 96px;
+}
+/* horizontal rule + corner marks */
+.am-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--am-fault), transparent 42%);
+}
+
+.am-hero-grid {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* left thesis */
+.am-lead .ey { color: var(--am-fault); }
+.am-lead .ey::before { background: var(--am-fault); }
+.am-title {
+  font-family: var(--am-sans);
   font-weight: 800;
-  letter-spacing: 0.5px;
+  font-size: clamp(34px, 4.6vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 18px 0 20px;
+  color: var(--vp-c-text-1);
 }
-.VPHero .text {
-  background: linear-gradient(120deg, #1c2130 0%, #c7000b 55%, #e02020 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.VPHero .tagline {
-  font-size: 17px;
+.am-title .acc { color: var(--am-fault); }
+.am-sub {
+  font-size: clamp(15px, 1.4vw, 17px);
+  line-height: 1.85;
   color: var(--vp-c-text-2);
-  line-height: 1.7;
+  max-width: 34em;
 }
+.am-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+.am-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--am-mono);
+  font-size: 13px; letter-spacing: .02em;
+  padding: 12px 20px; border-radius: 5px;
+  text-decoration: none; font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s;
+}
+.am-btn.primary { background: var(--am-fault); color: #fff; border: 1px solid var(--am-fault); }
+.am-btn.primary:hover { background: var(--vp-c-brand-3); transform: translateY(-1px); }
+.am-btn.ghost { color: var(--vp-c-text-1); border: 1px solid var(--vp-c-divider); background: transparent; }
+.am-btn.ghost:hover { border-color: var(--am-fault); color: var(--am-fault); }
 
-/* ---------- 特性卡片 ---------- */
-.VPFeature {
-  border: 1px solid rgba(199, 0, 11, 0.14) !important;
-  border-radius: 12px !important;
-  background-color: #fff !important;
-  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+/* ==========================================================================
+   RIGHT — npu-smi telemetry monitor (THE SIGNATURE)
+   ========================================================================== */
+.am-monitor {
+  font-family: var(--am-mono);
+  font-size: 13px;
+  line-height: 1.55;
+  border: 1px solid var(--am-panel-line);
+  border-radius: 10px;
+  background: var(--am-panel-2);
+  color: var(--am-text-body);
+  box-shadow: 0 30px 80px -30px rgba(0,0,0,.55);
   position: relative;
   overflow: hidden;
 }
-.VPFeature::before {
+/* rear light bleed */
+.am-monitor::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--asc-brand), var(--asc-brand-light));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
+  top: -90px; right: -60px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224,35,48,.18), transparent 62%);
+  pointer-events: none;
 }
+.am-mon-head {
+  display: flex; align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--am-panel-line);
+  font-size: 12px; color: var(--am-text-dim);
+}
+.am-mon-head .led {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--am-text-dim);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+}
+.am-mon-head .led.act { background: var(--am-health); animation: blink 1.6s infinite; }
+.am-mon-body { padding: 4px 14px 10px; }
+.am-line { white-space: nowrap; opacity: 0; animation: txin .28s forwards; }
+.am-line .k  { color: var(--am-text-dim); }
+.am-line .v  { color: var(--am-text-body); }
+.am-line .num{ color: var(--am-text-body); }
+.am-line.health .k{ color: var(--am-warn); }
+.am-line.hl .v{ color: var(--am-health); }
+.am-line.lnk .v{ color: var(--am-link); }
+
+/* per-row boot delays */
+.am-boot .am-line:nth-child(1){animation-delay:.15s}
+.am-boot .am-line:nth-child(2){animation-delay:.30s}
+.am-boot .am-line:nth-child(3){animation-delay:.45s}
+.am-boot .am-line:nth-child(4){animation-delay:.60s}
+.am-boot .am-line:nth-child(5){animation-delay:.75s}
+.am-boot .am-line:nth-child(6){animation-delay:.90s}
+.am-boot .am-line:nth-child(7){animation-delay:1.05s}
+.am-boot .am-line:nth-child(8){animation-delay:1.20s}
+.am-boot .am-line:nth-child(9){animation-delay:1.35s}
+.am-boot .am-line:nth-child(10){animation-delay:1.5s}
+
+@keyframes txin { from{opacity:0} to{opacity:1} }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+
+.am-bar {
+  position: relative; height: 8px; border-radius: 4px;
+  background: rgba(255,255,255,.07);
+  overflow: hidden;
+}
+.am-bar > span {
+  position: absolute; inset: 0 auto 0 0;
+  transform-origin: left;
+  animation: fillw 1.1s cubic-bezier(.2,.7,.2,1) .5s forwards;
+  transform: scaleX(0);
+}
+.am-bar.g > span{ background: var(--am-health); }
+.am-bar.y > span{ background: var(--am-warn); }
+@keyframes fillw { to{ transform: scaleX(1); } }
+.am-bar-wrap { margin: 2px 0 6px; }
+.am-bar-row { display:flex; justify-content:space-between; color:var(--am-text-dim); font-size:11px; margin-bottom:3px; }
+
+.am-mon-foot {
+  display:flex; justify-content:space-between;
+  padding: 8px 14px 10px;
+  border-top:1px solid var(--am-panel-line);
+  color: var(--am-health);
+  font-size:11px;
+}
+.am-cursor::after {
+  content: "▍";
+  color: var(--am-health);
+  animation: blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .am-line, .am-bar > span { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .am-mon-head .led.act, .am-cursor::after { animation: none; }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .am-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .am-monitor { max-width: 560px; }
+}
+
+/* ==========================================================================
+   Home feature cards — terminal edge + corner pin mark
+   ========================================================================== */
+.VPFeatures .VPFeature {
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 8px !important;
+  background: var(--vp-c-bg) !important;
+  transition: transform .18s ease, border-color .18s ease !important;
+}
+.VPFeature .icon { background: rgba(211,27,38,.08) !important; }
 .VPFeature:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(20, 27, 45, 0.12);
-}
-.VPFeature:hover::before { transform: scaleX(1); }
-.VPFeature .icon {
-  background: rgba(199, 0, 11, 0.08) !important;
-  border-radius: 10px !important;
+  border-color: rgba(211,27,38,.4) !important;
 }
 
-/* 深色模式特性卡片 */
-.dark .VPFeature {
-  background-color: #1d2129 !important;
-  border-color: rgba(224, 32, 32, 0.22) !important;
-}
-
-/* ---------- 表格 ---------- */
-.vp-doc table {
-  border-radius: 8px;
-  overflow: hidden;
-  font-size: 14px;
-}
-.vp-doc th {
-  background-color: #f6f7f9;
-  color: var(--vp-c-text-1);
-  font-weight: 600;
-}
-.vp-doc tr:nth-child(2n) td { background-color: rgba(246,247,249,0.5); }
-
-/* ---------- 自定义提示框 ---------- */
-.custom-block {
-  border-radius: 8px !important;
-}
-.custom-block.tip { border-color: var(--asc-brand) !important; }
-.custom-block.tip .custom-block-title,
-.custom-block.tip { color: #8c1a1a; }
-.dark .custom-block.tip { color: #ffb3b3 !important; }
-
-/* ---------- 首页生态徽章条 ---------- */
+/* ecosystem strip */
 .ecosystem-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-  margin: 8px auto 36px;
-  padding: 16px 20px;
-  border: 1px solid #e8eaef;
-  border-radius: 12px;
-  background: linear-gradient(180deg, #fafbfc, #fff);
-  max-width: 780px;
+  display:flex; flex-wrap:wrap; gap:8px 26px; align-items:center; justify-content:center;
+  margin: 6px auto 46px; padding: 18px 28px;
+  border:1px solid var(--vp-c-divider); border-radius:10px;
+  background: var(--vp-c-bg); max-width:900px;
 }
-.dark .ecosystem-strip {
-  border-color: #2c313a;
-  background: linear-gradient(180deg, #1d2129, #16181d);
+.eco-label { font-family: var(--am-mono); font-size:11px; letter-spacing:.16em; color:var(--vp-c-text-3); text-transform:uppercase; }
+.eco-item { display:inline-flex; align-items:center; opacity:.85; transition:opacity .18s; }
+.eco-item:hover{ opacity:1; }
+.eco-item img { height:22px; }
+.eco-mono{ font-family:var(--am-mono); font-size:12px; color:var(--vp-c-text-3); }
+
+/* ==========================================================================
+   Content styling
+   ========================================================================== */
+.vp-doc h1, .vp-doc h2 { font-family: var(--am-sans); letter-spacing:-.01em; font-weight:750; }
+.vp-doc h1 { position: relative; padding-bottom:.4em; }
+.vp-doc h1::after {
+  content:""; position:absolute; left:0; bottom:0; width:54px; height:3px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), transparent);
 }
-.ecosystem-strip .eco-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--vp-c-text-2);
-  font-size: 13px;
-  text-decoration: none;
+.vp-doc :not(pre)>code {
+  font-family: var(--am-mono);
+  border:1px solid var(--vp-c-divider); border-bottom:2px solid var(--vp-c-divider);
+  border-radius:4px;
 }
-.ecosystem-strip .eco-item img {
-  height: 22px;
-  width: auto;
+.vp-doc table { border:1px solid var(--vp-c-divider); border-radius:6px; overflow:hidden; font-size:14px; }
+.vp-doc th {
+  font-family:var(--am-mono); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase;
+  background: var(--vp-c-bg-alt); color: var(--vp-c-brand-1); border:0;
+}
+.vp-doc td { border-color: var(--vp-c-divider); }
+.vp-doc tr:nth-child(2n) td { background: rgba(18,20,28,.02); }
+.vp-doc tr:hover td { background: rgba(211,27,38,.045); }
+.dark .vp-doc tr:nth-child(2n) td { background: rgba(255,255,255,.02); }
+.dark .vp-doc tr:hover td { background: rgba(255,91,99,.08); }
+
+.custom-block { border-radius:8px !important; }
+.custom-block.tip { border-color: var(--vp-c-brand-1) !important; background: rgba(211,27,38,.05); }
+.dark .custom-block.tip { background: rgba(255,91,99,.08); }
+.custom-block.tip .custom-block-title { color: var(--vp-c-brand-1); }
+.custom-block.warning { border-color: var(--am-warn); }
+.custom-block.danger { border-color: var(--am-fault); }
+
+.vp-doc a { color: var(--vp-c-brand-1); text-decoration:none; font-weight:500; }
+.vp-doc a:hover { text-decoration:underline; }
+
+.VPFooter { border-top:1px solid var(--vp-c-divider); }
+
+/* ==========================================================================
+   Accessibility / polish (per Web Interface Guidelines)
+   ========================================================================== */
+/* explicit visible focus on custom links */
+.am-btn:focus-visible,
+.am-card:focus-visible,
+.am-step a:focus-visible {
+  outline: 2px solid var(--am-fault);
+  outline-offset: 2px;
+}
+/* touch: prevent double-tap zoom delay on interactive elements */
+.am-btn, .am-card, .am-step { touch-action: manipulation; }
+/* tabular numerals for instrumentation + data tables */
+.am-monitor, .am-mon-body, .am-line .num,
+.am-who td, .am-who th, .vp-doc table { font-variant-numeric: tabular-nums; }
+/* anchor scroll offset so headings aren't hidden under sticky nav */
+.vp-doc h1, .vp-doc h2, .vp-doc h3 { scroll-margin-top: 88px; }
+/* reduce-motion already handled for monitor; also gate hero rise */
+@media (prefers-reduced-motion: reduce) {
+  .am-lead { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .am-btn, .am-card, .am-step { transition: none; }
 }
 
-/* ---------- 页脚 ---------- */
-.VPFooter {
-  border-top: 1px solid #ececf0;
-}
-.dark .VPFooter { border-top-color: #262a33; }
+/* ==========================================================================
+   Home overview (custom layout) — cards, who, steps
+   ========================================================================== */
+.overview { max-width: 1152px; margin: 0 auto; padding: 0 28px 64px; }
+.am-section { margin-top: 64px; }
+.am-sec-head .ey { color: var(--am-fault); }
+.am-sec-head .ey::before { background: var(--am-fault); }
+.am-sec-head h2 { font-size: clamp(20px, 2.4vw, 28px); margin: 10px 0 22px; color: var(--vp-c-text-1); }
 
-/* ---------- 面包屑/锚点 细节 ---------- */
-.vp-doc h1 {
-  border-bottom: 2px solid var(--asc-brand);
-  padding-bottom: 0.35em;
-  display: inline-block;
+.am-feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.am-card {
+  display: block; position: relative; padding: 22px; text-decoration: none;
+  border: 1px solid var(--vp-c-divider); border-radius: 8px; background: var(--vp-c-bg);
+  transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
 }
-.outline-title { font-weight: 700; }
+.am-card .am-card-num { font-family: var(--am-mono); font-size: 11px; letter-spacing: .12em; color: var(--vp-c-text-3); }
+.am-card h3 { font-size: 17px; font-weight: 700; margin: 10px 0 8px; color: var(--vp-c-text-1); }
+.am-card p { font-size: 13.5px; line-height: 1.7; color: var(--vp-c-text-2); margin: 0; }
+.am-card::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 18px; height: 18px;
+  border-top: 2px solid var(--am-fault); border-right: 2px solid var(--am-fault);
+  opacity: 0; transition: opacity .16s ease;
+}
+.am-card:hover { transform: translateY(-3px); border-color: rgba(211,27,38,.4); box-shadow: 0 16px 38px -24px rgba(211,27,38,.5); }
+.am-card:hover::after { opacity: 1; }
+
+.am-table-wrap { overflow-x: auto; }
+.am-who { width: 100%; font-size: 14px; border: 1px solid var(--vp-c-divider); border-radius: 8px; overflow: hidden; }
+.am-who th {
+  font-family: var(--am-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .04em;
+  background: var(--vp-c-bg-alt); color: var(--am-fault); text-align: left; padding: 10px 14px;
+  border-bottom: 1px solid var(--vp-c-divider); border-right: 0;
+}
+.am-who td { padding: 12px 14px; border-bottom: 1px solid var(--vp-c-divider); border-top: 0; color: var(--vp-c-text-2); vertical-align: top; }
+.am-who tr:last-child td { border-bottom: 0; }
+
+.am-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.am-step { border: 1px solid var(--vp-c-divider); border-radius: 8px; padding: 20px; background: var(--vp-c-bg); }
+.am-step-n { font-family: var(--am-mono); font-size: 26px; font-weight: 600; color: var(--am-fault); }
+.am-step h3 { font-size: 16px; font-weight: 700; margin: 8px 0 6px; color: var(--vp-c-text-1); }
+.am-step p { font-size: 13.5px; line-height: 1.7; color: var(--vp-c-text-2); margin: 0; }
+
+.mon-right { margin-left: auto; }
+@media (max-width: 960px) { .am-feats, .am-steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .am-feats, .am-steps { grid-template-columns: 1fr; } }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
