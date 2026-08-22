@@ -37,7 +37,7 @@ const repo = process.env.ASCENDMATE_GITHUB || 'https://github.com/RevolutionLA/A
 const editPrefix = `${repo.replace(/\/+$/, '')}/edit/master/docs/`
 
 export default defineConfig({
-  title: 'AscendMate · 昇腾一指禅',
+  title: '昇腾一指禅',
   base,
   description: '一站式昇腾智算服务器使用手册 —— 环境搭建、模型微调、推理部署、算子开发的完整实战指南',
   lang: 'zh-CN',
@@ -47,15 +47,15 @@ export default defineConfig({
     lineNumbers: true,
   },
   head: [
-    ['meta', { name: 'theme-color', content: '#e0212b' }],
+    ['meta', { name: 'theme-color', content: '#f4f6f8' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/ascendmate.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: `${base.replace(/\/+$/, '')}/ascend/ascend-favicon.png` }],
     ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 华为' }],
   ],
   themeConfig: {
-    logo: '/ascendmate.svg',
+    logo: '/ascend/ascend-logo.svg',
     nav,
     outline: { label: '本页目录', level: [2, 3] },
     search: {
