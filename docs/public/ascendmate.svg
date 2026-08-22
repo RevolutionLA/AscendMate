@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e21315"/>
+      <stop offset="100%" stop-color="#9c0a0c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- 芯片主体 -->
+  <rect x="18" y="18" width="28" height="28" rx="5" fill="#ffffff" opacity="0.95"/>
+  <!-- 内部电路 -->
+  <path d="M26 28h12v8H26z" fill="#c7000b" opacity="0.85"/>
+  <circle cx="32" cy="24" r="2.4" fill="#c7000b"/>
+  <circle cx="24" cy="24" r="1.6" fill="#c7000b"/>
+  <circle cx="40" cy="24" r="1.6" fill="#c7000b"/>
+  <!-- 引脚 -->
+  <path d="M26 18v-3M32 18v-3M38 18v-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M26 46v3M32 46v3M38 46v3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M18 26h-3M18 32h-3M18 38h-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <path d="M46 26h3M46 32h3M46 38h3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+</svg>

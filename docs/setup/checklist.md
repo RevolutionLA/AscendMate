@@ -1,0 +1,81 @@
+# 08 环境自检清单
+
+> **什么时候读**：环境搭建完成后，逐项验收，确保交付结果可复现、可排查。
+
+把下面每项都过一遍，勾选通过即代表"这台昇腾机器从底层到框架都可用了"。
+
+## 一、硬件与底层
+
+- [ ] `npu-smi info` 输出正常，能看到所有 NPU 卡且状态健康
+- [ ] 驱动版本与目标 CANN 配套（记下版本号）
+- [ ] CPU / 内存 / 存储资源充足且可用
+- [ ] 网络通（外网或内网镜像源可达）
+
+## 二、CANN
+
+- [ ] `cat /usr/local/Ascend/ascend-toolkit/latest/version.cfg` 有版本号
+- [ ] `source /usr/local/Ascend/ascend-toolkit/set_env.sh` 不报错
+- [ ] CANN 版本与驱动、框架版本配套
+
+## 三、AI 框架
+
+::: tip PyTorch + torch_npu
+```bash
+python -c "import torch; import torch_npu; print(torch.npu.device_count())"
+```
+- [ ] `torch.npu.device_count()` 返回正确 NPU 数量
+:::
+
+::: tip MindSpore
+```bash
+python -c "import mindspore; mindspore.set_device('Ascend'); mindspore.run_check()"
+```
+- [ ] 输出 "installed on platform [Ascend] successfully"
+:::
+
+## 四、真实计算验证（最推荐）
+
+跑一个真实的小模型任务（如 LLaMA-Factory 的极小微调、或 MindIE 拉起，见对应章节），确认：
+
+- [ ] 训练/推理能真正跑起来（不只是 import）
+- [ ] 无驱动、显存、算子报错
+- [ ] 性能基线可用（记录单卡/多卡吞吐）
+
+## 五、常用健康命令（速查）
+
+```bash
+# NPU 状态
+npu-smi info
+# 或周期性监控
+npu-smi info --loop 3
+
+# 查看日志（驱动报错时）
+dmesg | grep -i npu
+tail -f /var/log/npu/slog/*.log 2>/dev/null
+
+# 查框架版本
+python -c "import torch, torch_npu; print(torch.__version__, torch_npu.__version__)"
+```
+
+## 六、交付记录建议
+
+建议把以下信息记入交付文档，方便后续支持：
+
+| 项 | 值 |
+| --- | --- |
+| 硬件型号 / NPU 数量 |  |
+| 操作系统 / 内核 |  |
+| 驱动固件版本 |  |
+| CANN 版本 |  |
+| PyTorch / torch_npu 版本 |  |
+| 备注（离线/镜像等信息） |  |
+
+> [!TIP]
+> 环境自检全部通过后，你就可以放心进入业务了。若某一步失败，到 [问题定位 FAQ](/faq/setup-issues) 查对应报错。
+
+## 下一步
+
+环境就绪后：
+
+- 想微调大模型 → [训练全景](/training/)
+- 想部署推理 → [推理全景](/inference/)
