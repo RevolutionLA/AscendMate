@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "AscendMate"
   text: "昇腾部署易用一指禅"
-  tagline: "采购昇腾智算服务器后，只看这一个仓库就够了。一站式搞定环境搭建、模型微调、推理部署与算子开发。"
+  tagline: "面向昇腾智算服务器的部署与开发手册：环境搭建、模型微调、推理部署、算子开发的落地操作与检索入口。"
   image:
     src: /ascendmate.svg
     alt: AscendMate
@@ -22,32 +22,33 @@ hero:
 features:
   - icon: 🚀
     title: 按场景找答案
-    details: 从「我要跑大模型」「我要做推理服务」「我要迁移 GPU 模型」等真实场景出发，一步步带你走到目标，而不是淹没在文档海洋里。
+    details: 从「我要跑大模型」「我要做推理服务」「我要迁移 GPU 模型」等实际部署目标出发，定位到对应教程与操作步骤。
   - icon: 🔍
     title: 全站可检索
-    details: 内置全文搜索，按关键词、报错信息、硬件型号、软件版本快速定位到对应教程与 FAQ，几秒钟找到解决办法。
-  - icon: 🗺️
-    title: 一图看懂全景
-    details: 把散落在多个站点、多种格式的昇腾资料，整理成清晰的目录导航，每个环节都能找到对应的官方文档、样例代码与实操步骤。
+    details: 内置全文搜索，按关键词、报错信息、硬件型号、软件版本定位到对应教程与 FAQ。
+  - icon: 🗂️
+    title: 统一导航
+    details: 把分散在多个站点、多种格式的昇腾资料，整理成目录导航，每个环节都能找到官方文档、样例代码与实操步骤。
   - icon: 🧱
-    title: 从零到实战
-    details: 从服务器上电、操作系统、固件驱动、CANN，到 PyTorch / MindSpore，再到训练与推理全链路，覆盖真实交付场景。
+    title: 从零到可运维
+    details: 从服务器上电、操作系统、固件驱动、CANN，到 PyTorch / MindSpore，再到训练与推理全链路，覆盖可交付、可运维的流程。
   - icon: 🛠️
     title: 训推一体化
     details: 覆盖 LLaMA-Factory 微调、MindSpeed 预训练、MindIE / vLLM / SGLang 推理、Dify 平台等主流方案。
   - icon: 💬
-    title: 持续沉淀
-    details: 面向售前与售后一线经验持续更新，把客户高频问题整理为 FAQ，贡献即共建，欢迎 PR。
+    title: 持续迭代
+    details: 面向部署与运维一线经验持续更新，把高频问题沉淀为 FAQ，欢迎贡献。
 ---
 
-## 谁在使用 AscendMate
+## 适合谁
 
-| 角色 | 遇到的问题 | AscendMate 帮到你什么 |
+| 岗位 | 关注点 | 对应章节 |
 | --- | --- | --- |
-| **采购/项目决策者** | 昇腾到底能做什么、硬件怎么选、生态行不行 | 看 [昇腾硬件全景](/hardware/) 与 [昇腾全景](/guide/ascend-landscape) |
-| **环境交付工程师** | 服务器买回来不知道怎么装系统、装驱动、装 CANN | 从 [快速开始](/guide/seven-steps) 按 7 步一路做下去 |
-| **算法/模型工程师** | 模型怎么在昇腾上微调、训练、部署推理 | 看 [LLaMA-Factory 微调](/training/llama-factory)、[推理](/inference/mindie) |
-| **运维/调优工程师** | 报错了怎么排查、性能怎么提升、精度怎么对齐 | 看 [问题定位 FAQ](/faq/) 与 [工具链](/tools/) |
+| **环境交付 / 运维工程师** | 从装系统、驱动、CANN 到搭建可用环境 | [环境搭建](/setup/) 按 7 步走 |
+| **算法 / 模型工程师** | 在昇腾上微调、训练、部署推理 | [LLaMA-Factory 微调](/training/llama-factory)、[推理](/inference/mindie) |
+| **算子 / 移植工程师** | 自定义算子、GPU 算子迁移 | [算子开发](/ops/)、[PyTorch 迁移](/training/pytorch-migration) |
+| **应用 / 集成工程师** | 推理服务、RAG 平台、接入业务 | [推理](/inference/)、[Dify](/inference/dify) |
+| **性能 / 调优工程师** | 报错排查、性能提升、精度对齐 | [问题定位 FAQ](/faq/) · [工具链](/tools/) |
 
 ## 三步上手
 

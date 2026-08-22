@@ -2,9 +2,9 @@
 name: Deploy VitePress site to Pages
 
 on:
-  # 推送到 main 分支时触发
+  # 推送到 main / master 分支时触发
   push:
-    branches: [main]
+    branches: [main, master]
   # 允许手动触发
   workflow_dispatch:
 

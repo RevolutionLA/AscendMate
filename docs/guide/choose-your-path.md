@@ -6,7 +6,7 @@
 
 | 你的角色 | 常见诉求 | 直接看这里 |
 | --- | --- | --- |
-| **采购 / 项目决策者** | 昇腾能做什么？硬件怎么选？生态成不成熟？ | [昇腾全景](/guide/ascend-landscape) · [硬件产品全景](/hardware/) · [资源导航](/resources/) |
+| **初次接触昇腾** | 想了解硬件形态、软件栈与生态，判断从哪切入 | [昇腾软硬件全景](/guide/ascend-landscape) · [硬件产品全景](/hardware/) · [典型部署场景](/guide/use-cases) |
 | **环境交付工程师** | 服务器买回来，从装系统到能跑通环境 | [从零到上手：7 步走](/guide/seven-steps) · [环境搭建总览](/setup/) |
 | **算法 / 模型工程师** | 在昇腾上微调、训练、部署模型 | [训练全景](/training/) · [推理全景](/inference/) · [模型迁移](/training/pytorch-migration) |
 | **算子开发工程师** | 写自定义算子、迁移 GPU 算子 | [算子开发全景](/ops/) |
@@ -32,7 +32,7 @@
 入口：[MindIE 服务化拉起](/inference/mindie) · [vLLM-Ascend 部署](/inference/vllm-ascend)
 :::
 
-::: tip 场景四：我要给客户交付一整台智算服务器
+::: tip 场景四：交付一整台昇腾智算服务器
 路径：上电 → 系统 → 驱动 → CANN → 框架 → 业务 → 自检
 入口：[从零到上手：7 步走](/guide/seven-steps)
 :::
