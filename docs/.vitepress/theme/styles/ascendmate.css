@@ -116,7 +116,7 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
    ========================================================================== */
 .am-hero {
   position: relative;
-  padding: 88px 0 104px;
+  padding: 80px 0 72px;
   overflow: hidden;
 }
 /* faint engineering grid, very subtle */
@@ -264,7 +264,7 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
    ========================================================================== */
 .ecosystem-strip {
   display:flex; flex-wrap:wrap; gap:8px 30px; align-items:center; justify-content:center;
-  margin: -64px auto 10px; padding: 22px 34px;
+  margin: 48px auto 0; padding: 22px 34px;
   position: relative; z-index: 2;
   max-width: 900px;
   border-top: 3px solid var(--am-red);
