@@ -86,7 +86,112 @@ from functools import partial
 
 > 详细步骤以官方 quick start 为准，见离线文档「基于MindSpeed预训练Qwen2.5_quick_start」。
 
-## 九、常见问题
+## 九、Qwen2.5 预训练完整流程
+
+> 来自官方《基于 MindSpeed 预训练 Qwen2.5 快速开始》。以 **Qwen2.5-7B + MindSpeed-LLM（PyTorch 后端）** 为例，走完「环境 → 权重 → 数据 → 启动」全流程。
+
+### 9.1 基础要求
+
+- 具备基础 PyTorch 使用经验，对 Megatron-LM 有概略了解。
+- MindSpeed-LLM 环境已搭好（见仓库安装指导）。
+
+### 9.2 开源权重获取（HF）
+
+```shell
+mkdir -p ./model_from_hf/qwen2.5-7b-hf
+cd ./model_from_hf/qwen2.5-7b-hf
+# HuggingFace 下载（ModelScope 同样可用）
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/config.json
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/model-00001-of-00004.safetensors
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/model-00002-of-00004.safetensors
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/model-00003-of-00004.safetensors
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/model-00004-of-00004.safetensors
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/model.safetensors.index.json
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/tokenizer.json
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/tokenizer_config.json
+wget https://huggingface.co/Qwen/Qwen2.5-7B/resolve/main/vocab.json
+# 用 sha256sum 校验权重完整性（与模型页面公布的 sha256 对比）
+sha256sum model-00001-of-00004.safetensors
+```
+
+> 国内环境建议从 **ModelScope** 下载，URL 前缀替换为 `https://www.modelscope.cn/models/Qwen/Qwen2.5-7B/resolve/master/`。
+
+### 9.3 hf → Megatron-Mcore 权重转换
+
+MindSpeed-LLM 使用 **Megatron-Mcore** 格式权重，需把 HF 权重转换并切分：
+
+```shell
+cd MindSpeed-LLM
+# 编辑脚本后执行（Qwen2.5 建议切分为 tp1pp4）
+bash examples/mcore/qwen25/ckpt_convert_qwen25_hf2mcore.sh
+```
+
+核心转换命令（关键参数）：
+
+```shell
+source /usr/local/Ascend/cann/set_env.sh   # 换成实际 Toolkit 路径
+python convert_ckpt.py \
+  --use-mcore-models --model-type GPT \
+  --load-model-type hf --save-model-type mg \
+  --target-tensor-parallel-size 1 \
+  --target-pipeline-parallel-size 4 \
+  --add-qkv-bias \
+  --load-dir ./model_from_hf/qwen2.5-7b-hf/ \
+  --save-dir ./model_weights/qwen2.5_mcore/ \
+  --tokenizer-model ./model_from_hf/qwen2.5-7b-hf/tokenizer.json \
+  --model-type-hf llama2 --params-dtype bf16
+```
+
+### 9.4 预训练数据预处理
+
+统一把数据预处理为 `.bin` `.idx` 文件，避免反复解析。以 alpaca 为例：
+
+```shell
+mkdir dataset && cd dataset/
+wget https://huggingface.co/datasets/tatsu-lab/alpaca/resolve/main/data/train-00000-of-00001-a09b74b3ef9c3b56.parquet
+cd ..
+bash examples/mcore/qwen25/data_convert_qwen25_pretrain.sh
+```
+
+### 9.5 启动单机预训练
+
+配置 `examples/mcore/qwen25/pretrain_qwen25_7b_32k_ptd.sh`：
+
+```shell
+NPUS_PER_NODE=8           # 单节点 8 卡
+MASTER_ADDR=localhost
+MASTER_PORT=6000
+NNODES=1
+NODE_RANK=0
+WORLD_SIZE=$(($NPUS_PER_NODE * $NNODES))
+
+CKPT_LOAD_DIR="./model_weights/qwen2.5_mcore/"
+CKPT_SAVE_DIR="./ckpt/qwen25-7b"
+DATA_PATH="./dataset/alpaca_text_document"
+TOKENIZER_PATH="./model_from_hf/qwen2.5-7b-hf/"
+TP=1
+PP=4
+SEQ_LEN=4096
+MBS=1
+GBS=64
+```
+
+启动：
+
+```shell
+source /usr/local/Ascend/cann/set_env.sh
+source /usr/local/Ascend/nnal/atb/set_env.sh
+bash examples/mcore/qwen25/pretrain_qwen25_7b_32k_ptd.sh
+```
+
+### 9.6 常见问题（预训练）
+
+- **`Checkpoint path not found`** → 检查 `CKPT_LOAD_DIR` 是否正确指向权重转换产物目录。
+- **数据加载 `out of range`** → 检查 `DATA_PATH` 是否符合规范（含 `.text_document` 后缀）。
+- **脚本拉起失败** → 确认是否 source 了 CANN 环境变量、有无残留训练进程。
+- **无运行日志** → 自行创建 `logs/` 目录。
+
+## 十、常见问题
 
 - 数据预处理出错 / Torch extensions 编译卡住 → 查仓库 `docs/faq/`。
 - `Gloo 建链失败` → 配置 HCCL 替代，见仓库 `hccl-replace-gloo` 特性。

@@ -178,6 +178,7 @@ export default defineConfig({
             { text: '完整链接导航表', link: '/resources/links' },
             { text: '样例代码与模型', link: '/resources/samples-models' },
             { text: '镜像与软件下载', link: '/resources/download' },
+            { text: '生态与社区', link: '/resources/community' },
           ],
         },
       ],

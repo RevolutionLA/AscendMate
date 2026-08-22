@@ -95,7 +95,99 @@ API_PORT=8000 llamafactory-cli api examples/inference/qwen3.yaml \
 
 👉 更多见 [资源导航](/resources/)。
 
-## 九、常用排错
+## 九、完整微调命令参考
+
+> 以下参考自 LLaMA-Factory 官方示例脚本，均在 `LLaMA-Factory` 目录下执行。
+> 通过设备选择变量指定计算设备：GPU 用 `CUDA_VISIBLE_DEVICES`，**NPU 用 `ASCEND_RT_VISIBLE_DEVICES`**。
+
+### 选择设备（NPU / GPU）
+
+```bash
+export ASCEND_RT_VISIBLE_DEVICES=0,1   # NPU 上指定使用第 0、1 号卡
+# GPU 对应 CUDA_VISIBLE_DEVICES=0,1
+```
+
+### LoRA 微调
+
+```bash
+# 指令监督微调（SFT）
+llamafactory-cli train examples/train_lora/qwen3_lora_sft.yaml
+
+# （增量）预训练
+llamafactory-cli train examples/train_lora/qwen3_lora_pretrain.yaml
+
+# 多模态指令监督微调
+llamafactory-cli train examples/train_lora/qwen3vl_lora_sft.yaml
+
+# DPO / ORPO / SimPO 训练
+llamafactory-cli train examples/train_lora/qwen3_lora_dpo.yaml
+
+# 奖励模型训练 / KTO 训练
+llamafactory-cli train examples/train_lora/qwen3_lora_reward.yaml
+llamafactory-cli train examples/train_lora/qwen3_lora_kto.yaml
+
+# 覆盖超参（高级用法）
+ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/qwen3_lora_sft.yaml learning_rate=1e-5
+```
+
+### 多机 / 多卡微调
+
+```bash
+# 多节点 SFT（各节点执行，仅 NODE_RANK 不同）
+FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=0 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+  llamafactory-cli train examples/train_lora/qwen3_lora_sft.yaml
+FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=1 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+  llamafactory-cli train examples/train_lora/qwen3_lora_sft.yaml
+
+# DeepSpeed ZeRO-3 平均分配显存
+FORCE_TORCHRUN=1 llamafactory-cli train examples/train_lora/qwen3_lora_sft_ds3.yaml
+```
+
+### QLoRA 微调（量化）
+
+```bash
+# 昇腾 NPU 上基于 4 比特 Bitsandbytes 量化微调
+llamafactory-cli train examples/train_qlora/qwen3_lora_sft_bnb_npu.yaml
+
+# 基于 GPTQ / AWQ 量化微调（GPU 侧常用）
+llamafactory-cli train examples/train_qlora/llama3_lora_sft_gptq.yaml
+llamafactory-cli train examples/train_qlora/llama3_lora_sft_awq.yaml
+```
+
+### 全参数微调
+
+```bash
+# 单机全参 SFT
+FORCE_TORCHRUN=1 llamafactory-cli train examples/train_full/qwen3_full_sft.yaml
+# 多机全参
+FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=0 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+  llamafactory-cli train examples/train_full/qwen3_full_sft.yaml
+```
+
+### 合并 LoRA / 导出
+
+```bash
+# 合并 LoRA 适配器（导出为完整权重）
+llamafactory-cli export examples/merge_lora/qwen3_lora_sft.yaml
+# 用 AutoGPTQ 量化导出
+llamafactory-cli export examples/merge_lora/qwen3_gptq.yaml
+```
+
+> [!WARNING]
+> 合并 LoRA 时**不要使用量化后的模型**或带 `quantization_bit` 参数，否则无法正确合并。
+
+### 推理 LoRA 模型
+
+```bash
+# 命令行对话
+llamafactory-cli chat examples/inference/qwen3_lora_sft.yaml
+# 浏览器对话
+llamafactory-cli webchat examples/inference/qwen3_lora_sft.yaml
+# OpenAI 风格 API
+llamafactory-cli api examples/inference/qwen3_lora_sft.yaml
+```
+
+## 十、常用排错
 
 - `torch_npu` 相关报错 → [训练类问题](/faq/training-issues)
 - 显存不足 → 调并行/用 QLoRA/降序列长度，见 [性能与精度问题](/faq/perf-precision-issues)

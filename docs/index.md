@@ -40,6 +40,15 @@ features:
     details: 面向部署与运维一线经验持续更新，把高频问题沉淀为 FAQ，欢迎贡献。
 ---
 
+<div class="ecosystem-strip">
+  <span style="font-size:13px;font-weight:600;color:var(--vp-c-text-2)">生态 &amp; 技术栈</span>
+  <span class="eco-item"><img src="/ascend/ascend-logo.svg" alt="Ascend"/></span>
+  <span class="eco-item"><img src="/ascend/mindspeed.svg" alt="MindSpeed"/></span>
+  <span class="eco-item"><img src="/ascend/mindie.svg" alt="MindIE"/></span>
+  <span class="eco-item"><img src="/ascend/mindspore.svg" alt="MindSpore"/></span>
+  <span class="eco-item" style="color:var(--vp-c-text-3);font-weight:600">PyTorch · vLLM · SGLang · Triton · LLaMA-Factory</span>
+</div>
+
 ## 适合谁
 
 | 岗位 | 关注点 | 对应章节 |
@@ -67,7 +76,7 @@ features:
 - **模型推理** `/inference/`：MindIE · vLLM-Ascend · SGLang · Dify
 - **算子开发** `/ops/`：Ascend C · Triton-Ascend · CATLASS
 - **工具链** `/tools/`：MindStudio · 精度调试 · 性能调优
-- **资源导航** `/resources/`：完整链接总表 · 样例代码 · 软件下载
+- **资源导航** `/resources/`：完整链接总表 · 样例代码 · 软件下载 · [生态与社区](/resources/community)
 - **问题定位** `/faq/`：环境 · 训练 · 推理 · 性能精度
 
 > [!NOTE]

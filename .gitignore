@@ -5,6 +5,8 @@ node_modules/
 # 构建产物
 docs/.vitepress/dist/
 docs/.vitepress/cache/
+.tmp_preview/
+.tmp_preview_dist/
 
 # 日志
 *.log

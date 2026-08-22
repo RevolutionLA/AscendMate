@@ -1,0 +1,163 @@
+/* ==========================================================================
+   AscendMate 自定义主题
+   基于 VitePress，风格取向：专业、克制、可信（面向运维/开发工程师）
+   品牌主色：昇腾红 #C7000B · 辅助色：深海蓝灰
+   ========================================================================== */
+
+:root {
+  /* 品牌色板 */
+  --asc-brand: #C7000B;
+  --asc-brand-dark: #9c0a0c;
+  --asc-brand-light: #e02020;
+  --asc-ink: #1b1f27;
+  --asc-slate: #57627a;
+
+  /* 覆盖 VitePress 主题色 */
+  --vp-c-brand-1: var(--asc-brand);
+  --vp-c-brand-2: var(--asc-brand-light);
+  --vp-c-brand-3: var(--asc-brand-dark);
+  --vp-c-brand-soft: rgba(199, 0, 11, 0.10);
+
+  --vp-c-default-1: #3a4556;
+  --vp-c-default-2: #56607500;
+  --vp-c-default-3: rgba(63, 75, 97, 0.55);
+
+  --vp-c-text-1: #1c2130;
+  --vp-c-text-2: #3d4657;
+  --vp-c-text-3: #6b7486;
+}
+
+/* 圆角与阴影微调，让整体更精致 */
+:root {
+  --vp-border-radius: 8px;
+  --vp-sidebar-width: 280px;
+}
+
+/* ---------- 页首导航 ---------- */
+.VPNavBar .appearance {
+  transform: scale(0.9);
+}
+.VPNavBarTitle .title {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Hero 区（首页） ---------- */
+.VPHero .name,
+.VPHero .text {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.VPHero .text {
+  background: linear-gradient(120deg, #1c2130 0%, #c7000b 55%, #e02020 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.VPHero .tagline {
+  font-size: 17px;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+}
+
+/* ---------- 特性卡片 ---------- */
+.VPFeature {
+  border: 1px solid rgba(199, 0, 11, 0.14) !important;
+  border-radius: 12px !important;
+  background-color: #fff !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+.VPFeature::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--asc-brand), var(--asc-brand-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.VPFeature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(20, 27, 45, 0.12);
+}
+.VPFeature:hover::before { transform: scaleX(1); }
+.VPFeature .icon {
+  background: rgba(199, 0, 11, 0.08) !important;
+  border-radius: 10px !important;
+}
+
+/* 深色模式特性卡片 */
+.dark .VPFeature {
+  background-color: #1d2129 !important;
+  border-color: rgba(224, 32, 32, 0.22) !important;
+}
+
+/* ---------- 表格 ---------- */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.vp-doc th {
+  background-color: #f6f7f9;
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+.vp-doc tr:nth-child(2n) td { background-color: rgba(246,247,249,0.5); }
+
+/* ---------- 自定义提示框 ---------- */
+.custom-block {
+  border-radius: 8px !important;
+}
+.custom-block.tip { border-color: var(--asc-brand) !important; }
+.custom-block.tip .custom-block-title,
+.custom-block.tip { color: #8c1a1a; }
+.dark .custom-block.tip { color: #ffb3b3 !important; }
+
+/* ---------- 首页生态徽章条 ---------- */
+.ecosystem-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto 36px;
+  padding: 16px 20px;
+  border: 1px solid #e8eaef;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fafbfc, #fff);
+  max-width: 780px;
+}
+.dark .ecosystem-strip {
+  border-color: #2c313a;
+  background: linear-gradient(180deg, #1d2129, #16181d);
+}
+.ecosystem-strip .eco-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  text-decoration: none;
+}
+.ecosystem-strip .eco-item img {
+  height: 22px;
+  width: auto;
+}
+
+/* ---------- 页脚 ---------- */
+.VPFooter {
+  border-top: 1px solid #ececf0;
+}
+.dark .VPFooter { border-top-color: #262a33; }
+
+/* ---------- 面包屑/锚点 细节 ---------- */
+.vp-doc h1 {
+  border-bottom: 2px solid var(--asc-brand);
+  padding-bottom: 0.35em;
+  display: inline-block;
+}
+.outline-title { font-weight: 700; }
