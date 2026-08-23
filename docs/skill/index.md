@@ -87,6 +87,28 @@ Ascend Assistant 在回答时，会把它能落地的细节联动到本手册的
 
 > 核心心法：**给 AI"机型 + 系统 + 版本 + 报错原文 + 目标"**，它就能基于这套 Skill + 手册给你可照做的步骤。
 
+## 常见报错速查
+
+先跑一版 [ascend-assistant](https://github.com/RevolutionLA/ascend-assistant) 的只读诊断脚本，快速定位（下载后本地运行，`curl -O` 脚本到 scripts/ 下）：
+
+```bash
+# 环境一键检测
+bash scripts/check_env.sh
+# 常见问题快速诊断（✗ 项即问题点）
+bash scripts/quick_troubleshoot.sh
+```
+
+| 现象 / 报错 | 优先排查 | 手册章节 |
+| --- | --- | --- |
+| `npu-smi: command not found` | 驱动未装 / PATH | [固件驱动](/setup/firmware-driver) |
+| `driver not initialized` | 驱动 vs 内核 / 是否重启 | [环境搭建类](/faq/setup-issues) |
+| `import torch_npu` 失败 | torch 与 torch_npu 配套 | [torch_npu 安装](/setup/torch-npu-install) |
+| CANN `set_env.sh` 找不到 | 路径 `ascend-toolkit` vs `ascend_toolkit` | [CANN 安装](/setup/cann-install) |
+| 推理 OOM / 起不来 | batch / seq / KV 显存 | [推理类问题](/faq/inference-issues) |
+| loss NaN / 精度不对 | 混合精度 / 种子 | [性能与精度](/faq/perf-precision-issues) |
+
+> 完整报错映射见 [ascend-assistant references/troubleshooting-map.md](https://github.com/RevolutionLA/ascend-assistant/blob/master/references/troubleshooting-map.md)。
+
 ## 如何贡献 / 反馈
 
 - 想加能力、改进排障规则？去 [ascend-assistant 仓库](https://github.com/RevolutionLA/ascend-assistant) 提 Issue / PR。
