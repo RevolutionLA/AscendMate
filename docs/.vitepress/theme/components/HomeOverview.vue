@@ -79,8 +79,8 @@
     <section class="am-section">
       <div class="am-sec-head"><span class="ey">重点场景</span><h2>按部署目标快速切入</h2></div>
       <div class="am-feats">
-        <a class="am-card hot" :href="b('/inference/')"><span class="num">01</span><h3>模型推理部署 🔥</h3><p>MindIE 服务化、vLLM-Ascend、SGLang、Dify 平台，接入 OpenAI 兼容服务，最快跑起推理。</p></a>
-        <a class="am-card hot" :href="b('/tools/')"><span class="num">02</span><h3>工具链 · 性能调优</h3><p>MindStudio 开发调试、Profiling 性能分析、精度对齐，定位并解决性能瓶颈。</p></a>
+        <a class="am-card" :href="b('/inference/')"><span class="num">01</span><h3>模型推理部署 🔥</h3><p>MindIE 服务化、vLLM-Ascend、SGLang、Dify 平台，接入 OpenAI 兼容服务，最快跑起推理。</p></a>
+        <a class="am-card" :href="b('/tools/')"><span class="num">02</span><h3>工具链 · 性能调优</h3><p>MindStudio 开发调试、Profiling 性能分析、精度对齐，定位并解决性能瓶颈。</p></a>
         <a class="am-card" :href="b('/setup/')"><span class="num">03</span><h3>环境搭建</h3><p>操作系统 · 固件驱动 · CANN · torch_npu · MindSpore · Docker 离线。从裸机到可跑第一行代码的 7 步走。</p></a>
         <a class="am-card" :href="b('/training/')"><span class="num">04</span><h3>大模型训练</h3><p>LLaMA-Factory 微调、MindSpeed 预训练、PyTorch / MindSpore 模型迁移，含完整命令。</p></a>
         <a class="am-card" :href="b('/ops/')"><span class="num">05</span><h3>算子开发</h3><p>Ascend C、Triton-Ascend、CATLASS 自定义算子，GPU 算子迁移。</p></a>

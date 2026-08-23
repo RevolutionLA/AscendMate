@@ -317,13 +317,6 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
 .am-card .num { font-family:var(--am-mono); font-size:11px; letter-spacing:.12em; color:var(--am-red); }
 .am-card h3 { font-family:var(--am-sans); font-weight:700; font-size:18px; margin:14px 0 8px; color:var(--vp-c-text-1); }
 .am-card p { font-size:13.5px; line-height:1.75; color:var(--vp-c-text-2); margin:0; }
-/* priority card: inference & tuning */
-.am-card.hot {
-  background: linear-gradient(180deg, var(--am-red-soft), transparent 70%);
-  box-shadow: inset 3px 0 0 var(--am-red);
-}
-.am-card.hot h3 { color: var(--am-red); }
-.am-card.hot:hover { background: linear-gradient(180deg, var(--am-red-soft), var(--am-paper-soft) 80%); }
 
 .am-who { width:100%; font-size:14.5px; border-collapse:collapse; }
 .am-who th { font-family:var(--am-sans); font-size:13px; font-weight:700; letter-spacing:.02em; text-align:left; color:var(--vp-c-text-1); padding:12px 16px; border-bottom:2px solid var(--am-red); background:var(--vp-c-bg-alt); }
