@@ -1,21 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AscendMate">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e21315"/>
-      <stop offset="100%" stop-color="#9c0a0c"/>
+    <linearGradient id="g" x1="0.1" y1="1" x2="0.9" y2="0">
+      <stop offset="0" stop-color="#D81B23"/>
+      <stop offset="1" stop-color="#FF6B45"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <!-- 芯片主体 -->
-  <rect x="18" y="18" width="28" height="28" rx="5" fill="#ffffff" opacity="0.95"/>
-  <!-- 内部电路 -->
-  <path d="M26 28h12v8H26z" fill="#c7000b" opacity="0.85"/>
-  <circle cx="32" cy="24" r="2.4" fill="#c7000b"/>
-  <circle cx="24" cy="24" r="1.6" fill="#c7000b"/>
-  <circle cx="40" cy="24" r="1.6" fill="#c7000b"/>
-  <!-- 引脚 -->
-  <path d="M26 18v-3M32 18v-3M38 18v-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M26 46v3M32 46v3M38 46v3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M18 26h-3M18 32h-3M18 38h-3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-  <path d="M46 26h3M46 32h3M46 38h3" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- 圆角浅底：年轻、干净、克制 -->
+  <rect x="3" y="3" width="58" height="58" rx="17" fill="#fffef9"/>
+  <rect x="3" y="3" width="58" height="58" rx="17" fill="none" stroke="#FBEEEA" stroke-width="2"/>
+
+  <!-- 主标记：一个"升腾/飞跃"的翅膀形 A。
+       两条向左上腾起的斜线 = 昇腾向上；同时负空间/结构暗含字母 A 与 LA 的动势。 -->
+  <path d="M32 17
+           L45 45
+           H38.5
+           L32 30
+           L25.5 45
+           H19
+           Z"
+        fill="url(#g)"/>
+
+  <!-- 左翼升腾小斜块：增加动感/速度感，呼应"腾" -->
+  <path d="M19 21
+           L32 34
+           H19
+           Z"
+        fill="#FF6B45" opacity="0.9"/>
+
+  <!-- 顶部光点（像腾起时的一点星芒） -->
+  <circle cx="32" cy="15.5" r="2.2" fill="#FF6B45" opacity="0.85"/>
 </svg>

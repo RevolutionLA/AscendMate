@@ -25,11 +25,12 @@
             <div class="am-row"><span class="k">Driver Version</span><span class="v">25.1.0</span></div>
             <div class="am-row"><span class="k">CANN</span><span class="v">8.3.RC2</span></div>
             <div class="am-row"><span class="k">Health</span><span class="v g">Normal</span></div>
-            <div class="am-row"><span class="k">HBM</span><span class="v">243.0 / 256.0 GB</span></div>
-            <div class="am-row"><span class="k">HCCS Link</span><span class="v g">up · 8×C2C</span></div>
+            <div class="am-row"><span class="k">算力 (FP16)</span><span class="v">4.48 PFLOPS</span></div>
+            <div class="am-row"><span class="k">显存 (单机)</span><span class="v">1024 TB</span></div>
+            <div class="am-row"><span class="k">HCCS Link</span><span class="v g">up</span></div>
           </div>
           <div class="am-metric">
-            <div class="mtop"><span>HBM Utilization</span><span>12%</span></div>
+            <div class="mtop"><span>显存利用率</span><span>12%</span></div>
             <div class="am-meter"><span style="width:12%"></span></div>
           </div>
           <div class="am-instrument-foot">

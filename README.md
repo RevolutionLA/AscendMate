@@ -22,11 +22,24 @@
 
 ## 特性
 
+- **🤖 Ascend Assistant（亮点）**：配套的昇腾服务器助手 Skill，可用 AI 直接操作/查询/排障昇腾服务器（环境检测、排障、命令生成、部署引导、性能调优）。
 - **🔍 全站可检索**：VitePress 全文搜索，按关键词、报错、型号、版本快速定位。
 - **🗂️ 按场景找答案**：从「我要微调大模型」「我要做推理服务」「我要迁移 GPU 模型」等部署目标出发。
 - **🧱 从零到可运维**：覆盖交付整机的完整链路 —— 上电 → 系统 → 驱动 → CANN → 框架 → 业务 → 自检。
 - **🚀 训推一体化**：LLaMA-Factory 微调、MindSpeed 预训练、MindIE / vLLM-Ascend / SGLang 推理、Dify 平台。
 - **💬 持续迭代**：面向部署与运维一线经验持续更新，把高频问题沉淀为可检索 FAQ。
+
+## ⚡ Ascend Assistant（昇腾服务器助手）
+
+**亮点功能**。让 AI 你的得力干将——直接帮你检测环境、定位报错、生成命令、引导部署、给出调优建议。
+
+```bash
+skills add https://github.com/RevolutionLA/ascend-assistant
+```
+
+覆盖四类能力：**环境检测 + 排障 · 命令生成 · 部署引导 · 性能调优**，并与本手册深度联动。
+
+> 📖 完整说明见站内 [Ascend Assistant](/skill/)；独立仓库为 [ascend-assistant](https://github.com/RevolutionLA/ascend-assistant)。
 
 ## 🚀 快速开始
 

@@ -6,14 +6,19 @@ const nav = [
   { text: 'Ascend Assistant', link: '/skill/', activeMatch: '/skill/' },
   { text: '快速开始', link: '/guide/' },
   { text: '环境搭建', link: '/setup/' },
-  { text: '昇腾硬件', link: '/hardware/' },
-  { text: '大模型训练', link: '/training/' },
+  { text: '模型训练', link: '/training/' },
   { text: '模型推理', link: '/inference/' },
-  { text: '算子开发', link: '/ops/' },
-  { text: '工具链', link: '/tools/' },
-  { text: '资源导航', link: '/resources/' },
-  { text: '问题定位 FAQ', link: '/faq/' },
-  { text: '贡献', link: '/contributing/' },
+  { text: '问题定位', link: '/faq/' },
+  {
+    text: '更多',
+    items: [
+      { text: '昇腾硬件', link: '/hardware/' },
+      { text: '算子开发', link: '/ops/' },
+      { text: '工具链', link: '/tools/' },
+      { text: '资源导航', link: '/resources/' },
+      { text: '贡献', link: '/contributing/' },
+    ],
+  },
 ]
 
 const sidebarGuide = [
