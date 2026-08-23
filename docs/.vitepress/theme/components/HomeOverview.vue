@@ -39,19 +39,17 @@
         </div>
       </div>
 
-      <!-- ecosystem — everything clickable -->
+      <!-- ecosystem — uniform icon + label chips, all clickable -->
       <div class="ecosystem-strip">
         <span class="eco-label">Ecosystem</span>
-        <a class="eco-item" :href="b('/guide/ascend-landscape')"><img :src="b('/ascend/ascend-logo.svg')" alt="Ascend" /></a>
-        <a class="eco-item" :href="b('/training/mindspeed')"><img :src="b('/ascend/mindspeed.svg')" alt="MindSpeed" /></a>
-        <a class="eco-item" :href="b('/inference/mindie')"><img :src="b('/ascend/mindie.svg')" alt="MindIE" /></a>
-        <a class="eco-item" :href="b('/setup/mindspore-install')"><img :src="b('/ascend/mindspore.svg')" alt="MindSpore" /></a>
-        <span class="eco-mono">
-          <a :href="b('/training/llama-factory')">PyTorch</a> ·
-          <a :href="b('/inference/vllm-ascend')">vLLM</a> ·
-          <a :href="b('/inference/sglang')">SGLang</a> ·
-          <a :href="b('/ops/triton-ascend')">Triton</a>
-        </span>
+        <a class="eco-chip" :href="b('/guide/ascend-landscape')"><img :src="b('/ascend/ascend-mark.svg')" alt="" /><span class="eco-t">Ascend</span></a>
+        <a class="eco-chip" :href="b('/training/mindspeed')"><img :src="b('/ascend/mindspeed.svg')" alt="" /><span class="eco-t">MindSpeed</span></a>
+        <a class="eco-chip" :href="b('/inference/mindie')"><img :src="b('/ascend/mindie.svg')" alt="" /><span class="eco-t">MindIE</span></a>
+        <a class="eco-chip" :href="b('/setup/mindspore-install')"><img :src="b('/ascend/mindspore.svg')" alt="" /><span class="eco-t">MindSpore</span></a>
+        <a class="eco-chip" :href="b('/training/llama-factory')"><img :src="b('/ascend/pytorch-flame.svg')" alt="" /><span class="eco-t">PyTorch</span></a>
+        <a class="eco-chip" :href="b('/inference/vllm-ascend')"><img :src="b('/ascend/vllm.svg')" alt="" /><span class="eco-t">vLLM</span></a>
+        <a class="eco-chip" :href="b('/inference/sglang')"><img :src="b('/ascend/sglang.svg')" alt="" /><span class="eco-t">SGLang</span></a>
+        <a class="eco-chip" :href="b('/ops/triton-ascend')"><img :src="b('/ascend/triton.svg')" alt="" /><span class="eco-t">Triton</span></a>
       </div>
     </section>
 

@@ -273,12 +273,19 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
   box-shadow: 0 26px 60px -40px rgba(18,22,30,.4);
 }
 .eco-label{ font-family:var(--am-mono); font-size:11px; letter-spacing:.16em; color:var(--vp-c-text-3); text-transform:uppercase; }
-.eco-item{ display:inline-flex; align-items:center; opacity:.8; transition:opacity .18s ease; text-decoration:none; }
-.eco-item:hover{ opacity:1; }
-.eco-item img{ height:22px; display:block; }
-.eco-mono{ font-family:var(--am-mono); font-size:12px; color:var(--vp-c-text-3); }
-.eco-mono a{ color:var(--vp-c-text-2); text-decoration:none; font-family:var(--am-mono); transition:color .15s ease; }
-.eco-mono a:hover{ color:var(--am-red); text-decoration:none; border-bottom:1px solid currentColor; }
+/* uniform "icon + label" chip */
+.eco-chip{
+  display:inline-flex; flex-direction:column; align-items:center; gap:7px;
+  padding: 10px 14px 9px; border:1px solid var(--vp-c-divider); border-radius:10px;
+  background: var(--vp-c-bg); text-decoration:none;
+  min-width:76px; opacity:.9;
+  transition: opacity .16s ease, border-color .16s ease, transform .16s ease, box-shadow .16s ease;
+}
+.eco-chip:hover{ opacity:1; border-color: rgba(200,16,46,.45); transform: translateY(-2px); box-shadow: 0 12px 26px -18px rgba(18,22,30,.5); }
+.eco-chip img{ width:22px; height:22px; object-fit:contain; display:block; }
+.eco-chip .eco-t{ font-size:11.5px; font-weight:600; color:var(--vp-c-text-2); font-family:var(--am-sans); line-height:1; }
+.eco-chip:hover .eco-t{ color:var(--am-red); }
+.eco-chip:focus-visible{ outline:2px solid var(--am-red); outline-offset:2px; }
 .eco-mono a:focus-visible{ outline:2px solid var(--am-red); outline-offset:2px; }
 
 /* ==========================================================================

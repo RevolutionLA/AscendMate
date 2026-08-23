@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Ascend mark: red square tile with chip "A" -->
+  <rect x="2" y="2" width="28" height="28" rx="6" fill="#c8102e"/>
+  <path d="M16 8 L24 24 H20 L18 19 H14 L12 24 H8 Z" fill="#fff"/>
+  <path d="M14.8 16 H17.2 L16 12 Z" fill="#fff"/>
+</svg>

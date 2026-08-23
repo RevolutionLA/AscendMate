@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" width="120" height="75">
+  <g fill="none" stroke="#2a2e37" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 波浪/浪潮 形状：Triton 的语言标识 -->
+    <path d="M6 30 Q 16 8, 26 24 T 46 24"/>
+    <path d="M58 30 Q 48 8, 38 24 T 18 24"/>
+  </g>
+  <g fill="#2a2e37">
+    <circle cx="6" cy="34" r="2.4"/>
+    <circle cx="58" cy="34" r="2.4"/>
+  </g>
+</svg>
