@@ -46,6 +46,18 @@ jobs:
           NPM_CONFIG_FUND: false
         run: npm run docs:build
 
+      - name: Inject GitHub traffic stats into footer
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          VIEWS=$(gh api "repos/$REPO/traffic/views" --jq '.count')
+          UV=$(gh api "repos/$REPO/traffic/views" --jq '.uniques')
+          CLONES=$(gh api "repos/$REPO/traffic/clones" --jq '.count')
+          echo "views=$VIEWS uv=$UV clones=$CLONES"
+          P="${{ github.workspace }}/docs/.vitepress/dist"
+          find "$P" -name '*.html' -print0 | xargs -0 -I{} sed -i "s/__VIEWS__/$VIEWS/g; s/__UV__/$UV/g; s/__CLONES__/$CLONES/g" {}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

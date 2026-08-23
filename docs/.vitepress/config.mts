@@ -210,7 +210,7 @@ export default defineConfig({
       ],
     },
     footer: {
-      message: 'AscendMate · 昇腾之家 © 昇腾技术团队',
+      message: 'AscendMate · 昇腾之家 © 昇腾技术团队 · GitHub 统计（近14天）：仓库访问 <span class="site-pv">__VIEWS__</span> 次 · 独立访客 <span class="site-uv">__UV__</span> 人 · 克隆 <span class="site-clones">__CLONES__</span>',
       copyright: '内容基于公开资料整理，仅供学习与参考',
     },
   },
