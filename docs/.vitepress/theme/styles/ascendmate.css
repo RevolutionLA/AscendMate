@@ -406,3 +406,46 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
 .am-btn, .am-card, .am-step { touch-action:manipulation; }
 .vp-doc h1,.vp-doc h2,.vp-doc h3 { scroll-margin-top:84px; }
 .VPFooter { border-top:1px solid var(--vp-c-divider); }
+
+/* ==========================================================================
+   Skill highlight banner (Ascend Assistant)
+   ========================================================================== */
+.am-skill-banner {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  padding: 34px 34px 32px;
+  background: linear-gradient(150deg, var(--am-red-soft), var(--vp-c-bg) 60%, var(--vp-c-bg-soft));
+}
+.am-skill-banner::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--vp-c-divider) 1px, transparent 1px),
+    linear-gradient(90deg, var(--vp-c-divider) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: .4;
+  mask-image: radial-gradient(ellipse 60% 80% at 18% 20%, #000 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 80% at 18% 20%, #000 20%, transparent 70%);
+}
+.am-skill-text { position: relative; z-index: 1; }
+.am-skill-text .ey { color: var(--am-red); }
+.am-skill-text .ey::before { background: var(--am-red); }
+.am-skill-text h2 {
+  font-family: var(--am-sans); font-weight: 800;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: -0.01em;
+  margin: 10px 0 12px; color: var(--vp-c-text-1);
+}
+.am-skill-text p { font-size: 15px; line-height: 1.85; color: var(--vp-c-text-2); max-width: 46em; margin: 0 0 16px; }
+.am-skill-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.am-tag {
+  font-family: var(--am-mono); font-size: 12px;
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid rgba(200,16,46,.3);
+  color: var(--am-red); background: var(--vp-c-bg);
+}
+.am-skill-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.am-skill-actions .am-btn { font-size: 14px; padding: 11px 18px; }

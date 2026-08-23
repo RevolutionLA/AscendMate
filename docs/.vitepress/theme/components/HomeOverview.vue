@@ -53,6 +53,28 @@
       </div>
     </section>
 
+    <!-- ============ SKILL HIGHLIGHT ============ -->
+    <section class="am-section">
+      <div class="am-skill-banner">
+        <div class="am-skill-text">
+          <span class="ey">亮点功能</span>
+          <h2>Ascend Assistant · 昇腾服务器助手</h2>
+          <p>让 AI 直接帮你检测环境、定位报错、生成命令、引导部署、给出调优建议。作为 Agent Skill 独立分发，与本手册深度联动。</p>
+          <div class="am-skill-chips">
+            <span class="am-tag">环境检测</span>
+            <span class="am-tag">排障</span>
+            <span class="am-tag">命令生成</span>
+            <span class="am-tag">部署引导</span>
+            <span class="am-tag">性能调优</span>
+          </div>
+          <div class="am-skill-actions">
+            <a class="am-btn primary" :href="b('/skill/')">了解 & 安装 Skill →</a>
+            <a class="am-btn ghost" href="https://github.com/RevolutionLA/ascend-assistant">访问独立仓库</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ FEATURES ============ -->
     <section class="am-section">
       <div class="am-sec-head"><span class="ey">重点场景</span><h2>按部署目标快速切入</h2></div>

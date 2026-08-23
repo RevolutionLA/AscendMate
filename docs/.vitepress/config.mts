@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // 站点页脚 / 主题色定义
 const nav = [
   { text: '首页', link: '/' },
+  { text: 'Ascend Assistant', link: '/skill/', activeMatch: '/skill/' },
   { text: '快速开始', link: '/guide/' },
   { text: '环境搭建', link: '/setup/' },
   { text: '昇腾硬件', link: '/hardware/' },
@@ -91,6 +92,15 @@ export default defineConfig({
       { icon: 'github', link: repo },
     ],
     sidebar: {
+      '/skill/': [
+        {
+          text: 'Ascend Assistant',
+          collapsed: false,
+          items: [
+            { text: 'Skill 总览', link: '/skill/' },
+          ],
+        },
+      ],
       '/guide/': sidebarGuide,
       '/setup/': [
         {
