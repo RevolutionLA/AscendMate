@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- PyTorch flame glyph -->
-  <path d="M16 2 C 10 8, 6 13, 6 20 A 10 10 0 0 0 26 20 C 26 13, 22 8, 16 2 Z" fill="none" stroke="#ee4c2c" stroke-width="2.2"/>
-  <path d="M16 13 C 13 17 12 18 12 21 A 4 4 0 0 0 20 21 C 20 18 19 17 16 13 Z" fill="#ee4c2c"/>
-</svg>

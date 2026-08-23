@@ -2,7 +2,7 @@
   <img src="docs/public/ascendmate.svg" width="96" alt="AscendMate" />
 </p>
 
-<h1 align="center">AscendMate · 昇腾部署易用一指禅</h1>
+<h1 align="center">AscendMate · 昇腾之家</h1>
 
 <p align="center">
   一站式昇腾智算服务器使用手册 —— <b>环境搭建 · 模型微调 · 推理部署 · 算子开发</b>

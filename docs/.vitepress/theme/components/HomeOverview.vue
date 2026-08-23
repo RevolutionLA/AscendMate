@@ -4,8 +4,8 @@
     <section class="am-hero">
       <div class="am-hero-grid">
         <div class="am-lead">
-          <span class="am-eyebrow">Ascend Deployment Handbook</span>
-          <h1 class="am-title">昇腾部署<br /><span class="acc">易用一指禅</span></h1>
+          <span class="am-eyebrow">AscendMate</span>
+          <h1 class="am-title">昇腾之家<br /><span class="acc">一站式部署与开发手册</span></h1>
           <p class="am-sub">面向昇腾智算服务器的部署与开发手册。从环境搭建、模型微调、推理部署到算子开发，把散落各处的资料整理成可检索、可落地的实操入口。</p>
           <div class="am-actions">
             <a class="am-btn primary" :href="b('/guide/')">开始部署 <span aria-hidden="true">→</span></a>
@@ -46,9 +46,9 @@
         <a class="eco-chip" :href="b('/training/mindspeed')"><img :src="b('/ascend/mindspeed.svg')" alt="" /><span class="eco-t">MindSpeed</span></a>
         <a class="eco-chip" :href="b('/inference/mindie')"><img :src="b('/ascend/mindie.svg')" alt="" /><span class="eco-t">MindIE</span></a>
         <a class="eco-chip" :href="b('/setup/mindspore-install')"><img :src="b('/ascend/mindspore.svg')" alt="" /><span class="eco-t">MindSpore</span></a>
-        <a class="eco-chip" :href="b('/training/llama-factory')"><img :src="b('/ascend/pytorch-flame.svg')" alt="" /><span class="eco-t">PyTorch</span></a>
-        <a class="eco-chip" :href="b('/inference/vllm-ascend')"><img :src="b('/ascend/vllm.svg')" alt="" /><span class="eco-t">vLLM</span></a>
-        <a class="eco-chip" :href="b('/inference/sglang')"><img :src="b('/ascend/sglang.svg')" alt="" /><span class="eco-t">SGLang</span></a>
+        <a class="eco-chip" :href="b('/training/llama-factory')"><img :src="b('/ascend/pytorch-official.svg')" alt="" /><span class="eco-t">PyTorch</span></a>
+        <a class="eco-chip" :href="b('/inference/vllm-ascend')"><img :src="b('/ascend/vllm-official.png')" alt="" /><span class="eco-t">vLLM</span></a>
+        <a class="eco-chip" :href="b('/inference/sglang')"><img :src="b('/ascend/sglang-official.svg')" alt="" /><span class="eco-t">SGLang</span></a>
         <a class="eco-chip" :href="b('/ops/triton-ascend')"><img :src="b('/ascend/triton.svg')" alt="" /><span class="eco-t">Triton</span></a>
       </div>
     </section>
@@ -73,11 +73,23 @@
         <table class="am-who">
           <thead><tr><th>岗位</th><th>关注点</th><th>入口</th></tr></thead>
           <tbody>
-            <tr><td>环境交付 / 运维</td><td>装系统、驱动、CANN 到可用环境</td><td><a :href="b('/setup/')">环境搭建</a></td></tr>
-            <tr><td>算法 / 模型</td><td>微调、训练、部署推理</td><td><a :href="b('/training/llama-factory')">微调</a> · <a :href="b('/inference/')">推理</a></td></tr>
-            <tr><td>算子 / 移植</td><td>自定义算子、GPU 迁移</td><td><a :href="b('/ops/')">算子</a> · <a :href="b('/training/pytorch-migration')">迁移</a></td></tr>
-            <tr><td>应用 / 集成</td><td>推理服务、RAG 平台、业务接入</td><td><a :href="b('/inference/')">推理</a> · <a :href="b('/inference/dify')">Dify</a></td></tr>
-            <tr><td>性能 / 调优</td><td>报错排查、性能、精度</td><td><a :href="b('/faq/')">FAQ</a> · <a :href="b('/tools/')">工具链</a></td></tr>
+            <tr><td>环境交付 / 运维</td><td>装系统、驱动、CANN 到可用环境</td><td><a class="am-pill" :href="b('/setup/')">环境搭建 <span class="am-pill-go">→</span></a></td></tr>
+            <tr><td>算法 / 模型</td><td>微调、训练、部署推理</td><td>
+              <a class="am-pill" :href="b('/training/llama-factory')">微调 <span class="am-pill-go">→</span></a>
+              <a class="am-pill" :href="b('/inference/')">推理 <span class="am-pill-go">→</span></a>
+            </td></tr>
+            <tr><td>算子 / 移植</td><td>自定义算子、GPU 迁移</td><td>
+              <a class="am-pill" :href="b('/ops/')">算子 <span class="am-pill-go">→</span></a>
+              <a class="am-pill" :href="b('/training/pytorch-migration')">迁移 <span class="am-pill-go">→</span></a>
+            </td></tr>
+            <tr><td>应用 / 集成</td><td>推理服务、RAG 平台、业务接入</td><td>
+              <a class="am-pill" :href="b('/inference/')">推理 <span class="am-pill-go">→</span></a>
+              <a class="am-pill" :href="b('/inference/dify')">Dify <span class="am-pill-go">→</span></a>
+            </td></tr>
+            <tr><td>性能 / 调优</td><td>报错排查、性能、精度</td><td>
+              <a class="am-pill" :href="b('/faq/')">问题 FAQ <span class="am-pill-go">→</span></a>
+              <a class="am-pill" :href="b('/tools/')">工具链 <span class="am-pill-go">→</span></a>
+            </td></tr>
           </tbody>
         </table>
       </div>
@@ -87,9 +99,11 @@
     <section class="am-section">
       <div class="am-sec-head"><span class="ey">如何开始</span><h2>三步上手</h2></div>
       <div class="am-steps">
-        <div class="am-step"><span class="n">1</span><h3>选路径</h3><p>在<a :href="b('/guide/choose-your-path')">路径选择</a>里找到你的场景。</p></div>
-        <div class="am-step"><span class="n">2</span><h3>做环境</h3><p>按<a :href="b('/guide/seven-steps')">7 步走</a>从裸机到可跑 PyTorch。</p></div>
-        <div class="am-step"><span class="n">3</span><h3>跑业务</h3><p>进入<a :href="b('/training/')">训练</a>或<a :href="b('/inference/')">推理</a>跑起模型。</p></div>
+        <div class="am-step"><span class="n">1</span><h3>选路径</h3><p>先确定你的场景。</p><a class="am-pill" :href="b('/guide/choose-your-path')">去路径选择 →</a></div>
+        <div class="am-step"><span class="n">2</span><h3>做环境</h3><p>从裸机搭到可跑 PyTorch。</p><a class="am-pill" :href="b('/guide/seven-steps')">看 7 步走 →</a></div>
+        <div class="am-step"><span class="n">3</span><h3>跑业务</h3><p>用现成方案跑起模型。</p>
+          <a class="am-pill" :href="b('/training/')">去训练 →</a>
+          <a class="am-pill" :href="b('/inference/')">去推理 →</a></div>
       </div>
     </section>
   </div>

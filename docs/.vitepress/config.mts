@@ -19,6 +19,7 @@ const sidebarGuide = [
   {
     text: '快速开始',
     items: [
+      { text: '快速开始总览', link: '/guide/' },
       { text: '认识 AscendMate', link: '/guide/what-is-ascendmate' },
       { text: '典型部署场景', link: '/guide/use-cases' },
       { text: '如何选择使用路径', link: '/guide/choose-your-path' },
@@ -37,7 +38,7 @@ const repo = process.env.ASCENDMATE_GITHUB || 'https://github.com/RevolutionLA/A
 const editPrefix = `${repo.replace(/\/+$/, '')}/edit/master/docs/`
 
 export default defineConfig({
-  title: '昇腾一指禅',
+  title: '昇腾之家',
   base,
   description: '一站式昇腾智算服务器使用手册 —— 环境搭建、模型微调、推理部署、算子开发的完整实战指南',
   lang: 'zh-CN',
@@ -209,7 +210,7 @@ export default defineConfig({
       ],
     },
     footer: {
-      message: 'AscendMate © 昇腾技术团队 · 让昇腾更易用',
+      message: 'AscendMate · 昇腾之家 © 昇腾技术团队',
       copyright: '内容基于公开资料整理，仅供学习与参考',
     },
   },

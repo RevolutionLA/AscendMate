@@ -2,7 +2,7 @@
 
 > **什么时候读**：你想找**具体的官方文档、代码仓、模型、软件/镜像下载入口**，而不是看讲解。
 
-这个板块是把 Excel《昇腾部署易用一指禅》里的完整资源清单，整理成**可检索、可跳转**的导航。按需进入：
+这个板块把昇腾相关的**官方文档、开源社区、软件/镜像下载入口**整理成可检索、可跳转的导航。按需进入：
 
 ## 快捷入口
 
@@ -14,9 +14,9 @@
 
 ## 资源三大来源
 
-- **官方文档**：hiascend.com（CANN、Pytorch、MindIE 等）、support.huawei.com（硬件手册）。
-- **开源代码仓**：GitHub / Gitee / GitCode（MindSpeed、vLLM-Ascend、Triton-Ascend、ModelZoo 等）。
-- **下载/社区**：CANN 下载站、AscendHub 镜像、魔乐社区模型。
+- **官方文档**：[昇腾文档中心](https://www.hiascend.com/document)（CANN、PyTorch、MindIE 等）· [华为企业支持](https://support.huawei.com/enterprise/zh/ascend-computing)（硬件手册）。
+- **开源代码仓**：[昇腾开源社区](https://gitcode.com/ascend)（MindSpeed、ModelZoo 等）· [GitHub Ascend](https://github.com/Ascend) · [Gitee 昇腾](https://gitee.com/organizations/ascend)。
+- **下载 / 社区**：[昇腾资源下载](https://www.hiascend.com/developer/download)（CANN/驱动）· [AscendHub 镜像](https://www.hiascend.com/developer/ascendhub) · [魔乐社区](https://modelers.cn/models?page=1&size=16&hardwares=NPU)（模型）。
 
 > [!TIP]
 > 想快速找某个资源，直接右上角**搜索**，例如输入「CANN 下载」「ModelZoo」「AscendHub」等关键词。

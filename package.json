@@ -1,7 +1,7 @@
 {
   "name": "ascendmate",
   "version": "1.0.0",
-  "description": "AscendMate —— 昇腾部署易用一指禅 · 一站式昇腾智算服务器使用手册",
+  "description": "AscendMate · 昇腾之家 —— 一站式昇腾智算服务器部署与开发手册",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
