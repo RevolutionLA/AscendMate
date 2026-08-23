@@ -48,17 +48,18 @@ jobs:
 
       - name: Inject GitHub traffic stats into footer
         env:
-          # 优先用 PAT(GH_STATS_TOKEN) 读 traffic; 否则用默认 token(通常 403, 容错显示 –)
+          # 优先用 PAT(GH_STATS_TOKEN, repo权限) 读 traffic; 否则显示 –, 不阻断部署
           GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          # traffic 接口需 PAT(repo 权限); 拿不到就显示 –, 不阻断部署
-          VIEWS=$(gh api "repos/$REPO/traffic/views" --jq '.count' 2>/dev/null || echo "–")
-          UV=$(gh api "repos/$REPO/traffic/views" --jq '.uniques' 2>/dev/null || echo "–")
-          CLONES=$(gh api "repos/$REPO/traffic/clones" --jq '.count' 2>/dev/null || echo "–")
+          # traffic 接口需 PAT; gh api 返回错误 JSON 或为空时就回退为 – (数字/– 不破坏 sed)
+          VIEWS=$(v=$(gh api "repos/$REPO/traffic/views" --jq ".count" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
+          UV=$(v=$(gh api "repos/$REPO/traffic/views" --jq ".uniques" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
+          CLONES=$(v=$(gh api "repos/$REPO/traffic/clones" --jq ".count" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
           echo "views=$VIEWS uv=$UV clones=$CLONES"
+          # 用 # 作 sed 分隔符, 值和占位符不含 # , 避免冲突
           P="${{ github.workspace }}/docs/.vitepress/dist"
-          find "$P" -name '*.html' -print0 | xargs -0 -I{} sed -i "s/__VIEWS__/$VIEWS/g; s/__UV__/$UV/g; s/__CLONES__/$CLONES/g" {}
+          find "$P" -name '*.html' -print0 | xargs -0 -I% sed -i "s#__VIEWS__#$VIEWS#g; s#__UV__#$UV#g; s#__CLONES__#$CLONES#g" %
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
