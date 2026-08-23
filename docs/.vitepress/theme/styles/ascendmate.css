@@ -273,10 +273,13 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
   box-shadow: 0 26px 60px -40px rgba(18,22,30,.4);
 }
 .eco-label{ font-family:var(--am-mono); font-size:11px; letter-spacing:.16em; color:var(--vp-c-text-3); text-transform:uppercase; }
-.eco-item{ display:inline-flex; align-items:center; opacity:.75; transition:opacity .18s; }
+.eco-item{ display:inline-flex; align-items:center; opacity:.8; transition:opacity .18s ease; text-decoration:none; }
 .eco-item:hover{ opacity:1; }
-.eco-item img{ height:22px; }
+.eco-item img{ height:22px; display:block; }
 .eco-mono{ font-family:var(--am-mono); font-size:12px; color:var(--vp-c-text-3); }
+.eco-mono a{ color:var(--vp-c-text-2); text-decoration:none; font-family:var(--am-mono); transition:color .15s ease; }
+.eco-mono a:hover{ color:var(--am-red); text-decoration:none; border-bottom:1px solid currentColor; }
+.eco-mono a:focus-visible{ outline:2px solid var(--am-red); outline-offset:2px; }
 
 /* ==========================================================================
    Home sections
