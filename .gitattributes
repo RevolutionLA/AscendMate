@@ -1,0 +1,21 @@
+# ============================================================================
+# AscendMate · GitHub Linguist 语言检测配置
+# ----------------------------------------------------------------------------
+# AscendMate 是一个 VitePress 文档项目，主体是 Markdown。
+# GitHub 默认认为 Markdown 属于"文档"，不计入编程语言统计，
+# 导致仓库显示不出语言标签。以下规则让 Markdown 显式归类为文档，
+# 同时保留 .ts/.vue/.css/.mts 等真实业务代码计入语言统计，
+# 这样 GitHub Linguist 就能重新检测出项目的编程语言（JavaScript/TypeScript）。
+# 参考：https://github.com/github/linguist/blob/master/docs/overrides.md
+# ============================================================================
+
+# 所有 Markdown 文档统一视为"文档"，不计入编程语言统计
+*.md                     linguist-documentation=true
+*.markdown               linguist-documentation=true
+
+# 配置文件 / 依赖锁文件归为 vendored（非业务代码），不计入语言统计
+package-lock.json        linguist-vendored
+pnpm-lock.yaml           linguist-vendored
+yarn.lock                linguist-vendored
+
+# 目录级规则：VitePress 构建产物本地生成，无需提交语言影响（提交时已被 .gitignore 忽略）
