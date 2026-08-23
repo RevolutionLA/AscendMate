@@ -5,8 +5,8 @@
       <div class="am-hero-grid">
         <div class="am-lead">
           <span class="am-eyebrow">AscendMate</span>
-          <h1 class="am-title">昇腾之家<br /><span class="acc">一站式部署与开发手册</span></h1>
-          <p class="am-sub">面向昇腾智算服务器的部署与开发手册。从环境搭建、模型微调、推理部署到算子开发，把散落各处的资料整理成可检索、可落地的实操入口。</p>
+          <h1 class="am-title">昇腾之家<br /><span class="acc">一站式部署与调优</span></h1>
+          <p class="am-sub">面向昇腾智算服务器的实操手册，重点覆盖 <b>模型推理部署</b> 与 <b>性能调优</b>，并完整涵盖环境搭建、模型微调与算子开发，帮你快速落地、查得到、可照做。</p>
           <div class="am-actions">
             <a class="am-btn primary" :href="b('/guide/')">开始部署 <span aria-hidden="true">→</span></a>
             <a class="am-btn ghost" :href="b('/resources/')">资源导航</a>
@@ -19,14 +19,14 @@
           <div class="am-instrument-head">
             <span class="led"></span>
             <span class="tl">npu-smi</span>
-            <span class="u">Atlas 800I A2</span>
+            <span class="u">Atlas 800I A3</span>
           </div>
           <div class="am-instrument-body">
-            <div class="am-row"><span class="k">Driver Version</span><span class="v">24.2.0</span></div>
-            <div class="am-row"><span class="k">CANN</span><span class="v">8.5.0</span></div>
+            <div class="am-row"><span class="k">Driver Version</span><span class="v">25.1.0</span></div>
+            <div class="am-row"><span class="k">CANN</span><span class="v">8.3.RC2</span></div>
             <div class="am-row"><span class="k">Health</span><span class="v g">Normal</span></div>
-            <div class="am-row"><span class="k">HBM</span><span class="v">62.4 / 64.0 GB</span></div>
-            <div class="am-row"><span class="k">HCCS Link</span><span class="v g">up · 4×100G</span></div>
+            <div class="am-row"><span class="k">HBM</span><span class="v">243.0 / 256.0 GB</span></div>
+            <div class="am-row"><span class="k">HCCS Link</span><span class="v g">up · 8×C2C</span></div>
           </div>
           <div class="am-metric">
             <div class="mtop"><span>HBM Utilization</span><span>12%</span></div>
@@ -55,13 +55,13 @@
 
     <!-- ============ FEATURES ============ -->
     <section class="am-section">
-      <div class="am-sec-head"><span class="ey">本手册</span><h2>按部署目标快速切入</h2></div>
+      <div class="am-sec-head"><span class="ey">重点场景</span><h2>按部署目标快速切入</h2></div>
       <div class="am-feats">
-        <a class="am-card" :href="b('/setup/')"><span class="num">01</span><h3>环境搭建</h3><p>操作系统 · 固件驱动 · CANN · torch_npu · MindSpore · Docker 离线。从裸机到可跑第一行代码的 7 步走。</p></a>
-        <a class="am-card" :href="b('/training/')"><span class="num">02</span><h3>大模型训练</h3><p>LLaMA-Factory 微调、MindSpeed 预训练、PyTorch / MindSpore 模型迁移，含完整命令。</p></a>
-        <a class="am-card" :href="b('/inference/')"><span class="num">03</span><h3>模型推理</h3><p>MindIE 服务化、vLLM-Ascend、SGLang、Dify 平台，接入 OpenAI 兼容服务。</p></a>
-        <a class="am-card" :href="b('/ops/')"><span class="num">04</span><h3>算子开发</h3><p>Ascend C、Triton-Ascend、CATLASS 自定义算子，GPU 算子迁移。</p></a>
-        <a class="am-card" :href="b('/tools/')"><span class="num">05</span><h3>工具链</h3><p>MindStudio 开发调试、精度对齐、Profiling 性能调优。</p></a>
+        <a class="am-card hot" :href="b('/inference/')"><span class="num">01</span><h3>模型推理部署 🔥</h3><p>MindIE 服务化、vLLM-Ascend、SGLang、Dify 平台，接入 OpenAI 兼容服务，最快跑起推理。</p></a>
+        <a class="am-card hot" :href="b('/tools/')"><span class="num">02</span><h3>工具链 · 性能调优</h3><p>MindStudio 开发调试、Profiling 性能分析、精度对齐，定位并解决性能瓶颈。</p></a>
+        <a class="am-card" :href="b('/setup/')"><span class="num">03</span><h3>环境搭建</h3><p>操作系统 · 固件驱动 · CANN · torch_npu · MindSpore · Docker 离线。从裸机到可跑第一行代码的 7 步走。</p></a>
+        <a class="am-card" :href="b('/training/')"><span class="num">04</span><h3>大模型训练</h3><p>LLaMA-Factory 微调、MindSpeed 预训练、PyTorch / MindSpore 模型迁移，含完整命令。</p></a>
+        <a class="am-card" :href="b('/ops/')"><span class="num">05</span><h3>算子开发</h3><p>Ascend C、Triton-Ascend、CATLASS 自定义算子，GPU 算子迁移。</p></a>
         <a class="am-card" :href="b('/resources/')"><span class="num">06</span><h3>资源导航</h3><p>完整链接总表、软件/模型下载、生态与社区入口。</p></a>
       </div>
     </section>

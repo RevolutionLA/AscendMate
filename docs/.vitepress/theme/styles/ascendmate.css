@@ -175,21 +175,30 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
 .am-btn {
   display:inline-flex; align-items:center; gap:8px;
   font-family:var(--am-sans); font-weight:600; font-size:15px;
-  padding: 13px 24px; border-radius: 999px;
-  text-decoration:none;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  padding: 12px 22px; border-radius: 8px;
+  text-decoration:none; line-height:1;
+  position:relative;
+  transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease, color .16s ease;
 }
 .am-btn.primary {
   background: var(--am-red); color:#fff;
-  box-shadow: 0 10px 24px -14px rgba(200,16,46,.7);
+  border:1px solid var(--am-red);
+  box-shadow: 0 6px 18px -8px rgba(200,16,46,.7);
 }
-.am-btn.primary:hover { background: var(--vp-c-brand-3); transform: translateY(-1px); }
+.am-btn.primary:hover { background: var(--vp-c-brand-3); border-color: var(--vp-c-brand-3); transform: translateY(-1px); box-shadow: 0 10px 26px -10px rgba(200,16,46,.8); }
 .am-btn.ghost {
   color: var(--vp-c-text-1);
   border: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg);
 }
-.am-btn.ghost:hover { border-color: var(--am-red); color: var(--am-red); }
+.am-btn.ghost::after {
+  content: "→"; font-size: 14px; font-weight:700;
+  color: var(--am-red);
+  transition: transform .16s ease;
+}
+.am-btn.ghost:hover { border-color: var(--am-red); color: var(--am-red); background: var(--am-red-soft); transform: translateY(-1px); }
+.am-btn.ghost:hover::after { transform: translateX(3px); }
+.am-btn:focus-visible{ outline:2px solid var(--am-red); outline-offset:2px; }
 
 /* ==========================================================================
    Status instrument (npu-smi) — clean light "readout card", not a black box
@@ -308,10 +317,17 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
 .am-card .num { font-family:var(--am-mono); font-size:11px; letter-spacing:.12em; color:var(--am-red); }
 .am-card h3 { font-family:var(--am-sans); font-weight:700; font-size:18px; margin:14px 0 8px; color:var(--vp-c-text-1); }
 .am-card p { font-size:13.5px; line-height:1.75; color:var(--vp-c-text-2); margin:0; }
+/* priority card: inference & tuning */
+.am-card.hot {
+  background: linear-gradient(180deg, var(--am-red-soft), transparent 70%);
+  box-shadow: inset 3px 0 0 var(--am-red);
+}
+.am-card.hot h3 { color: var(--am-red); }
+.am-card.hot:hover { background: linear-gradient(180deg, var(--am-red-soft), var(--am-paper-soft) 80%); }
 
 .am-who { width:100%; font-size:14.5px; border-collapse:collapse; }
 .am-who th { font-family:var(--am-sans); font-size:13px; font-weight:700; letter-spacing:.02em; text-align:left; color:var(--vp-c-text-1); padding:12px 16px; border-bottom:2px solid var(--am-red); background:var(--vp-c-bg-alt); }
-.am-who td { padding:14px 16px; border-bottom:1px solid var(--vp-c-divider); color:var(--vp-c-text-2); vertical-align:top; }
+.am-who td { padding:14px 16px; border-bottom:1px solid var(--vp-c-divider); color:var(--vp-c-text-2); vertical-align:middle; }
 .am-who tr:last-child td { border-bottom:0; }
 .am-who tr:hover td { background: var(--vp-c-bg-soft); }
 .am-who td:first-child { font-weight:600; color:var(--vp-c-text-1); white-space:nowrap; }
