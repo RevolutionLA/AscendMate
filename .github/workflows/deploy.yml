@@ -23,18 +23,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
@@ -46,23 +46,30 @@ jobs:
           NPM_CONFIG_FUND: false
         run: npm run docs:build
 
+      # 附加功能：页脚显示 GitHub traffic 统计。
+      # traffic 接口仅对 PAT(GH_STATS_TOKEN, repo 权限) 开放；拿不到就显示 –，
+      # 且整个 step 绝不因统计失败而阻断部署。
       - name: Inject GitHub traffic stats into footer
+        continue-on-error: true
         env:
-          # 优先用 PAT(GH_STATS_TOKEN, repo权限) 读 traffic; 否则显示 –, 不阻断部署
           GH_TOKEN: ${{ secrets.GH_STATS_TOKEN || secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          # traffic 接口需 PAT; gh api 返回错误 JSON 或为空时就回退为 – (数字/– 不破坏 sed)
-          VIEWS=$(v=$(gh api "repos/$REPO/traffic/views" --jq ".count" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
-          UV=$(v=$(gh api "repos/$REPO/traffic/views" --jq ".uniques" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
-          CLONES=$(v=$(gh api "repos/$REPO/traffic/clones" --jq ".count" 2>/dev/null || true); case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac)
+          getnum(){
+            api="$1"; key="$2"
+            v="$(gh api "$api" --jq ".$key" 2>/dev/null || true)"
+            case "$v" in ""|*[!0-9]*) echo "–";; *) echo "$v";; esac
+          }
+          VIEWS=$(getnum "repos/$REPO/traffic/views" "count")
+          UV=$(getnum "repos/$REPO/traffic/views" "uniques")
+          CLONES=$(getnum "repos/$REPO/traffic/clones" "count")
           echo "views=$VIEWS uv=$UV clones=$CLONES"
-          # 用 # 作 sed 分隔符, 值和占位符不含 # , 避免冲突
           P="${{ github.workspace }}/docs/.vitepress/dist"
-          find "$P" -name '*.html' -print0 | xargs -0 -I% sed -i "s#__VIEWS__#$VIEWS#g; s#__UV__#$UV#g; s#__CLONES__#$CLONES#g" %
+          find "$P" -name '*.html' -print0 \
+            | xargs -0 -I% sed -i "s#__VIEWS__#$VIEWS#g; s#__UV__#$UV#g; s#__CLONES__#$CLONES#g" %
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs/.vitepress/dist
 
@@ -75,4 +82,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
