@@ -28,6 +28,11 @@
 - **🧱 从零到可运维**：覆盖交付整机的完整链路 —— 上电 → 系统 → 驱动 → CANN → 框架 → 业务 → 自检。
 - **🚀 训推一体化**：LLaMA-Factory 微调、MindSpeed 预训练、MindIE / vLLM-Ascend / SGLang 推理、Dify 平台。
 - **💬 持续迭代**：面向部署与运维一线经验持续更新，把高频问题沉淀为可检索 FAQ。
+- **🎓 学习路径（全新专题）**：面向AI行业新人的六阶段体系化学习路径，从零到昇腾AI工程师。
+- **📊 运维监控**：Prometheus + Grafana 搭建NPU监控大屏、告警规则、巡检SOP、日志管理。
+- **💼 场景价值发现**：金融/医疗/政务/制造行业AI场景库，快速POC指南，帮业务人员把算力变成价值。
+- **📈 算力运营管理**：利用率监控优化、多团队调度、成本核算，让每一张卡都发挥价值。
+- **📦 交付验收与批量部署**：到货验收Checklist、Ansible批量部署方案。
 
 ## ⚡ Ascend Assistant（昇腾服务器助手）
 
@@ -51,6 +56,11 @@ skills add https://github.com/RevolutionLA/ascend-assistant
 | 把 GPU 模型迁到昇腾 | [PyTorch 模型迁移](docs/training/pytorch-migration.md) |
 | 遇到报错 | [问题定位 FAQ](docs/faq/index.md) |
 | 找所有官方链接 | [资源导航总表](docs/resources/links.md) |
+| 我想从零学AI | → [学习路径](docs/learning/index.md) |
+| 我想搭建NPU监控 | → [运维监控](docs/monitoring/index.md) |
+| 我想找行业场景 | → [场景价值](docs/scenes/index.md) |
+| 我想管理算力利用率 | → [运营管理](docs/operations/index.md) |
+| 我要验收新到设备 | → [交付验收](docs/setup/delivery-acceptance.md) |
 
 ## 📂 目录结构
 
@@ -68,6 +78,10 @@ AscendMate/
 │   ├── tools/             # 工具链（MindStudio/精度/性能）
 │   ├── resources/         # 资源导航（完整链接/模型/下载）
 │   ├── faq/               # 问题定位（环境/训练/推理/性能精度）
+│   ├── learning/            # 学习路径（六阶段入行AI）
+│   ├── monitoring/          # 运维监控（Prometheus/Grafana/告警/巡检/日志）
+│   ├── scenes/              # 场景价值发现（行业方案/POC指南）
+│   ├── operations/          # 算力运营管理（利用率/调度/成本）
 │   └── contributing/      # 贡献指南
 ```
 
@@ -81,7 +95,7 @@ npm run docs:build   # 构建静态站点
 
 ## 📚 文档导航
 
-- [环境搭建](/docs/setup/) · [昇腾硬件](/docs/hardware/) · [大模型训练](/docs/training/) · [模型推理](/docs/inference/) · [算子开发](/docs/ops/) · [工具链](/docs/tools/) · [资源导航](/docs/resources/) · [问题定位 FAQ](/docs/faq/)
+- [环境搭建](/docs/setup/) · [昇腾硬件](/docs/hardware/) · [大模型训练](/docs/training/) · [模型推理](/docs/inference/) · [算子开发](/docs/ops/) · [工具链](/docs/tools/) · [资源导航](/docs/resources/) · [问题定位 FAQ](/docs/faq/) · [学习路径](/docs/learning/) · [运维监控](/docs/monitoring/) · [场景价值](/docs/scenes/) · [运营管理](/docs/operations/) · [交付验收](/docs/setup/delivery-acceptance.md)
 
 ## 🤝 参与贡献
 
@@ -91,5 +105,3 @@ npm run docs:build   # 构建静态站点
 
 - 本仓库为**开源整理项目**，内容基于公开的昇腾官方文档与开源项目整理，链接指向官方与开源项目，遵循各自许可证。
 - 代码/命令请以官方最新版本与配套为准；内容会持续更新，以 GitHub 仓库最新版本为准。
-
-<!-- 小雅网络验证标记 2026-08-26 12:50 -->

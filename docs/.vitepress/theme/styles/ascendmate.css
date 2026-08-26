@@ -442,3 +442,46 @@ body { letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
 }
 .am-skill-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .am-skill-actions .am-btn { font-size: 14px; padding: 11px 18px; }
+
+/* ==========================================================================
+   Learning path highlight banner
+   ========================================================================== */
+.am-learning-banner {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  padding: 34px 34px 32px;
+  background: linear-gradient(150deg, var(--am-red-soft), var(--vp-c-bg) 55%, var(--vp-c-bg-soft));
+}
+.am-learning-banner::before {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--vp-c-divider) 1px, transparent 1px),
+    linear-gradient(90deg, var(--vp-c-divider) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: .4;
+  mask-image: radial-gradient(ellipse 65% 80% at 82% 20%, #000 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 65% 80% at 82% 20%, #000 20%, transparent 70%);
+}
+.am-learning-text { position: relative; z-index: 1; }
+.am-learning-text .ey { color: var(--am-red); }
+.am-learning-text .ey::before { background: var(--am-red); }
+.am-learning-text h2 {
+  font-family: var(--am-sans); font-weight: 800;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: -0.01em;
+  margin: 10px 0 12px; color: var(--vp-c-text-1);
+}
+.am-learning-text p { font-size: 15px; line-height: 1.85; color: var(--vp-c-text-2); max-width: 46em; margin: 0 0 18px; }
+.am-learning-stages { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.am-stage-chip {
+  font-family: var(--am-mono); font-size: 12px;
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid rgba(200,16,46,.25);
+  color: var(--vp-c-text-2); background: var(--vp-c-bg);
+  transition: border-color .15s ease, color .15s ease;
+}
+.am-stage-chip:hover { border-color: var(--am-red); color: var(--am-red); }

@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // 站点页脚 / 主题色定义
 const nav = [
   { text: '首页', link: '/' },
+  { text: '学习路径', link: '/learning/', activeMatch: '/learning/' },
   { text: 'Ascend Assistant', link: '/skill/', activeMatch: '/skill/' },
   { text: '快速开始', link: '/guide/' },
   { text: '环境搭建', link: '/setup/' },
@@ -12,6 +13,9 @@ const nav = [
   {
     text: '更多',
     items: [
+      { text: '运维监控', link: '/monitoring/' },
+      { text: '场景价值', link: '/scenes/' },
+      { text: '运营管理', link: '/operations/' },
       { text: '昇腾硬件', link: '/hardware/' },
       { text: '算子开发', link: '/ops/' },
       { text: '工具链', link: '/tools/' },
@@ -46,7 +50,7 @@ const editPrefix = `${repo.replace(/\/+$/, '')}/edit/master/docs/`
 export default defineConfig({
   title: '昇腾之家',
   base,
-  description: '一站式昇腾智算服务器使用手册 —— 环境搭建、模型微调、推理部署、算子开发的完整实战指南',
+  description: '面向昇腾智算服务器的一站式服务平台 —— 从零入行AI到算力运营管理，覆盖学习路径、环境搭建、模型训练推理、运维监控、场景价值、算力运营全链路',
   lang: 'zh-CN',
   cleanUrls: true,
   lastUpdated: true,
@@ -59,7 +63,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap' }],
     ['link', { rel: 'icon', type: 'image/png', href: `${base.replace(/\/+$/, '')}/ascend/ascend-favicon.png` }],
-    ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 华为' }],
+    ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 华为, 学习路径, 运维监控, Prometheus, Grafana, 算力运营, 场景价值' }],
   ],
   themeConfig: {
     logo: '/ascend/ascend-logo.svg',
@@ -121,6 +125,8 @@ export default defineConfig({
             { text: '06 MindSpore 安装', link: '/setup/mindspore-install' },
             { text: '07 Docker 镜像与离线部署', link: '/setup/docker-offline' },
             { text: '08 环境自检清单', link: '/setup/checklist' },
+            { text: '09 交付验收 Checklist', link: '/setup/delivery-acceptance' },
+            { text: '10 批量部署（Ansible）', link: '/setup/batch-deployment' },
           ],
         },
       ],
@@ -211,6 +217,61 @@ export default defineConfig({
             { text: '训练类问题', link: '/faq/training-issues' },
             { text: '推理类问题', link: '/faq/inference-issues' },
             { text: '性能与精度问题', link: '/faq/perf-precision-issues' },
+          ],
+        },
+      ],
+      '/learning/': [
+        {
+          text: '学习路径',
+          collapsed: false,
+          items: [
+            { text: '学习路径总览', link: '/learning/' },
+            { text: '阶段一 · AI 基础认知', link: '/learning/ai-fundamentals' },
+            { text: '阶段二 · 数学与编程基础', link: '/learning/math-programming' },
+            { text: '阶段三 · 深度学习入门', link: '/learning/deep-learning' },
+            { text: '阶段四 · 大模型技术栈', link: '/learning/llm-basics' },
+            { text: '阶段五 · 昇腾生态实战', link: '/learning/ascend-hands-on' },
+            { text: '阶段六 · 行业应用与进阶', link: '/learning/industry-applications' },
+          ],
+        },
+      ],
+      '/monitoring/': [
+        {
+          text: '运维监控',
+          collapsed: false,
+          items: [
+            { text: '运维监控总览', link: '/monitoring/' },
+            { text: 'NPU 指标采集', link: '/monitoring/npu-exporter' },
+            { text: 'Prometheus + Grafana 搭建', link: '/monitoring/prometheus-grafana' },
+            { text: '告警规则与通知', link: '/monitoring/alerting' },
+            { text: '巡检与应急 SOP', link: '/monitoring/inspection' },
+            { text: '日志管理', link: '/monitoring/log-management' },
+          ],
+        },
+      ],
+      '/scenes/': [
+        {
+          text: '场景价值发现',
+          collapsed: false,
+          items: [
+            { text: '场景价值总览', link: '/scenes/' },
+            { text: '金融行业', link: '/scenes/finance' },
+            { text: '医疗行业', link: '/scenes/healthcare' },
+            { text: '政务行业', link: '/scenes/government' },
+            { text: '制造行业', link: '/scenes/manufacturing' },
+            { text: '快速 POC 指南', link: '/scenes/poc-guide' },
+          ],
+        },
+      ],
+      '/operations/': [
+        {
+          text: '算力运营管理',
+          collapsed: false,
+          items: [
+            { text: '运营管理总览', link: '/operations/' },
+            { text: '算力利用率监控与优化', link: '/operations/utilization' },
+            { text: '多团队调度与资源分配', link: '/operations/scheduling' },
+            { text: '成本核算与计费', link: '/operations/cost-accounting' },
           ],
         },
       ],
