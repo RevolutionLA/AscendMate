@@ -1,7 +1,3 @@
-﻿<p align="center">
-  <img src="docs/public/ascendmate.svg" width="96" alt="AscendMate" />
-</p>
-
 <h1 align="center">AscendMate · 昇腾之家</h1>
 
 <p align="center">
