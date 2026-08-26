@@ -63,7 +63,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }],
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap' }],
     ['link', { rel: 'icon', type: 'image/png', href: `${base.replace(/\/+$/, '')}/ascend/ascend-favicon.png` }],
-    ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 华为, 学习路径, 运维监控, Prometheus, Grafana, 算力运营, 场景价值' }],
+    ['meta', { name: 'keywords', content: '昇腾, Ascend, NPU, Atlas, CANN, torch_npu, MindSpeed, vLLM-Ascend, MindIE, LLaMA-Factory, AscendC, MindStudio, 智算服务器, 大模型, 训推, 学习路径, 运维监控, Prometheus, Grafana, 算力运营, 场景价值' }],
   ],
   themeConfig: {
     logo: '/ascend/ascend-logo.svg',

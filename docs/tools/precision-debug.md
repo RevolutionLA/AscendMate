@@ -36,10 +36,10 @@
 
 ## 五、常见数值问题速查
 
-- 训练 loss 为 NaN/Inf → [训练类问题](/faq/training-issues)
+- 训练 loss 为 NaN/Inf → [训练类问题](https://revolutionla.github.io/AscendMate/faq/training-issues)
 - 推理结果显著偏离 → 检查数据预处理、精度格式、算子精度
 
 ## 相关
 
-- [性能调优（Profiling）](/tools/profiling)
-- [工具链全景](/tools/)
+- [性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling)
+- [工具链全景](https://revolutionla.github.io/AscendMate/tools/)

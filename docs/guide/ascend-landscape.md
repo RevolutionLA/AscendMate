@@ -4,7 +4,7 @@
 
 ## 昇腾整体定位
 
-昇腾（Ascend）是华为针对 **AI 计算**打造的芯片与全栈计算产品。它覆盖从**芯片 → 计算产品 → 硬件 → C++/Python 生态 → 应用**的完整栈，对标的是面向 AI 场景的"CPU + GPU 专用计算"。
+昇腾（Ascend）是面向 **AI 计算**打造的芯片与全栈计算产品。它覆盖从**芯片 → 计算产品 → 硬件 → C++/Python 生态 → 应用**的完整栈，对标的是面向 AI 场景的"CPU + GPU 专用计算"。
 
 ## 硬件形态速览
 
@@ -16,7 +16,7 @@
 | AI 推理卡 | Atlas 300I A2/Duo/Pro/V Pro | 板卡形态推理加速 |
 | 开发套件 / 模组 | Atlas 200I DK A2 | 边缘、学习、快速原型 |
 
-👉 详细见 [硬件产品全景](/hardware/)
+👉 详细见 [硬件产品全景](https://revolutionla.github.io/AscendMate/hardware/)
 
 ## 软件栈分层
 
@@ -43,14 +43,14 @@
 
 | 生态块 | 关键内容 | 归属/入口 |
 | --- | --- | --- |
-| **AI 框架** | PyTorch + torch_npu、MindSpore | [setup](/setup/) |
-| **大模型微调** | LLaMA-Factory（支持 NPU） | [training](/training/llama-factory) |
-| **大模型训练加速库** | MindSpeed（对标 Megatron/DeepSpeed 生态） | [training](/training/mindspeed) |
-| **推理套件** | MindIE（自研）、vLLM-Ascend、SGLang-Kernel | [inference](/inference/) |
-| **算子开发** | Ascend C、Triton-Ascend、CATLASS | [ops](/ops/) |
-| **开发调试工具** | MindStudio、精度调试、Profiling | [tools](/tools/) |
-| **模型与样例** | ModelZoo、samples、魔乐社区 | [resources](/resources/) |
-| **软件下载** | CANN / 驱动 / 固件 / 镜像 | [resources/download](/resources/download) |
+| **AI 框架** | PyTorch + torch_npu、MindSpore | [setup](https://revolutionla.github.io/AscendMate/setup/) |
+| **大模型微调** | LLaMA-Factory（支持 NPU） | [training](https://revolutionla.github.io/AscendMate/training/llama-factory) |
+| **大模型训练加速库** | MindSpeed（对标 Megatron/DeepSpeed 生态） | [training](https://revolutionla.github.io/AscendMate/training/mindspeed) |
+| **推理套件** | MindIE（自研）、vLLM-Ascend、SGLang-Kernel | [inference](https://revolutionla.github.io/AscendMate/inference/) |
+| **算子开发** | Ascend C、Triton-Ascend、CATLASS | [ops](https://revolutionla.github.io/AscendMate/ops/) |
+| **开发调试工具** | MindStudio、精度调试、Profiling | [tools](https://revolutionla.github.io/AscendMate/tools/) |
+| **模型与样例** | ModelZoo、samples、魔乐社区 | [resources](https://revolutionla.github.io/AscendMate/resources/) |
+| **软件下载** | CANN / 驱动 / 固件 / 镜像 | [resources/download](https://revolutionla.github.io/AscendMate/resources/download) |
 
 ## 昇腾 vs 通用生态对照（帮助理解定位）
 
@@ -68,9 +68,9 @@
 
 ## 选型时常见问题
 
-- **生态是否成熟？** 主流大模型（Qwen、Llama、DeepSeek、GLM 等）与主流框架（LLaMA-Factory、vLLM 等）均已有昇腾适配，见 [资源导航总表](/resources/links)。
-- **能跑多大模型？** 与硬件规格、显存/内存、并行策略相关，见 [训练全景](/training/) 与 [推理全景](/inference/)。
-- **怎么评估性能？** 可参考官方评测工具 AISBench 与 Profiling，见 [工具链](/tools/)。
+- **生态是否成熟？** 主流大模型（Qwen、Llama、DeepSeek、GLM 等）与主流框架（LLaMA-Factory、vLLM 等）均已有昇腾适配，见 [资源导航总表](https://revolutionla.github.io/AscendMate/resources/links)。
+- **能跑多大模型？** 与硬件规格、显存/内存、并行策略相关，见 [训练全景](https://revolutionla.github.io/AscendMate/training/) 与 [推理全景](https://revolutionla.github.io/AscendMate/inference/)。
+- **怎么评估性能？** 可参考官方评测工具 AISBench 与 Profiling，见 [工具链](https://revolutionla.github.io/AscendMate/tools/)。
 
 > [!TIP]
-> 想直接看所有链接清单？去 [资源导航总表](/resources/links)，一张表收录官方文档、代码仓与下载入口。
+> 想直接看所有链接清单？去 [资源导航总表](https://revolutionla.github.io/AscendMate/resources/links)，一张表收录官方文档、代码仓与下载入口。

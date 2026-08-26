@@ -22,7 +22,7 @@ description: 了解昇腾NPU与NVIDIA GPU的差异，掌握昇腾软件栈（CAN
 - 规划昇腾认证路径
 
 ::: tip 💡 学习建议
-这个阶段**必须动手**。如果你没有实体昇腾设备，可以使用华为云 ModelArts 上的昇腾算力。光看文档是学不会的，一定要跑通完整的流程。
+这个阶段**必须动手**。如果你没有实体昇腾设备，可以使用昇腾云 ModelArts 上的昇腾算力。光看文档是学不会的，一定要跑通完整的流程。
 :::
 
 ---
@@ -114,9 +114,9 @@ NVIDIA GPU 架构（如 A100）：
 
 | 芯片 | 定位 | 算力 | 典型场景 |
 |:---|:---|:---|:---|
-| **Ascend 910** | 训练芯片 | 高 | 大模型训练、大规模训练 |
-| **Ascend 910B** | 训练芯片（升级版） | 高 | 大模型训练（当前主力） |
-| **Ascend 310** | 推理芯片 | 中 | 边缘推理、轻量推理 |
+| **Ascend 910** | 训练芯片 | 最大约 **320 TFLOPS FP16** | 大模型训练、大规模训练 |
+| **Ascend 910B** | 训练芯片（升级版） | 高（较 910 提升） | 大模型训练（当前主力） |
+| **Ascend 310** | 推理芯片 | 最大约 **22 TOPS INT8** | 边缘推理、轻量推理 |
 | **Ascend 310P** | 推理芯片（升级版） | 中高 | 推理服务 |
 
 ### Atlas 硬件产品线
@@ -229,7 +229,7 @@ tensor = tensor.npu()             # NPU
 
 #### MindSpore
 
-MindSpore 是华为自研框架，对昇腾有原生支持：
+MindSpore 是开源框架，对昇腾有原生支持：
 
 ```text
 PyTorch-NPU：通过适配层使用昇腾 → 兼容性好，但可能有性能损耗
@@ -263,7 +263,7 @@ MindSpore：原生支持昇腾 → 性能最优，但需要学习新 API
   运行简单 PyTorch 代码 → 能在 NPU 上计算
 ```
 
-详细的环境搭建步骤请参考：[环境搭建指南 →](/setup/)
+详细的环境搭建步骤请参考：[环境搭建指南 →](https://revolutionla.github.io/AscendMate/setup/)
 
 ::: tip 💡 快速验证环境
 ```python
@@ -295,7 +295,7 @@ print(f"NPU 矩阵乘法结果:\n{z}")
 路径A：使用 MindIE（推荐）
   MindIE 是昇腾原生推理引擎，性能最优
   支持主流大模型（Qwen、LLaMA、DeepSeek 等）
-  → 详见 [推理部署文档](/inference/)
+  → 详见 [推理部署文档](https://revolutionla.github.io/AscendMate/inference/)
 
 路径B：使用 PyTorch + transformers
   更灵活，适合开发调试
@@ -337,7 +337,7 @@ response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(response)
 ```
 
-详细推理部署步骤请参考：[推理部署指南 →](/inference/)
+详细推理部署步骤请参考：[推理部署指南 →](https://revolutionla.github.io/AscendMate/inference/)
 
 ---
 
@@ -393,7 +393,7 @@ llamafactory-cli train \
   --fp16 True
 ```
 
-详细微调步骤请参考：[LLaMA-Factory 微调指南 →](/training/llama-factory)
+详细微调步骤请参考：[LLaMA-Factory 微调指南 →](https://revolutionla.github.io/AscendMate/training/llama-factory)
 
 ::: tip 💡 微调方法选择
 | 方法 | 显存需求 | 训练速度 | 效果 | 适用场景 |
@@ -445,7 +445,7 @@ msprof --application="python inference.py" --output=./prof_data
 # - 使用连续批处理（Continuous Batching）
 ```
 
-详细性能调优步骤请参考：[性能调优工具 →](/tools/)
+详细性能调优步骤请参考：[性能调优工具 →](https://revolutionla.github.io/AscendMate/tools/)
 
 #### 调优检查清单
 
@@ -470,7 +470,7 @@ msprof --application="python inference.py" --output=./prof_data
 认证的价值：
   1. 系统学习：认证课程覆盖完整知识体系
   2. 能力证明：简历加分，面试加分
-  3. 企业认可：华为及生态企业认可
+  3. 企业认可：产业及生态企业认可
   4. 个人成长：以考促学，查漏补缺
 ```
 
@@ -542,8 +542,8 @@ msprof --application="python inference.py" --output=./prof_data
 
 | 资源 | 说明 |
 |:---|:---|
-| [华为人才在线](https://e.huawei.com/cn/talent/) | 官方认证入口 |
-| [华为云学院](https://e.huawei.com/cn/talent/) | 官方培训课程 |
+| [昇腾人才在线](https://e.huawei.com/cn/talent/) | 官方认证入口 |
+| [昇腾云学院](https://e.huawei.com/cn/talent/) | 官方培训课程 |
 | [昇腾社区](https://www.hiascend.com/) | 技术文档和实战资源 |
 | 认证考试指南 | 官方考试大纲和样题 |
 
@@ -554,7 +554,7 @@ msprof --application="python inference.py" --output=./prof_data
 ### Q：没有昇腾硬件怎么办？
 
 ```text
-方案1：华为云 ModelArts
+方案1：昇腾云 ModelArts
   - 提供昇腾算力按需使用
   - 适合学习和实验
   - 按时计费，成本可控
@@ -605,7 +605,7 @@ msprof --application="python inference.py" --output=./prof_data
   ✅ 追求昇腾上的最优性能
   ✅ 从零开始开发项目
   ✅ 需要使用 MindSpore 特有功能
-  ✅ 在华为内部生态中工作
+  ✅ 在昇腾内部生态中工作
 
 最佳策略：两个都了解，根据项目选择。
 ```
@@ -643,19 +643,9 @@ msprof --application="python inference.py" --output=./prof_data
 
 ---
 
-## 下一步
+## 补充 · AI 通识：业界 AI 全栈系统与主流框架
 
-::: tip 🚀 下一阶段
-👉 [阶段六：行业应用与进阶](./industry-applications) —— 从技术走向业务
-:::
-
-> 「你现在已经具备了在昇腾生态上做开发的基本能力。接下来的挑战是：**如何把这些技术能力转化为业务价值**——这是从'工程师'到'优秀工程师'的关键跨越。」
-
----
-
-## 补充 · 华为AI通识：业界 AI 全栈系统与主流框架
-
-> 以下内容整理自《人工智能培训课件》，帮你跳出昇腾视角，看清**业界主流 AI 全栈系统**的完整分层、主流框架横向对比与 AI 平台层。已在前面讲过的昇腾自身 CANN/PyTorch-NPU/MindSpore/MindIE/MindSpeed 不再重复。
+> 以下内容帮你跳出昇腾视角，看清**业界主流 AI 全栈系统**的完整分层、主流框架横向对比与 AI 平台层。已在前面讲过的昇腾自身 CANN/PyTorch-NPU/MindSpore/MindIE/MindSpeed 不再重复。
 
 ### 1. 业界主流 AI 全栈系统五层架构
 
@@ -675,7 +665,7 @@ msprof --application="python inference.py" --output=./prof_data
 |:---|:---|:---|
 | **TensorFlow** | Google（2015.11 开源） | TF1 静态图效率高；TF2 默认 eager 模式，推荐 Keras，v2.2 起支持 Profiler |
 | **PyTorch** | Facebook（2017.01） | 动态图，支持 Tensor/Numpy 互转、ONNX、Tensorboard、分布式训练 |
-| **MindSpore** | 华为（2019.08，2020.03 开源） | 全场景 AI 框架，支持可视化、二阶优化、量化训练、混合异构、Serving、MindIR、调试器 |
+| **MindSpore** | 开源（2019.08，2020.03 开源） | 全场景 AI 框架，支持可视化、二阶优化、量化训练、混合异构、Serving、MindIR、调试器 |
 | **PaddlePaddle** | 百度（2016.08 开源） | 国内最早，v1.1 大规模异步分布式，PaddlePaddle 3.0 提供 VisualDL/PARL/AutoDL/EasyDL/AIStudio |
 
 **推理框架**：
@@ -694,8 +684,16 @@ msprof --application="python inference.py" --output=./prof_data
 |:---|:---|:---|
 | **百度 BML / EasyDL** | 百度 | BML 全流程开发平台（高级用户）；EasyDL 零门槛（新手），支持到数据训练级别 |
 | **腾讯 TI-ONE** | 腾讯 | 一站式机器学习平台，可视化 + AI 算法模板；预置模型较少、深度学习模型较少 |
-| **华为 ModelArts** | 华为 | 数据标注到推理全流程，「自动学习」对标 EasyDL；支持多计算引擎与分布式训练 |
+| **ModelArts** | 昇腾云 | 数据标注到推理全流程，「自动学习」对标 EasyDL；支持多计算引擎与分布式训练 |
 | **Amazon SageMaker** | AWS | 全面 AI 工具，含标注、数据集管理、建/训/部署；多计算引擎、预置算法与可视化 |
 
 ---
+
+## 下一步
+
+::: tip 🚀 下一阶段
+👉 [阶段六：行业应用与进阶](./industry-applications) —— 从技术走向业务
+:::
+
+> 「你现在已经具备了在昇腾生态上做开发的基本能力。接下来的挑战是：**如何把这些技术能力转化为业务价值**——这是从'工程师'到'优秀工程师'的关键跨越。」
 

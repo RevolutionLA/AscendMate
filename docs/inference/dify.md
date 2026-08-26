@@ -18,11 +18,11 @@
     昇腾 NPU (CANN + torch_npu)
 ```
 
-Dify 通过标准的 **OpenAI 兼容 API** 接入模型。所以在昇腾上，你**先把一个支持 OpenAI 兼容接口的推理引擎跑起来**（如 [vLLM-Ascend](/inference/vllm-ascend) 或 [MindIE](/inference/mindie)），再把它的地址填进 Dify 即可。
+Dify 通过标准的 **OpenAI 兼容 API** 接入模型。所以在昇腾上，你**先把一个支持 OpenAI 兼容接口的推理引擎跑起来**（如 [vLLM-Ascend](https://revolutionla.github.io/AscendMate/inference/vllm-ascend) 或 [MindIE](https://revolutionla.github.io/AscendMate/inference/mindie)），再把它的地址填进 Dify 即可。
 
 ## 二、前置环境
 
-- 昇腾环境就绪（[环境搭建](/setup/)）。
+- 昇腾环境就绪（[环境搭建](https://revolutionla.github.io/AscendMate/setup/)）。
 - 已跑通一个推理引擎，拿到一个 `http://<ip>:<port>/v1` 的地址。
 - 有 Docker（Dify 一般用 Docker Compose 部署）。
 
@@ -53,7 +53,7 @@ docker compose up -d
 
 - **多用户**：Dify 面向多用户/多应用，注意资源（显存/并发）规划。
 - **RAG 嵌入模型**：Dify 的向量化也可接入昇腾本地模型，或使用内置/第三方嵌入。
-- **离线内网**：需提前离线部署 Docker 镜像与模型权重（[Docker 离线部署](/setup/docker-offline)）。
+- **离线内网**：需提前离线部署 Docker 镜像与模型权重（[Docker 离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)）。
 - **权限与安全**：企业版/开源自建需关注账号与访问控制。
 
 ## 六、验证
@@ -62,8 +62,8 @@ docker compose up -d
 
 ## 相关
 
-- 选择一个推理后端：[推理全景](/inference/)
-- 离线部署：[Docker 镜像与离线部署](/setup/docker-offline)
+- 选择一个推理后端：[推理全景](https://revolutionla.github.io/AscendMate/inference/)
+- 离线部署：[Docker 镜像与离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)
 
 > [!NOTE]以官方为准
 > Dify 版本迭代快，部署细节（Compose 文件、环境变量、供应商配置）请以 Dify 官方文档为准。本页给出的是昇腾接入的整体方法。

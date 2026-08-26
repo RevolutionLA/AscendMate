@@ -1,8 +1,8 @@
 # 06 MindSpore 安装
 
-> **什么时候读**：你选择使用华为自研框架 MindSpore，或在昇腾上做 MindSpore 相关开发。
+> **什么时候读**：你选择使用开源框架 MindSpore，或在昇腾上做 MindSpore 相关开发。
 
-MindSpore 是华为自研 AI 框架，与昇腾深度协同，支持开箱即用。若你的项目基于 MindSpore，本页给出 pip 安装步骤。
+MindSpore 是开源 AI 框架，与昇腾深度协同，支持开箱即用。若你的项目基于 MindSpore，本页给出 pip 安装步骤。
 
 ## 一、版本配套
 
@@ -99,7 +99,7 @@ print(ops.add(x, y))
 
 ## 六、MindSpore 模型迁移
 
-若要把现有模型迁到 MindSpore，参考 [MindSpore 模型迁移](/training/mindspore-migration)。
+若要把现有模型迁到 MindSpore，参考 [MindSpore 模型迁移](https://revolutionla.github.io/AscendMate/training/mindspore-migration)。
 
 ## 验证
 

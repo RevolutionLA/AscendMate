@@ -12,7 +12,7 @@
 
 ## 二、环境准备
 
-1. **安装 NPU 驱动与固件**（见 [固件驱动安装](/setup/firmware-driver)）。
+1. **安装 NPU 驱动与固件**（见 [固件驱动安装](https://revolutionla.github.io/AscendMate/setup/firmware-driver)）。
 2. **安装社区版 CANN Toolkit**：
 
 ```bash
@@ -20,7 +20,7 @@ chmod +x Ascend-cann-toolkit_{version}_linux-{arch}.run
 ./Ascend-cann-toolkit_{version}_linux-{arch}.run --full --force --install-path=${install_path}
 ```
 
-> `{arch}` 为系统架构，`{install_path}` 默认 `/usr/local/Ascend`。CANN 下载见 [资源导航](/resources/download)。
+> `{arch}` 为系统架构，`{install_path}` 默认 `/usr/local/Ascend`。CANN 下载见 [资源导航](https://revolutionla.github.io/AscendMate/resources/download)。
 
 3. **使能 CANN 环境**：
 
@@ -81,6 +81,6 @@ cd output/bin
 
 ## 相关
 
-- [算子开发全景](/ops/)
-- [Ascend C 算子开发](/ops/ascend-c)
-- [Triton-Ascend](/ops/triton-ascend)
+- [算子开发全景](https://revolutionla.github.io/AscendMate/ops/)
+- [Ascend C 算子开发](https://revolutionla.github.io/AscendMate/ops/ascend-c)
+- [Triton-Ascend](https://revolutionla.github.io/AscendMate/ops/triton-ascend)

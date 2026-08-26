@@ -140,12 +140,12 @@ MindSpore 用 `value_and_grad(forward_fn, ...)` 生成「同时返回 loss 和�
 - 偏静态图/高性能部署场景。
 - 想与昇腾做更深协同。
 
-对生态和工具更依赖的场景，通常仍推荐 **PyTorch + torch_npu**（见 [PyTorch 模型迁移](/training/pytorch-migration)）。
+对生态和工具更依赖的场景，通常仍推荐 **PyTorch + torch_npu**（见 [PyTorch 模型迁移](https://revolutionla.github.io/AscendMate/training/pytorch-migration)）。
 
 > [!TIP]
 > 大多数新项目在昇腾上直接用 **torch_npu** 更省事。只有在明确要用 MindSpore 时才走这条迁移路径。
 
 ## 相关
 
-- 环境：[MindSpore 安装](/setup/mindspore-install)
-- [训练全景](/training/)
+- 环境：[MindSpore 安装](https://revolutionla.github.io/AscendMate/setup/mindspore-install)
+- [训练全景](https://revolutionla.github.io/AscendMate/training/)

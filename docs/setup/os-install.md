@@ -12,7 +12,7 @@
 
 | 系统 | 特点 | 适用 | 备注 |
 | --- | --- | --- | --- |
-| **openEuler** | 华为社区开源系统，与昇腾协同好 | 推荐首选 | 本仓库默认示例 |
+| **openEuler** | 社区开源系统，与昇腾协同好 | 推荐首选 | 本仓库默认示例 |
 | **Ubuntu** | 生态广、教程多 | 通用 | 注意选用受支持 LTS |
 | **EulerOS** | 商用发行 | 有商用订阅的客户 | |
 | **CentOS / Kylin / UOS** 等 | 按客户现网而定 | 有存量 | 需自查兼容性 |
@@ -22,10 +22,10 @@
 
 ## 二、下载镜像
 
-openEuler 24.03 LTS SP1（Arm 版）等镜像可从 openEuler 官网 / 华为云社区镜像下载。
+openEuler 24.03 LTS SP1（Arm 版）等镜像可从 openEuler 官网 / 昇腾云社区镜像下载。
 
 - openEuler 官网：<https://www.openeuler.org/zh/download/>
-- 华为云镜像站：可加速国内下载
+- 昇腾云镜像站：可加速国内下载
 
 注意区分 **aarch64（Arm）** 与 **x86_64** 架构，选错无法引导。
 
@@ -74,8 +74,8 @@ free -h
 后续要装 CANN、torch_npu 等，需要能访问软件源或已有离线包。建议提前确认：
 
 - 是否能访问昇腾下载站、pip 源、conda 源。
-- 若在隔离内网，需提前**离线下载**好所有依赖包（见 [Docker 镜像与离线部署](/setup/docker-offline)）。
+- 若在隔离内网，需提前**离线下载**好所有依赖包（见 [Docker 镜像与离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)）。
 
 ## 验证
 
-系统能正常引导、网络通、架构正确 → 进入 [03 固件与驱动安装](/setup/firmware-driver)。
+系统能正常引导、网络通、架构正确 → 进入 [03 固件与驱动安装](https://revolutionla.github.io/AscendMate/setup/firmware-driver)。

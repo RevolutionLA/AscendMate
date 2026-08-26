@@ -2,7 +2,7 @@
 
 > **什么时候读**：你想用**一体化 IDE** 来开发、调试、部署昇腾 AI 应用。
 
-[MindStudio](https://www.hiascend.com/document/detail/zh/mindstudio/830/index/index.html) 是华为面向昇腾 AI 开发者的**全流程开发工具集**，提供图形化的一体化开发环境。
+[MindStudio](https://www.hiascend.com/document/detail/zh/mindstudio/830/index/index.html) 是面向昇腾 AI 开发者的**全流程开发工具集**，提供图形化的一体化开发环境。
 
 ## 一、功能概览
 
@@ -36,6 +36,6 @@
 
 ## 相关
 
-- [算子开发全景](/ops/)
-- [精度调试](/tools/precision-debug)
-- [性能调优（Profiling）](/tools/profiling)
+- [算子开发全景](https://revolutionla.github.io/AscendMate/ops/)
+- [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)
+- [性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling)

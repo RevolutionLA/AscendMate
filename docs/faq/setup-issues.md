@@ -38,20 +38,20 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh   # 社区版常见路径
 **对策**：安装前查官方**配套表**，选择一套完整配套一起装：
 
 - 操作系统兼容：<https://www.hiascend.com/hardware/compatibility>
-- 选择成套版本，见 [环境搭建总览](/setup/)
+- 选择成套版本，见 [环境搭建总览](https://revolutionla.github.io/AscendMate/setup/)
 
 ## 五、Python/Docker 相关
 
 | 现象 | 排查 |
 | --- | --- |
 | ARM 下 pip 装不上 | 升级 pip（`pip install -U pip`），确认 Python 版本在支持范围 |
-| 容器内看不到 NPU | 检查 `docker run` 时是否传了 `--device`（见 [Docker](/setup/docker-offline)） |
+| 容器内看不到 NPU | 检查 `docker run` 时是否传了 `--device`（见 [Docker](https://revolutionla.github.io/AscendMate/setup/docker-offline)） |
 | 之前装过 te/topi/hccl | `pip uninstall te topi hccl` 后重装依赖 |
 
 ## 六、还要看
 
 - 日志：`dmesg | grep -i npu`、`cat /var/log/npu/slog/*.log`
-- [环境自检清单](/setup/checklist)
+- [环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist)
 
 > [!TIP]
-> 先用 [环境自检清单](/setup/checklist) 逐项确认，多数环境问题都会暴露在这一步。
+> 先用 [环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist) 逐项确认，多数环境问题都会暴露在这一步。

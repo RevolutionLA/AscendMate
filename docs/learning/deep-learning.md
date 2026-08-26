@@ -462,14 +462,14 @@ with torch.no_grad():  # 评估时不需要梯度
 
 ## 第四部分：MindSpore 简介
 
-MindSpore 是华为自研的深度学习框架，在昇腾生态中有原生优势。
+MindSpore 是开源的深度学习框架，在昇腾生态中有原生优势。
 
 ### MindSpore vs PyTorch
 
 | 特性 | PyTorch | MindSpore |
 |:---|:---|:---|
-| 开发商 | Meta | 华为 |
-| 计算图 | 动态图（Eager） | 静态图（Graph）为主 |
+| 开发商 | Meta | 昇腾 |
+| 计算图 | 动态图（Eager） | 支持 Graph 静态图，2.x 起默认 PyNative 动态图 |
 | 自动微分 | 反向模式自动微分 | 反向模式自动微分 |
 | 昇腾支持 | 通过适配层（PyTorch-NPU） | 原生支持 |
 | API 风格 | 面向对象 | 函数式 + 面向对象 |
@@ -519,7 +519,7 @@ print(result)
 如果你是初学者 → 先学 PyTorch（资源丰富，社区大）
 如果你在昇腾上做生产 → 同时了解 MindSpore（原生优势）
 如果你做研究 → PyTorch 为主
-如果你在华为生态内工作 → 两个都要会
+如果你在昇腾生态内工作 → 两个都要会
 ```
 
 ::: tip 💡 好消息
@@ -747,7 +747,7 @@ class MNISTCNN(nn.Module):
 | Google Colab | 免费 GPU，适合学习实验 |
 | Kaggle | 数据集 + 免费 GPU + 比赛 |
 | PyTorch 官方教程 | 官方权威教程 |
-| 昇腾 ModelArts | 华为云平台，有昇腾算力 |
+| 昇腾 ModelArts | 昇腾云平台，有昇腾算力 |
 
 ---
 

@@ -12,14 +12,14 @@
 
 | 步骤 | 内容 | 难度 | 关键产出 |
 | --- | --- | --- | --- |
-| [01 服务器上电与规划](/setup/server-onboarding) | 硬件识别、版本配套规划 | ★ | 版本配套表 |
-| [02 操作系统选择与安装](/setup/os-install) | 选 OS、装系统（openEuler 例） | ★★ | 可用系统 |
-| [03 固件与驱动安装](/setup/firmware-driver) | Firmware + Driver | ★★ | npu-smi 可识别设备 |
-| [04 CANN 安装](/setup/cann-install) | CANN Toolkit + Kernels | ★★ | 算力使能 |
-| [05 PyTorch + torch_npu 安装](/setup/torch-npu-install) | 主流 AI 框架 | ★★ | 可跑 torch |
-| [06 MindSpore 安装](/setup/mindspore-install) | 自研框架 | ★★ | 可跑 mindspore |
-| [07 Docker 镜像与离线部署](/setup/docker-offline) | 容器化、离线包 | ★★ | 一键可用环境 |
-| [08 环境自检清单](/setup/checklist) | 全链路验证 | ★ | 通过的环境 |
+| [01 服务器上电与规划](https://revolutionla.github.io/AscendMate/setup/server-onboarding) | 硬件识别、版本配套规划 | ★ | 版本配套表 |
+| [02 操作系统选择与安装](https://revolutionla.github.io/AscendMate/setup/os-install) | 选 OS、装系统（openEuler 例） | ★★ | 可用系统 |
+| [03 固件与驱动安装](https://revolutionla.github.io/AscendMate/setup/firmware-driver) | Firmware + Driver | ★★ | npu-smi 可识别设备 |
+| [04 CANN 安装](https://revolutionla.github.io/AscendMate/setup/cann-install) | CANN Toolkit + Kernels | ★★ | 算力使能 |
+| [05 PyTorch + torch_npu 安装](https://revolutionla.github.io/AscendMate/setup/torch-npu-install) | 主流 AI 框架 | ★★ | 可跑 torch |
+| [06 MindSpore 安装](https://revolutionla.github.io/AscendMate/setup/mindspore-install) | 自研框架 | ★★ | 可跑 mindspore |
+| [07 Docker 镜像与离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline) | 容器化、离线包 | ★★ | 一键可用环境 |
+| [08 环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist) | 全链路验证 | ★ | 通过的环境 |
 
 ## 版本配套是第一关键
 
@@ -27,7 +27,7 @@
 
 - 官方兼容性查询：<https://www.hiascend.com/hardware/compatibility>
 - CANN 软件下载：<https://www.hiascend.com/developer/download>
-- 各组件配套表会在对应步骤中给出（如 [CANN](/setup/cann-install)、[torch_npu](/setup/torch-npu-install)）
+- 各组件配套表会在对应步骤中给出（如 [CANN](https://revolutionla.github.io/AscendMate/setup/cann-install)、[torch_npu](https://revolutionla.github.io/AscendMate/setup/torch-npu-install)）
 
 > [!WARNING]
 > **不要在没查配套表的情况下乱装版本。** 装驱动前先确认固件和驱动配套；装 CANN 前确认驱动已 OK；装框架前确认 CANN 已 OK。
@@ -36,10 +36,10 @@
 
 如果你暂时没有裸机，或想快速体验，可以：
 
-- 使用官方 **Docker 镜像**（AscendHub），见 [Docker](/setup/docker-offline)。
+- 使用官方 **Docker 镜像**（AscendHub），见 [Docker](https://revolutionla.github.io/AscendMate/setup/docker-offline)。
 - 使用昇腾**开发者云/ModelArts** 等云服务快速起验证环境。
 
 ## 下一步
 
-- 没看过总体流程？先看 [从零到上手：7 步走](/guide/seven-steps)。
-- 直接开始？→ [01 服务器上电与规划](/setup/server-onboarding)
+- 没看过总体流程？先看 [从零到上手：7 步走](https://revolutionla.github.io/AscendMate/guide/seven-steps)。
+- 直接开始？→ [01 服务器上电与规划](https://revolutionla.github.io/AscendMate/setup/server-onboarding)

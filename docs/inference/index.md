@@ -15,11 +15,11 @@
 
 ## 二、推荐路径
 
-- **想最快跑起一个推理服务（新手）** → [vLLM-Ascend 部署](/inference/vllm-ascend)（生态教程最全）。
-- **追求自研高性能生产方案** → [MindIE 服务化拉起](/inference/mindie)。
-- **做 MoE / 专家并行大模型推理** → [SGLang-Kernel-NPU](/inference/sglang)。
-- **微调后马上测** → [LLaMA-Factory 微调实操](/training/llama-factory) 里的 API 章节。
-- **要一套完整 RAG / 应用平台** → [Dify 平台部署](/inference/dify)。
+- **想最快跑起一个推理服务（新手）** → [vLLM-Ascend 部署](https://revolutionla.github.io/AscendMate/inference/vllm-ascend)（生态教程最全）。
+- **追求自研高性能生产方案** → [MindIE 服务化拉起](https://revolutionla.github.io/AscendMate/inference/mindie)。
+- **做 MoE / 专家并行大模型推理** → [SGLang-Kernel-NPU](https://revolutionla.github.io/AscendMate/inference/sglang)。
+- **微调后马上测** → [LLaMA-Factory 微调实操](https://revolutionla.github.io/AscendMate/training/llama-factory) 里的 API 章节。
+- **要一套完整 RAG / 应用平台** → [Dify 平台部署](https://revolutionla.github.io/AscendMate/inference/dify)。
 
 ## 三、推理部署通用步骤
 
@@ -27,17 +27,17 @@
 2. **准备环境**：CANN + torch_npu（+ 对应推理引擎）。
 3. **拉起服务**：配置模型路径、显存、并发 → 启动 HTTP 服务。
 4. **接入应用**：用 OpenAI 兼容 API 接入你的业务。
-5. **压测调优**：评估吞吐/延迟（见 [性能与精度问题](/faq/perf-precision-issues)）。
+5. **压测调优**：评估吞吐/延迟（见 [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)）。
 
 ## 四、模型从哪来
 
 - 开源权重：魔乐社区（昇腾适配）、魔搭、HuggingFace。
-- 微调产出：用 LLaMA-Factory export，见 [LLaMA-Factory](/training/llama-factory)。
-- 参考代码：ModelZoo，见 [资源导航](/resources/samples-models)。
+- 微调产出：用 LLaMA-Factory export，见 [LLaMA-Factory](https://revolutionla.github.io/AscendMate/training/llama-factory)。
+- 参考代码：ModelZoo，见 [资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models)。
 
 > [!NOTE]在线/离线
-> 各推理引擎多为在线（需联网拉依赖/权重）或离线（内网已预置）两种用法，详见各页与 [Docker 离线部署](/setup/docker-offline)。
+> 各推理引擎多为在线（需联网拉依赖/权重）或离线（内网已预置）两种用法，详见各页与 [Docker 离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)。
 
 ## 下一步
 
-按你的选型进入对应页面，或先去 [推理类问题](/faq/inference-issues) 看常见坑、避免走弯路。
+按你的选型进入对应页面，或先去 [推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues) 看常见坑、避免走弯路。

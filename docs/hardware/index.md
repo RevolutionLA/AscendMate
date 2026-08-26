@@ -23,12 +23,12 @@
 
 | 形态 | 典型配置 | 适用场景 | 文档 |
 | --- | --- | --- | --- |
-| **超节点 / 集群** | 900 A3 SuperPoD、900 A2 PoD | 大模型预训练、多卡并行 | [集群形态](/hardware/cluster) |
-| **A2 训练服务器** | 800T A2 | 中大型训练 | [A2 服务器](/hardware/a2-server) |
-| **A2 推理服务器** | 800I A2 | 推理部署 | [A2 服务器](/hardware/a2-server) |
-| **A3 服务器** | 800I/800T A3 | 新一代训练/推理 | [A3 服务器](/hardware/a3-server) |
-| **AI 推理卡** | 300I Pro / V Pro / 300I A2 / Duo | 板卡级加速 | [AI 推理卡](/hardware/inference-card) |
-| **开发套件 / 模组** | 200I DK A2 | 学习、边缘、原型 | [开发套件与模组](/hardware/devkit-module) |
+| **超节点 / 集群** | 900 A3 SuperPoD、900 A2 PoD | 大模型预训练、多卡并行 | [集群形态](https://revolutionla.github.io/AscendMate/hardware/cluster) |
+| **A2 训练服务器** | 800T A2 | 中大型训练 | [A2 服务器](https://revolutionla.github.io/AscendMate/hardware/a2-server) |
+| **A2 推理服务器** | 800I A2 | 推理部署 | [A2 服务器](https://revolutionla.github.io/AscendMate/hardware/a2-server) |
+| **A3 服务器** | 800I/800T A3 | 新一代训练/推理 | [A3 服务器](https://revolutionla.github.io/AscendMate/hardware/a3-server) |
+| **AI 推理卡** | 300I Pro / V Pro / 300I A2 / Duo | 板卡级加速 | [AI 推理卡](https://revolutionla.github.io/AscendMate/hardware/inference-card) |
+| **开发套件 / 模组** | 200I DK A2 | 学习、边缘、原型 | [开发套件与模组](https://revolutionla.github.io/AscendMate/hardware/devkit-module) |
 
 ## 三、怎么选（选型考虑）
 
@@ -55,8 +55,8 @@
 | Atlas 300I A2 | [链接](https://support.huawei.com/enterprise/zh/ascend-computing/a300i-a2-pid-260323393) |
 | Atlas 200I DK A2 | [链接](https://support.huawei.com/enterprise/zh/ascend-computing/atlas-200i-dk-a2-pid-254412173) |
 
-> 完整链接也收录在 [资源导航总表](/resources/links)。
+> 完整链接也收录在 [资源导航总表](https://revolutionla.github.io/AscendMate/resources/links)。
 
 ## 下一步
 
-按你的硬件形态进入对应子页，或直接到 [训练](/training/) / [推理](/inference/) 把硬件用起来。
+按你的硬件形态进入对应子页，或直接到 [训练](https://revolutionla.github.io/AscendMate/training/) / [推理](https://revolutionla.github.io/AscendMate/inference/) 把硬件用起来。

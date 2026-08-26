@@ -43,7 +43,7 @@
 | PyTorch | 2.1 / 2.5 / 2.6 等，与 torch_npu 版本对应 |
 | torch_npu | 与 PyTorch 版本严格对应（如 2.6.0 ←→ torch_npu 对应版本） |
 
-> 各组件精确配套表见对应安装页：[/setup/cann-install](/setup/cann-install)、[/setup/torch-npu-install](/setup/torch-npu-install)
+> 各组件精确配套表见对应安装页：[/setup/cann-install](https://revolutionla.github.io/AscendMate/setup/cann-install)、[/setup/torch-npu-install](https://revolutionla.github.io/AscendMate/setup/torch-npu-install)
 
 ## 三、物理准备清单
 
@@ -62,4 +62,4 @@
 
 ## 验证
 
-上电进入引导菜单，即说明带外与电源链路 OK。接下来进入 [02 操作系统选择与安装](/setup/os-install)。
+上电进入引导菜单，即说明带外与电源链路 OK。接下来进入 [02 操作系统选择与安装](https://revolutionla.github.io/AscendMate/setup/os-install)。

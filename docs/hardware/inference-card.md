@@ -22,10 +22,10 @@
 
 ## 三、涉及链路
 
-- 集成到整机后，环境搭建仍走 [7 步走](/guide/seven-steps)。
-- 想跑推理 → [推理全景](/inference/)。
+- 集成到整机后，环境搭建仍走 [7 步走](https://revolutionla.github.io/AscendMate/guide/seven-steps)。
+- 想跑推理 → [推理全景](https://revolutionla.github.io/AscendMate/inference/)。
 - 板卡相关的驱动/CANN 配套请查该卡用户指南与兼容性。
 
 ## 四、常见问题
 
-- 装卡后 `npu-smi` 不识别 → [环境搭建类问题](/faq/setup-issues)（检查物理插槽、PCIe 枚举、驱动）。
+- 装卡后 `npu-smi` 不识别 → [环境搭建类问题](https://revolutionla.github.io/AscendMate/faq/setup-issues)（检查物理插槽、PCIe 枚举、驱动）。

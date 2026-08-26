@@ -44,15 +44,15 @@ model = model.to(device)
 
 ## 四、迁移后常见坑
 
-1. **版本配套**：PyTorch 与 torch_npu 版本必须匹配（见 [安装页](/setup/torch-npu-install)）。
-2. **算子兼容**：个别自定义算子/高阶 API 在 NPU 上可能不生效，需改写或查替代（见 [算子开发](/ops/)）。
-3. **显存策略**：OOM 时调整 batch、用显存优化（见 [性能与精度问题](/faq/perf-precision-issues)）。
+1. **版本配套**：PyTorch 与 torch_npu 版本必须匹配（见 [安装页](https://revolutionla.github.io/AscendMate/setup/torch-npu-install)）。
+2. **算子兼容**：个别自定义算子/高阶 API 在 NPU 上可能不生效，需改写或查替代（见 [算子开发](https://revolutionla.github.io/AscendMate/ops/)）。
+3. **显存策略**：OOM 时调整 batch、用显存优化（见 [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)）。
 4. **seed/随机**：训练收敛对齐需固定 NPU 随机种子。
 
 ## 五、多 GPU / 分布式
 
 - torch 原生分布式（`torch.distributed`）经由 torch_npu 支持集合通信（HCCL）。
-- 大规模训练建议直接用 [MindSpeed](/training/mindspeed) 管理并行。
+- 大规模训练建议直接用 [MindSpeed](https://revolutionla.github.io/AscendMate/training/mindspeed) 管理并行。
 
 ## 六、参考模型代码
 
@@ -62,11 +62,11 @@ model = model.to(device)
 - 推理（ACL）源码：`.../ACL_PyTorch`
 - MindIE 参考：`.../MindIE`
 
-👉 汇总见 [资源导航](/resources/samples-models)。
+👉 汇总见 [资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models)。
 
 ## 官方迁移文档
 
 - 昇腾 PyTorch 训练迁移指南：[官方文档](https://www.hiascend.com/document/detail/zh/Pytorch/730/ptmoddevg/trainingmigrguide/PT_LMTMOG_0013.html)
 
 > [!TIP]
-> 迁移难点通常不在"cuda→npu"，而在**算子和性能**。先跑通，再优化。遇到性能瓶颈看 [性能调优](/tools/profiling)。
+> 迁移难点通常不在"cuda→npu"，而在**算子和性能**。先跑通，再优化。遇到性能瓶颈看 [性能调优](https://revolutionla.github.io/AscendMate/tools/profiling)。

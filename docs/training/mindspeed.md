@@ -2,7 +2,7 @@
 
 > **什么时候读**：你需要进行**大规模大模型预训练 / 训练加速**，尤其是超过单机能力、需要并行策略（张量/流水/数据并行、长序列、MoE）的场景。
 
-[MindSpeed](https://gitcode.com/Ascend/MindSpeed) 是华为面向昇腾的大模型**训练加速库**，对标 Megatron/DeepSpeed 生态，让 Megatron-LM 能在昇腾上开箱运行，并补上昇腾亲和的高性能特性。
+[MindSpeed](https://gitcode.com/Ascend/MindSpeed) 是面向昇腾的大模型**训练加速库**，对标 Megatron/DeepSpeed 生态，让 Megatron-LM 能在昇腾上开箱运行，并补上昇腾亲和的高性能特性。
 
 ## 一、关键价值
 
@@ -195,12 +195,12 @@ bash examples/mcore/qwen25/pretrain_qwen25_7b_32k_ptd.sh
 
 - 数据预处理出错 / Torch extensions 编译卡住 → 查仓库 `docs/faq/`。
 - `Gloo 建链失败` → 配置 HCCL 替代，见仓库 `hccl-replace-gloo` 特性。
-- 训练遇精度/性能问题 → [性能与精度问题](/faq/perf-precision-issues)
+- 训练遇精度/性能问题 → [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)
 
 ## 相关
 
-- 微调不走大规模预训练？→ [LLaMA-Factory 微调实操](/training/llama-factory)
-- [训练全景](/training/)
+- 微调不走大规模预训练？→ [LLaMA-Factory 微调实操](https://revolutionla.github.io/AscendMate/training/llama-factory)
+- [训练全景](https://revolutionla.github.io/AscendMate/training/)
 
 > [!NOTE]
 > MindSpeed 与 Megatron-LM 等第三方开源软件相互依存，第三方问题修复依赖上游社区；详见仓库安全声明。

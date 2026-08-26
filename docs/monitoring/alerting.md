@@ -65,9 +65,9 @@ sudo systemctl start alertmanager
 
 global:
   # 邮件 SMTP 配置
-  smtp_smarthost: 'smtp.huawei.com:25'
-  smtp_from: 'ascend-alert@huawei.com'
-  smtp_auth_username: 'ascend-alert@huawei.com'
+  smtp_smarthost: 'smtp.example.com:25'
+  smtp_from: 'ascend-alert@example.com'
+  smtp_auth_username: 'ascend-alert@example.com'
   smtp_auth_password: 'your-smtp-password'
   smtp_require_tls: false
 
@@ -136,13 +136,13 @@ receivers:
   # 默认邮件接收
   - name: 'default-email'
     email_configs:
-      - to: 'ascend-ops@huawei.com'
+      - to: 'ascend-ops@example.com'
         send_resolved: true
 
   # P0：所有渠道
   - name: 'p0-all-channels'
     email_configs:
-      - to: 'ascend-ops@huawei.com,ascend-leader@huawei.com'
+      - to: 'ascend-ops@example.com,ascend-leader@example.com'
         send_resolved: true
     webhook_configs:
       - url: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_WECOM_KEY'
@@ -154,7 +154,7 @@ receivers:
   # P1：邮件 + 企业微信
   - name: 'p1-email-wecom'
     email_configs:
-      - to: 'ascend-ops@huawei.com'
+      - to: 'ascend-ops@example.com'
         send_resolved: true
     webhook_configs:
       - url: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=YOUR_WECOM_KEY'
@@ -163,7 +163,7 @@ receivers:
   # P2：仅邮件
   - name: 'p2-email'
     email_configs:
-      - to: 'ascend-ops@huawei.com'
+      - to: 'ascend-ops@example.com'
         send_resolved: true
 ```
 
@@ -527,10 +527,10 @@ receivers:
 receivers:
   - name: 'email-notification'
     email_configs:
-      - to: 'ascend-ops@huawei.com'
-        from: 'ascend-alert@huawei.com'
-        smarthost: 'smtp.huawei.com:25'
-        auth_username: 'ascend-alert@huawei.com'
+      - to: 'ascend-ops@example.com'
+        from: 'ascend-alert@example.com'
+        smarthost: 'smtp.example.com:25'
+        auth_username: 'ascend-alert@example.com'
         auth_password: 'your-password'
         headers:
           Subject: '【{{ .Status }}】昇腾告警 - {{ .CommonLabels.alertname }} - {{ .CommonLabels.hostname }}'

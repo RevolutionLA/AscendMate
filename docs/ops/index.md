@@ -8,9 +8,9 @@
 
 | 路径 | 上手 | 适用 | 入口 |
 | --- | --- | --- | --- |
-| **Ascend C** | 较专业（类 C++/CUDA） | 高性能、自定义底层算子 | [Ascend C 算子开发](/ops/ascend-c) |
-| **Triton-Ascend** | 低（Python 化） | 用 Triton 语法写算子，开发者友好 | [Triton-Ascend](/ops/triton-ascend) |
-| **CATLASS 模板库** | 中 | 矩阵乘等算子开发的模板与基础组件 | [CATLASS 快速开始](/ops/catlass) |
+| **Ascend C** | 较专业（类 C++/CUDA） | 高性能、自定义底层算子 | [Ascend C 算子开发](https://revolutionla.github.io/AscendMate/ops/ascend-c) |
+| **Triton-Ascend** | 低（Python 化） | 用 Triton 语法写算子，开发者友好 | [Triton-Ascend](https://revolutionla.github.io/AscendMate/ops/triton-ascend) |
+| **CATLASS 模板库** | 中 | 矩阵乘等算子开发的模板与基础组件 | [CATLASS 快速开始](https://revolutionla.github.io/AscendMate/ops/catlass) |
 
 ## 二、什么时候需要写算子
 
@@ -24,12 +24,12 @@
 算子开发 (Ascend C / Triton) → 精度调试 → 性能调优 (Profiling)
 ```
 
-- 精度：对比算子结果与标杆算子/CPU 结果，见 [精度调试](/tools/precision-debug)。
-- 性能：用 Profiling 看算子耗时，见 [性能调优](/tools/profiling)。
+- 精度：对比算子结果与标杆算子/CPU 结果，见 [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)。
+- 性能：用 Profiling 看算子耗时，见 [性能调优](https://revolutionla.github.io/AscendMate/tools/profiling)。
 
 ## 四、开发者工具
 
-- **MindStudio**：一体化开发调试工具，见 [MindStudio](/tools/mindstudio)。
+- **MindStudio**：一体化开发调试工具，见 [MindStudio](https://revolutionla.github.io/AscendMate/tools/mindstudio)。
 - 仿真器、msDebug、Profiling 等辅助手段。
 
 > [!TIP]新手选择

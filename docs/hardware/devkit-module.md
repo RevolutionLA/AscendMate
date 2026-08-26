@@ -21,10 +21,10 @@
 1. 烧录系统镜像到 SD 卡等介质。
 2. 上电、连接，进入系统。
 3. 用 `npu-smi info` 或对应工具确认识别设备。
-4. 开始跑样例（见 [样例代码与模型](/resources/samples-models)）或自己开发。
+4. 开始跑样例（见 [样例代码与模型](https://revolutionla.github.io/AscendMate/resources/samples-models)）或自己开发。
 
 ## 四、学习路径推荐
 
 - 先跑官方 **samples**（AscendCL 推理等样例），理解基本调用。
-- 再学 [Ascend C](/ops/ascend-c) 算子开发。
-- 有个性的模型要做 → [推理全景](/inference/) 或 [训练全景](/training/)。
+- 再学 [Ascend C](https://revolutionla.github.io/AscendMate/ops/ascend-c) 算子开发。
+- 有个性的模型要做 → [推理全景](https://revolutionla.github.io/AscendMate/inference/) 或 [训练全景](https://revolutionla.github.io/AscendMate/training/)。

@@ -24,7 +24,7 @@
 - **🧱 从零到可运维**：覆盖交付整机的完整链路 —— 上电 → 系统 → 驱动 → CANN → 框架 → 业务 → 自检。
 - **🚀 训推一体化**：LLaMA-Factory 微调、MindSpeed 预训练、MindIE / vLLM-Ascend / SGLang 推理、Dify 平台。
 - **💬 持续迭代**：面向部署与运维一线经验持续更新，把高频问题沉淀为可检索 FAQ。
-- **🎓 学习路径（全新专题）**：面向AI行业新人的六阶段体系化学习路径，从零到昇腾AI工程师（已整合华为AI培训课件补充内容）。
+- **🎓 学习路径（全新专题）**：面向AI行业新人的六阶段体系化学习路径，从零到昇腾AI工程师（已补充AI通识扩展内容）。
 - **📊 运维监控**：Prometheus + Grafana 搭建NPU监控大屏、告警规则、巡检SOP、日志管理。
 - **💼 场景价值发现**：金融/医疗/政务/制造行业AI场景库，快速POC指南，帮业务人员把算力变成价值。
 - **📈 算力运营管理**：利用率监控优化、多团队调度、成本核算，让每一张卡都发挥价值。
@@ -74,7 +74,7 @@ AscendMate/
 │   ├── tools/             # 工具链（MindStudio/精度/性能）
 │   ├── resources/         # 资源导航（完整链接/模型/下载）
 │   ├── faq/               # 问题定位（环境/训练/推理/性能精度）
-│   ├── learning/            # 学习路径（六阶段入行AI，含华为AI通识补充）
+│   ├── learning/            # 学习路径（六阶段入行AI，含AI通识补充）
 │   ├── monitoring/          # 运维监控（Prometheus/Grafana/告警/巡检/日志）
 │   ├── scenes/              # 场景价值发现（行业方案/POC指南）
 │   ├── operations/          # 算力运营管理（利用率/调度/成本）
@@ -91,7 +91,7 @@ npm run docs:build   # 构建静态站点
 
 ## 📚 文档导航
 
-- [环境搭建](/docs/setup/) · [昇腾硬件](/docs/hardware/) · [大模型训练](/docs/training/) · [模型推理](/docs/inference/) · [算子开发](/docs/ops/) · [工具链](/docs/tools/) · [资源导航](/docs/resources/) · [问题定位 FAQ](/docs/faq/) · [学习路径](/docs/learning/) · [运维监控](/docs/monitoring/) · [场景价值](/docs/scenes/) · [运营管理](/docs/operations/) · [交付验收](/docs/setup/delivery-acceptance.md)
+- [环境搭建](https://revolutionla.github.io/AscendMate/setup/) · [昇腾硬件](https://revolutionla.github.io/AscendMate/hardware/) · [大模型训练](https://revolutionla.github.io/AscendMate/training/) · [模型推理](https://revolutionla.github.io/AscendMate/inference/) · [算子开发](https://revolutionla.github.io/AscendMate/ops/) · [工具链](https://revolutionla.github.io/AscendMate/tools/) · [资源导航](https://revolutionla.github.io/AscendMate/resources/) · [问题定位 FAQ](https://revolutionla.github.io/AscendMate/faq/) · [学习路径](https://revolutionla.github.io/AscendMate/learning/) · [运维监控](https://revolutionla.github.io/AscendMate/monitoring/) · [场景价值](https://revolutionla.github.io/AscendMate/scenes/) · [运营管理](https://revolutionla.github.io/AscendMate/operations/) · [交付验收](https://revolutionla.github.io/AscendMate/setup/delivery-acceptance)
 
 ## 🤝 参与贡献
 

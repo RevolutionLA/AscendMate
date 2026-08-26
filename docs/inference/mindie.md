@@ -2,7 +2,7 @@
 
 > **什么时候读**：你要在昇腾上做**生产级高性能大模型推理服务**。
 
-[MindIE](https://www.hiascend.com/document/detail/zh/mindie/230/index/index.html) 是华为面向 AI 全场景的**推理加速套件**，深度定制于昇腾硬件，性能好、服务化能力强，是昇腾生产推理的主流选择之一。
+[MindIE](https://www.hiascend.com/document/detail/zh/mindie/230/index/index.html) 是面向 AI 全场景的**推理加速套件**，深度定制于昇腾硬件，性能好、服务化能力强，是昇腾生产推理的主流选择之一。
 
 ## 一、MindIE 是什么
 
@@ -25,9 +25,9 @@ MindIE 服务化的大致流程：
 
 ## 三、前置环境
 
-- 昇腾环境就绪（[环境搭建](/setup/)）。
+- 昇腾环境就绪（[环境搭建](https://revolutionla.github.io/AscendMate/setup/)）。
 - 驱动/CANN/torch 版本与 MindIE 版本**配套**（查 MindIE 发布说明）。
-- 通常建议用官方 MindIE **Docker 镜像**（[AscendHub](/setup/docker-offline)），避免环境坑。
+- 通常建议用官方 MindIE **Docker 镜像**（[AscendHub](https://revolutionla.github.io/AscendMate/setup/docker-offline)），避免环境坑。
 
 ## 四、常见配置关注点
 
@@ -52,7 +52,7 @@ curl -X POST http://127.0.0.1:<port>/v1/chat/completions \
 
 | 维度 | MindIE | vLLM-Ascend |
 | --- | --- | --- |
-| 定位 | 华为自研、深度优化 | vLLM 官方插件、生态开放 |
+| 定位 | 自研、深度优化 | vLLM 官方插件、生态开放 |
 | 上手 | 配置较专 | 上手快、教程多 |
 | 适用 | 生产高性能、对昇腾深度优化 | 通用、开源生态、快速迭代 |
 
@@ -60,9 +60,9 @@ curl -X POST http://127.0.0.1:<port>/v1/chat/completions \
 
 ## 相关
 
-- 参考模型代码：ModelZoo 的 MindIE 子目录，见 [资源导航](/resources/samples-models)。
-- 性能调优：[性能调优（Profiling）](/tools/profiling)
-- 常见问题：[推理类问题](/faq/inference-issues)
+- 参考模型代码：ModelZoo 的 MindIE 子目录，见 [资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models)。
+- 性能调优：[性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling)
+- 常见问题：[推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues)
 
 > [!NOTE]
 > MindIE 不同大版本（如 2.x）配置与命令差异明显，遇到问题时先确认**版本对应手册**。

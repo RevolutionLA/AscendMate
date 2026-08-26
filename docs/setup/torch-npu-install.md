@@ -84,8 +84,8 @@ print("NPU mul ok, shape=", z.shape)
 | `torch.cuda.device_count()` | `torch.npu.device_count()` |
 | `device = "cuda:0"` | `device = "npu:0"` |
 
-更系统的迁移方法见 [PyTorch 模型迁移](/training/pytorch-migration)。
+更系统的迁移方法见 [PyTorch 模型迁移](https://revolutionla.github.io/AscendMate/training/pytorch-migration)。
 
 ## 验证
 
-能 `torch.npu.device_count()` 正确返回 NPU 数量 → 环境核心已打通。接下来可进入 [业务接入](/guide/seven-steps#第-6-步接入业务)。
+能 `torch.npu.device_count()` 正确返回 NPU 数量 → 环境核心已打通。接下来可进入 [业务接入](https://revolutionla.github.io/AscendMate/guide/seven-steps#第-6-步接入业务)。

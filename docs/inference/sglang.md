@@ -39,13 +39,13 @@
 
 ## 选择建议
 
-- 通用/快速上手的推理 → [vLLM-Ascend](/inference/vllm-ascend) 或 [MindIE](/inference/mindie)。
+- 通用/快速上手的推理 → [vLLM-Ascend](https://revolutionla.github.io/AscendMate/inference/vllm-ascend) 或 [MindIE](https://revolutionla.github.io/AscendMate/inference/mindie)。
 - **MoE / 大规模专家并行**、要 DeepEP 同级能力 → SGLang-Kernel-NPU。
 
 ## 相关
 
-- [推理全景](/inference/)
-- [推理类问题](/faq/inference-issues)
+- [推理全景](https://revolutionla.github.io/AscendMate/inference/)
+- [推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues)
 
 > [!NOTE]许可证
 > SGLang-Kernel-NPU 为开源项目，遵循其自身许可证，使用前请查阅。

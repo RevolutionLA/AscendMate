@@ -26,7 +26,7 @@
 
 - **OOM / 请求失败**：降低 max-batch / 并发，或调 KV Cache 分配。
 - **吞吐低**：启用连续批处理，增大 bs / 并发。
-- 详见 [性能与精度问题](/faq/perf-precision-issues)。
+- 详见 [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)。
 
 ## 四、延迟高 / 服务卡顿
 
@@ -37,9 +37,9 @@
 
 | 引擎 | 常见坑 |
 | --- | --- |
-| **MindIE** | 版本配置差异大，务必用对应版本手册（见 [MindIE](/inference/mindie)） |
-| **vLLM-Ascend** | 版本配套严格，查官方快速开始（见 [vLLM](/inference/vllm-ascend)） |
-| **SGLang** | MoE/EP 通信配置，见 [SGLang](/inference/sglang) |
+| **MindIE** | 版本配置差异大，务必用对应版本手册（见 [MindIE](https://revolutionla.github.io/AscendMate/inference/mindie)） |
+| **vLLM-Ascend** | 版本配套严格，查官方快速开始（见 [vLLM](https://revolutionla.github.io/AscendMate/inference/vllm-ascend)） |
+| **SGLang** | MoE/EP 通信配置，见 [SGLang](https://revolutionla.github.io/AscendMate/inference/sglang) |
 
 > [!TIP]
 > 推理问题先确认「引擎版本配套 + 模型能加载 + 接口地址正确」，再谈性能。

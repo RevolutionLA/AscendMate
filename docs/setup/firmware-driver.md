@@ -9,7 +9,7 @@
 - 社区版：昇腾社区「固件与驱动」下载页（CANN 下载站内）。
 - 选包时**必须匹配你的硬件型号 / 操作系统 / 架构**，并尽量与目标 CANN 版本配套。
 
-下载入口汇总见 [资源导航 - 软件下载](/resources/download)。
+下载入口汇总见 [资源导航 - 软件下载](https://revolutionla.github.io/AscendMate/resources/download)。
 
 ## 二、安装前置检查
 
@@ -69,7 +69,7 @@ npu-smi info
 +-------------------------------+-----------------+-----------------+------------------+
 ```
 
-见不到设备（`npu-smi info` 报错或为空）时，排查 [环境搭建类问题](/faq/setup-issues)。
+见不到设备（`npu-smi info` 报错或为空）时，排查 [环境搭建类问题](https://revolutionla.github.io/AscendMate/faq/setup-issues)。
 
 ## 五、说明
 
@@ -78,4 +78,4 @@ npu-smi info
 
 ## 验证
 
-`npu-smi info` 能正确列出设备 → 进入 [04 CANN 安装](/setup/cann-install)。
+`npu-smi info` 能正确列出设备 → 进入 [04 CANN 安装](https://revolutionla.github.io/AscendMate/setup/cann-install)。

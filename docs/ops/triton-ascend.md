@@ -44,8 +44,8 @@ pip install triton-ascend
 
 1. 用 Triton 语法写 Kernel（`@triton.jit`）。
 2. 在昇腾上用 Triton-Ascend 编译运行。
-3. 精度对比：用 `msDebug` / 与 CPU 或 Ascend C 结果对比（见 [精度调试](/tools/precision-debug)）。
-4. 性能调优：用 Profiling 定位（见 [性能调优](/tools/profiling)）。
+3. 精度对比：用 `msDebug` / 与 CPU 或 Ascend C 结果对比（见 [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)）。
+4. 性能调优：用 Profiling 定位（见 [性能调优](https://revolutionla.github.io/AscendMate/tools/profiling)）。
 
 > 官方提供「快速开始」「算子开发指南」「算子迁移指南（从 GPU）」「算子调试指南」「性能调优指南」等文档，在仓库 `docs/zh/` 目录下。
 
@@ -67,8 +67,8 @@ pip install triton-ascend
 
 ## 相关
 
-- [算子开发全景](/ops/)
-- [CATLASS 快速开始](/ops/catlass)
+- [算子开发全景](https://revolutionla.github.io/AscendMate/ops/)
+- [CATLASS 快速开始](https://revolutionla.github.io/AscendMate/ops/catlass)
 - [Triton 官方](https://triton-lang.org)
 
 > [!NOTE]许可证

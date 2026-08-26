@@ -68,7 +68,7 @@ docker load -i ascend_cann.tar
 若内网有 pip 缓存/私有源，离线安装可显著节省时间。
 
 ```
-软件/镜像下载入口汇总见 [资源导航 - 软件下载](/resources/download)。
+软件/镜像下载入口汇总见 [资源导航 - 软件下载](https://revolutionla.github.io/AscendMate/resources/download)。
 ```
 
 ## 四、LLaMA-Factory 官方 NPU 镜像（示例）
@@ -80,7 +80,7 @@ docker pull hiyouga/llamafactory:latest-npu-a2   # A2 系列
 docker pull hiyouga/llamafactory:latest-npu-a3   # A3 系列
 ```
 
-用法详见 [LLaMA-Factory 微调实操](/training/llama-factory)。
+用法详见 [LLaMA-Factory 微调实操](https://revolutionla.github.io/AscendMate/training/llama-factory)。
 
 ## 五、注意事项
 
@@ -89,4 +89,4 @@ docker pull hiyouga/llamafactory:latest-npu-a3   # A3 系列
 
 ## 验证
 
-容器内能执行 `npu-smi info`（host 驱动可见）并成功 import 框架 → 容器环境 OK。接下来进入 [08 环境自检清单](/setup/checklist)。
+容器内能执行 `npu-smi info`（host 驱动可见）并成功 import 框架 → 容器环境 OK。接下来进入 [08 环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist)。

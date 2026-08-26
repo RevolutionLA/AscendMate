@@ -35,10 +35,10 @@ AscendMate/
 
 ## 怎么使用这个仓库
 
-- **想快速开始**：看 [从零到上手：7 步走](/guide/seven-steps)。
-- **不确定从哪入手**：看 [如何选择使用路径](/guide/choose-your-path)，按角色/场景对号入座。
+- **想快速开始**：看 [从零到上手：7 步走](https://revolutionla.github.io/AscendMate/guide/seven-steps)。
+- **不确定从哪入手**：看 [如何选择使用路径](https://revolutionla.github.io/AscendMate/guide/choose-your-path)，按角色/场景对号入座。
 - **想找某个特定内容**：用页面右上角的**搜索框**，输入关键词直接搜。
-- **想看完整清单**：去 [资源导航总表](/resources/links)。
+- **想看完整清单**：去 [资源导航总表](https://revolutionla.github.io/AscendMate/resources/links)。
 
 ## 本仓库不是
 
@@ -48,7 +48,7 @@ AscendMate/
 
 ## 致谢与说明
 
-本仓库内容基于公开的昇腾官方文档、开源项目 README 与一线交付经验整理。涉及各开源项目及模型的版权归原作者所有。欢迎通过 [贡献指南](/contributing/) 一起完善。
+本仓库内容基于公开的昇腾官方文档、开源项目 README 与一线交付经验整理。涉及各开源项目及模型的版权归原作者所有。欢迎通过 [贡献指南](https://revolutionla.github.io/AscendMate/contributing/) 一起完善。
 
 > [!TIP]
-> 想先看一页能让你"少走弯路"的清单？直接跳到 [环境自检清单](/setup/checklist)。
+> 想先看一页能让你"少走弯路"的清单？直接跳到 [环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist)。

@@ -24,7 +24,7 @@
 2. CANN/驱动 run 包：在联网机下载 → 内网 `--install`。
 3. pip 依赖：`pip download` → 内网离线安装。
 
-📖 完整步骤见 [Docker 镜像与离线部署](/setup/docker-offline)。
+📖 完整步骤见 [Docker 镜像与离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)。
 
 ## 四、配套查询
 

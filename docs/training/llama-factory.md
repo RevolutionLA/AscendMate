@@ -13,7 +13,7 @@
 
 ## 二、硬性前提
 
-- 昇腾环境就绪（见 [环境搭建](/setup/)）。
+- 昇腾环境就绪（见 [环境搭建](https://revolutionla.github.io/AscendMate/setup/)）。
 - Python **3.10+**。
 - 已安装 **CANN Toolkit 与 Kernels**。
 
@@ -26,7 +26,7 @@ docker pull hiyouga/llamafactory:latest-npu-a2
 docker pull hiyouga/llamafactory:latest-npu-a3   # A3 系列
 ```
 
-镜像内已装好 PyTorch + torch_npu + CANN 相关，拉起即可用（注意挂载 NPU 设备，见 [Docker 离线部署](/setup/docker-offline)）。
+镜像内已装好 PyTorch + torch_npu + CANN 相关，拉起即可用（注意挂载 NPU 设备，见 [Docker 离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)）。
 
 ## 四、源码安装（可控）
 
@@ -86,14 +86,14 @@ API_PORT=8000 llamafactory-cli api examples/inference/qwen3.yaml \
   infer_backend=vllm vllm_enforce_eager=true
 ```
 
-> 云镜更常用的做法：导出权重后用 MindIE / vLLM-Ascend 部署，见 [推理全景](/inference/)。
+> 云镜更常用的做法：导出权重后用 MindIE / vLLM-Ascend 部署，见 [推理全景](https://revolutionla.github.io/AscendMate/inference/)。
 
 ## 八、模型与数据下载
 
 - 模型：魔乐社区（昇腾适配权重）、魔搭、HuggingFace。
 - 在 LLaMA-Factory 中设置 `export USE_MODELSCOPE_HUB=1` 可从魔搭下载；`export USE_OPENMIND_HUB=1` 从魔乐下载。
 
-👉 更多见 [资源导航](/resources/)。
+👉 更多见 [资源导航](https://revolutionla.github.io/AscendMate/resources/)。
 
 ## 九、完整微调命令参考
 
@@ -189,13 +189,13 @@ llamafactory-cli api examples/inference/qwen3_lora_sft.yaml
 
 ## 十、常用排错
 
-- `torch_npu` 相关报错 → [训练类问题](/faq/training-issues)
-- 显存不足 → 调并行/用 QLoRA/降序列长度，见 [性能与精度问题](/faq/perf-precision-issues)
+- `torch_npu` 相关报错 → [训练类问题](https://revolutionla.github.io/AscendMate/faq/training-issues)
+- 显存不足 → 调并行/用 QLoRA/降序列长度，见 [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)
 
 > [!TIP]
 > 完整示例与多 GPU 微调见 LLaMA-Factory 官方 `examples/README_zh.md`。这里是昇腾场景的实操浓缩。
 
 ## 相关
 
-- [MindSpeed 预训练](/training/mindspeed)（大规模训练）
-- [推理全景](/inference/)
+- [MindSpeed 预训练](https://revolutionla.github.io/AscendMate/training/mindspeed)（大规模训练）
+- [推理全景](https://revolutionla.github.io/AscendMate/inference/)

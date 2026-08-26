@@ -61,12 +61,12 @@ curl http://127.0.0.1:8000/v1/chat/completions \
 
 ## 六、与 MindIE 对比
 
-选择时见 [推理全景](/inference/) 的选型表。简言之：**要开源生态与快速上手选 vLLM-Ascend；要华为深度优化生产方案选 MindIE。**
+选择时见 [推理全景](https://revolutionla.github.io/AscendMate/inference/) 的选型表。简言之：**要开源生态与快速上手选 vLLM-Ascend；要深度优化生产方案选 MindIE。**
 
 ## 相关
 
-- 常见问题：[推理类问题](/faq/inference-issues)
-- 性能调优：[性能调优（Profiling）](/tools/profiling)
+- 常见问题：[推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues)
+- 性能调优：[性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling)
 
 > [!TIP]
 > 想在线快速试、不想自己装环境，vllm-ascend 官方教程通常会提供容器/一键启动方式，可优先采用。

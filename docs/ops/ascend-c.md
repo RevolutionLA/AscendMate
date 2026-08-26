@@ -12,8 +12,8 @@
 
 ## 二、开发前置
 
-- 昇腾环境就绪（[环境搭建](/setup/)），需安装 **CANN Toolkit**（含 Ascend C 相关）。
-- 建议配合 **MindStudio** 进行开发调试（见 [MindStudio](/tools/mindstudio)）。
+- 昇腾环境就绪（[环境搭建](https://revolutionla.github.io/AscendMate/setup/)），需安装 **CANN Toolkit**（含 Ascend C 相关）。
+- 建议配合 **MindStudio** 进行开发调试（见 [MindStudio](https://revolutionla.github.io/AscendMate/tools/mindstudio)）。
 
 ## 三、开发一般流程
 
@@ -37,14 +37,14 @@
 ## 五、学习资源
 
 - 官方文档：入门教程、编程指南、算子实践。
-- 样例：昇腾 samples（[资源导航](/resources/samples-models)）。
-- CATLASS 模板库：用现成模板起步（[CATLASS](/ops/catlass)）。
+- 样例：昇腾 samples（[资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models)）。
+- CATLASS 模板库：用现成模板起步（[CATLASS](https://revolutionla.github.io/AscendMate/ops/catlass)）。
 
 > [!TIP]降低门槛
-> 若你不需要极致性能、且熟悉 Triton，可用 [Triton-Ascend](/ops/triton-ascend) 以更低成本开发，再按需用 Ascend C 优化热点。
+> 若你不需要极致性能、且熟悉 Triton，可用 [Triton-Ascend](https://revolutionla.github.io/AscendMate/ops/triton-ascend) 以更低成本开发，再按需用 Ascend C 优化热点。
 
 ## 相关
 
-- [精度调试](/tools/precision-debug)
-- [性能调优（Profiling）](/tools/profiling)
-- [算子开发全景](/ops/)
+- [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)
+- [性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling)
+- [算子开发全景](https://revolutionla.github.io/AscendMate/ops/)

@@ -11,7 +11,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 欢迎来到**学习路径**专题。
 
 > [!IMPORTANT]
-> 本学习路径已整合华为《人工智能培训课件》的补充内容，在相应阶段末尾加入「华为AI通识」扩展章节（AI 三要素/算力/神经网络、趋势与产业洞察、AI 全栈与主流框架、企业 AI 落地方法论、电力行业 AI 场景方案等），内容更完整，覆盖趋势、原理、系统、落地全链路。
+> 本学习路径已补充了「AI 通识」扩展内容，在相应阶段末尾加入「AI 通识」扩展章节（AI 三要素/算力/神经网络、趋势与产业洞察、AI 全栈与主流框架、企业 AI 落地方法论、电力行业 AI 场景方案等），内容更完整，覆盖趋势、原理、系统、落地全链路。
 
 如果你刚刚踏入 AI 行业，面对铺天盖地的术语和技术名词感到无所适从——别担心，你来对地方了。这个板块专为你而设计：**一条清晰的、体系化的、可落地的学习路线**，帮助你从零开始，一步步成长为能够独立在昇腾生态上做开发与实践的 AI 工程师。
 
@@ -127,7 +127,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 - 神经网络基础：神经元、激活函数、前向传播、反向传播
 - 关键网络结构：CNN（图像）、RNN（序列）
 - 深度学习框架：PyTorch 基础（张量、自动求导、模型定义、训练循环）
-- MindSpore 简介：华为自研框架，与 PyTorch 的异同
+- MindSpore 简介：开源 AI 框架，与 PyTorch 的异同
 
 **实践项目**：用 PyTorch/MindSpore 训练 MNIST 手写数字识别模型
 
@@ -168,17 +168,17 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 
 ### 阶段五：昇腾生态实战
 
-**目标**：在华为昇腾 NPU 上完成模型推理、微调和性能调优。
+**目标**：在昇腾 NPU 上完成模型推理、微调和性能调优。
 
 **学什么**：
 - 昇腾 vs NVIDIA GPU：架构差异、生态差异
 - 昇腾硬件认知：Atlas 系列、NPU 概念
 - 软件栈全貌：CANN → PyTorch/MindSpore → MindIE/MindSpeed
 - 实战路径：
-  1. 环境搭建 → [查看 /setup/](/setup/)
-  2. 跑通第一个推理 → [查看 /inference/](/inference/)
-  3. 微调一个模型 → [查看 /training/llama-factory](/training/llama-factory)
-  4. 性能调优 → [查看 /tools/](/tools/)
+  1. 环境搭建 → [查看 /setup/](https://revolutionla.github.io/AscendMate/setup/)
+  2. 跑通第一个推理 → [查看 /inference/](https://revolutionla.github.io/AscendMate/inference/)
+  3. 微调一个模型 → [查看 /training/llama-factory](https://revolutionla.github.io/AscendMate/training/llama-factory)
+  4. 性能调优 → [查看 /tools/](https://revolutionla.github.io/AscendMate/tools/)
 - 昇腾认证：HCIA-AI / HCIP-AI 认证路径
 
 **学完你能**：
@@ -286,7 +286,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 ### Q：需要什么硬件设备？
 
 - **阶段一至四**：一台普通笔记本即可。深度学习实践可以使用 Google Colab（免费 GPU）或 Kaggle。
-- **阶段五（昇腾实战）**：需要昇腾 NPU 环境。如果没有实体设备，可以使用华为云 ModelArts 上的昇腾算力。
+- **阶段五（昇腾实战）**：需要昇腾 NPU 环境。如果没有实体设备，可以使用昇腾云 ModelArts 上的昇腾算力。
 
 ### Q：学完能找到工作吗？
 
@@ -297,7 +297,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 
 ### Q：PyTorch 还是 MindSpore？
 
-**两个都要了解，但建议先学 PyTorch。** PyTorch 是业界主流框架，学习资源最丰富。MindSpore 是华为自研框架，在昇腾生态中有原生优势。在昇腾上，PyTorch 也可以通过适配层使用（PyTorch-NPU）。
+**两个都要了解，但建议先学 PyTorch。** PyTorch 是业界主流框架，学习资源最丰富。MindSpore 是开源框架，在昇腾生态中有原生优势。在昇腾上，PyTorch 也可以通过适配层使用（PyTorch-NPU）。
 
 ### Q：这条路径和其他 AI 学习路径有什么不同？
 
@@ -333,7 +333,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 
 | 平台 | 说明 | 链接 |
 |:---|:---|:---|
-| 华为云学院 | 昇腾/AI 官方课程 | [访问](https://e.huawei.com/cn/talent/) |
+| 昇腾云学院 | 昇腾/AI 官方课程 | [访问](https://e.huawei.com/cn/talent/) |
 | 昇腾社区 | 昇腾开发者官方社区 | [访问](https://www.hiascend.com/) |
 | MindSpore 官网 | MindSpore 框架文档 | [访问](https://www.mindspore.cn/) |
 | CANN 官方文档 | 昇腾软件栈文档 | [访问](https://www.hiascend.com/document) |
@@ -354,7 +354,7 @@ description: 面向AI行业新人的体系化学习路径，从AI基础认知到
 | 吴恩达 Machine Learning | Coursera | 机器学习入门经典 |
 | 吴恩达 Deep Learning Specialization | Coursera | 深度学习系统课程 |
 | 李沐《动手学深度学习》 | B站 | 免费，理论+PyTorch 代码 |
-| 华为 HCIA-AI 课程 | 华为云学院 | 昇腾 AI 认证课程 |
+| HCIA-AI 认证课程 | 昇腾云学院 | 昇腾 AI 认证课程 |
 
 ---
 

@@ -10,10 +10,10 @@
 | --- | --- | --- |
 | **昇腾社区官网** | 最新资讯、开发者活动、培训、文档中心入口 | [hiascend.com](https://www.hiascend.com/) |
 | **昇腾文档中心** | CANN、PyTorch、MindIE、MindStudio 等官方文档 | [文档中心](https://www.hiascend.com/document) |
-| **昇腾开源社区（GitCode）** | 华为昇腾开源组织，含 MindSpeed、ModelZoo 等仓库 | [gitcode.com/ascend](https://gitcode.com/ascend) |
+| **昇腾开源社区（GitCode）** | 昇腾开源组织，含 MindSpeed、ModelZoo 等仓库 | [gitcode.com/ascend](https://gitcode.com/ascend) |
 | **昇腾开发者论坛/云社区** | 开发者交流、问题求助 | [bbs.huaweicloud.com](https://bbs.huaweicloud.com) |
-| **昇腾云（华为云）** | 昇腾算力云服务、ModelArts | [huaweicloud 昇腾](https://www.huaweicloud.com/product/ascend/) |
-| **昇腾社区公众号** | 华为计算官方公众号，推送活动与干货 | [昇腾社区官网](https://www.hiascend.com/)（公众号入口见官网底部） |
+| **昇腾云** | 昇腾算力云服务、ModelArts | [huaweicloud 昇腾](https://www.huaweicloud.com/product/ascend/) |
+| **昇腾社区公众号** | 计算官方公众号，推送活动与干货 | [昇腾社区官网](https://www.hiascend.com/)（公众号入口见官网底部） |
 
 ## 二、框架 / 引擎开源社区
 
@@ -23,7 +23,7 @@
 | **MindSpeed-LLM / MM / RL** | 大语言 / 多模态 / 强化学习套件 | [GitCode/Ascend](https://gitcode.com/ascend) |
 | **MindIE** | 昇腾自研推理引擎 | [文档](https://www.hiascend.com/document/detail/zh/mindie/230/index/index.html) |
 | **PyTorch / torch_npu** | 昇腾适配 PyTorch | [PyTorch 文档](https://www.hiascend.com/document/detail/zh/Pytorch/730/index/index.html) |
-| **MindSpore** | 华为自研 AI 框架 | [mindspore.cn](https://www.mindspore.cn/) |
+| **MindSpore** | 开源 AI 框架 | [mindspore.cn](https://www.mindspore.cn/) |
 | **LLaMA-Factory** | 大模型微调框架（支持 NPU） | [GitHub](https://github.com/hiyouga/LlamaFactory) |
 
 ## 三、推理生态社区
@@ -49,7 +49,7 @@
 
 ## 五、使用建议
 
-- **寻求帮助**：优先查 [业务问题 FAQ](/faq/)，再到对应开源项目的 GitHub/GitCode **Issues** 提交。
+- **寻求帮助**：优先查 [业务问题 FAQ](https://revolutionla.github.io/AscendMate/faq/)，再到对应开源项目的 GitHub/GitCode **Issues** 提交。
 - **参会交流**：vLLM-Ascend 等社区有**周例会**，关注其 README 中的会议链接。
 - **获取最新**：刷昇腾社区官网「动态新闻」与公众号。
 

@@ -162,7 +162,7 @@ description: 昇腾智算服务器运维监控体系总览，涵盖NPU健康状�
 
 在开始搭建监控体系前，请确保：
 
-1. **环境搭建**：昇腾驱动、固件、CANN 工具包已正确安装，参见 [环境搭建](/setup/)
+1. **环境搭建**：昇腾驱动、固件、CANN 工具包已正确安装，参见 [环境搭建](https://revolutionla.github.io/AscendMate/setup/)
 2. **`npu-smi` 可用**：在服务器上执行 `npu-smi info` 能正常输出 NPU 信息
 3. **网络互通**：Prometheus Server 能访问各计算节点的 9100 端口（Exporter 默认端口）
 4. **权限准备**：具备 root 或 sudo 权限，用于安装软件包和配置 systemd 服务
@@ -219,7 +219,7 @@ A: 按以下顺序排查：
 
 **Q: Grafana 仪表盘空白怎么办？**
 
-A: 确认数据源配置正确、Prometheus 有数据、时间范围选择正确。更多排查参见 [问题定位](/faq/)。
+A: 确认数据源配置正确、Prometheus 有数据、时间范围选择正确。更多排查参见 [问题定位](https://revolutionla.github.io/AscendMate/faq/)。
 
 **Q: 告警一直不触发怎么办？**
 
@@ -274,7 +274,7 @@ Phase 4: 持续优化（持续进行）
 | 术语 | 全称 | 说明 |
 |------|------|------|
 | NPU | Neural Processing Unit | 神经网络处理器，昇腾系列 AI 芯片 |
-| HCCS | Huawei Cache Coherent System | 华为高速缓存一致性互联架构，用于 NPU 间通信 |
+| HCCS | Cache Coherent System | 高速缓存一致性互联架构，用于 NPU 间通信 |
 | HBM | High Bandwidth Memory | 高带宽显存，NPU 的片上存储 |
 | ECC | Error Correction Code | 错误纠正码，用于检测和纠正显存错误 |
 | CE | Correctable Error | 可纠正错误（单比特），硬件可自动修复 |

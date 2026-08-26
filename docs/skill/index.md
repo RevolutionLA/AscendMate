@@ -47,11 +47,11 @@ Ascend Assistant 在回答时，会把它能落地的细节联动到本手册的
 
 | 能力 | 联动的 AscendMate 章节 |
 | --- | --- |
-| 环境检测 / 自检 | [环境自检清单](/setup/checklist) |
-| 排障 | [/faq/ 问题定位](/faq/) |
-| 命令生成 | [训练](/training/) · [推理](/inference/) |
-| 部署引导 | [7 步走](/guide/seven-steps) |
-| 性能调优 | [性能调优 Profiling](/tools/profiling) |
+| 环境检测 / 自检 | [环境自检清单](https://revolutionla.github.io/AscendMate/setup/checklist) |
+| 排障 | [/faq/ 问题定位](https://revolutionla.github.io/AscendMate/faq/) |
+| 命令生成 | [训练](https://revolutionla.github.io/AscendMate/training/) · [推理](https://revolutionla.github.io/AscendMate/inference/) |
+| 部署引导 | [7 步走](https://revolutionla.github.io/AscendMate/guide/seven-steps) |
+| 性能调优 | [性能调优 Profiling](https://revolutionla.github.io/AscendMate/tools/profiling) |
 
 > 也就是说：**本手册负责"为什么、完整怎么做"；Ascend Assistant 负责"你手头这台机器、现在就帮我做"**——两者互相引用，一起用效率最高。
 
@@ -100,19 +100,19 @@ bash scripts/quick_troubleshoot.sh
 
 | 现象 / 报错 | 优先排查 | 手册章节 |
 | --- | --- | --- |
-| `npu-smi: command not found` | 驱动未装 / PATH | [固件驱动](/setup/firmware-driver) |
-| `driver not initialized` | 驱动 vs 内核 / 是否重启 | [环境搭建类](/faq/setup-issues) |
-| `import torch_npu` 失败 | torch 与 torch_npu 配套 | [torch_npu 安装](/setup/torch-npu-install) |
-| CANN `set_env.sh` 找不到 | 路径 `ascend-toolkit` vs `ascend_toolkit` | [CANN 安装](/setup/cann-install) |
-| 推理 OOM / 起不来 | batch / seq / KV 显存 | [推理类问题](/faq/inference-issues) |
-| loss NaN / 精度不对 | 混合精度 / 种子 | [性能与精度](/faq/perf-precision-issues) |
+| `npu-smi: command not found` | 驱动未装 / PATH | [固件驱动](https://revolutionla.github.io/AscendMate/setup/firmware-driver) |
+| `driver not initialized` | 驱动 vs 内核 / 是否重启 | [环境搭建类](https://revolutionla.github.io/AscendMate/faq/setup-issues) |
+| `import torch_npu` 失败 | torch 与 torch_npu 配套 | [torch_npu 安装](https://revolutionla.github.io/AscendMate/setup/torch-npu-install) |
+| CANN `set_env.sh` 找不到 | 路径 `ascend-toolkit` vs `ascend_toolkit` | [CANN 安装](https://revolutionla.github.io/AscendMate/setup/cann-install) |
+| 推理 OOM / 起不来 | batch / seq / KV 显存 | [推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues) |
+| loss NaN / 精度不对 | 混合精度 / 种子 | [性能与精度](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues) |
 
 > 完整报错映射见 [ascend-assistant references/troubleshooting-map.md](https://github.com/RevolutionLA/ascend-assistant/blob/master/references/troubleshooting-map.md)。
 
 ## 如何贡献 / 反馈
 
 - 想加能力、改进排障规则？去 [ascend-assistant 仓库](https://github.com/RevolutionLA/ascend-assistant) 提 Issue / PR。
-- 想给手册补充教程？看本仓库的 [贡献指南](/contributing/)。
+- 想给手册补充教程？看本仓库的 [贡献指南](https://revolutionla.github.io/AscendMate/contributing/)。
 
 > [!NOTE]
 > 本 Skill 基于公开资料整理，命令与版本以官方发布为准；涉及驱动升级、重装等高风险操作请谨慎并自行确认环境。

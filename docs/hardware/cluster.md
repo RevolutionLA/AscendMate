@@ -19,8 +19,8 @@
 
 集群形态通常配合：
 
-- **MindSpeed**：并行策略（张量/流水/数据并行等）训练。见 [MindSpeed 预训练](/training/mindspeed)。
-- **vLLM-Ascend / MindIE**：专家并行（EP）、多卡推理。见 [推理全景](/inference/)。
+- **MindSpeed**：并行策略（张量/流水/数据并行等）训练。见 [MindSpeed 预训练](https://revolutionla.github.io/AscendMate/training/mindspeed)。
+- **vLLM-Ascend / MindIE**：专家并行（EP）、多卡推理。见 [推理全景](https://revolutionla.github.io/AscendMate/inference/)。
 - **HCCL**：昇腾集合通信库。
 
 ## 四、部署要点
@@ -34,5 +34,5 @@
 
 ## 相关内容
 
-- [MindSpeed 预训练](/training/mindspeed)
-- [性能与精度问题](/faq/perf-precision-issues)
+- [MindSpeed 预训练](https://revolutionla.github.io/AscendMate/training/mindspeed)
+- [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)

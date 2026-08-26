@@ -16,14 +16,14 @@
 
 ## 三、从交付到使用链路
 
-1. 环境搭建：走 [从零到上手：7 步走](/guide/seven-steps)。
+1. 环境搭建：走 [从零到上手：7 步走](https://revolutionla.github.io/AscendMate/guide/seven-steps)。
 2. 验证设备：`npu-smi info` 应识别所有 NPU。
-3. 跑业务：训练见 [训练全景](/training/)，推理见 [推理全景](/inference/)。
+3. 跑业务：训练见 [训练全景](https://revolutionla.github.io/AscendMate/training/)，推理见 [推理全景](https://revolutionla.github.io/AscendMate/inference/)。
 
 ## 四、常见问题入口
 
-- 装系统/驱动/CANN 卡住 → [环境搭建类问题](/faq/setup-issues)
-- 推理显存/性能 → [性能与精度问题](/faq/perf-precision-issues)
+- 装系统/驱动/CANN 卡住 → [环境搭建类问题](https://revolutionla.github.io/AscendMate/faq/setup-issues)
+- 推理显存/性能 → [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)
 
 > [!NOTE]
 > 具体硬件规格（NPU 数量、HBM、接口、功耗）以官方用户指南为准。

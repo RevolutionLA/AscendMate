@@ -8,11 +8,11 @@
 
 | 工具 | 用途 | 入口 |
 | --- | --- | --- |
-| **MindStudio** | 一体化开发调试工具（IDE） | [MindStudio](/tools/mindstudio) |
-| **精度调试工具** | 对比算子/模型结果，定位精度问题 | [精度调试](/tools/precision-debug) |
-| **性能调优工具（Profiling）** | 分析各阶段性能指标，找性能瓶颈 | [性能调优（Profiling）](/tools/profiling) |
-| **仿真器 / msDebug** | 算子开发辅助 | 见 [算子开发](/ops/) 各页 |
-| **AISBench** | 模型评测/性能基准 | [资源导航](/resources/samples-models) |
+| **MindStudio** | 一体化开发调试工具（IDE） | [MindStudio](https://revolutionla.github.io/AscendMate/tools/mindstudio) |
+| **精度调试工具** | 对比算子/模型结果，定位精度问题 | [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug) |
+| **性能调优工具（Profiling）** | 分析各阶段性能指标，找性能瓶颈 | [性能调优（Profiling）](https://revolutionla.github.io/AscendMate/tools/profiling) |
+| **仿真器 / msDebug** | 算子开发辅助 | 见 [算子开发](https://revolutionla.github.io/AscendMate/ops/) 各页 |
+| **AISBench** | 模型评测/性能基准 | [资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models) |
 
 ## 二、开发调试链路
 

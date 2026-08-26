@@ -4,7 +4,7 @@
 
 ## 一、性能问题定位框架
 
-性能问题不要靠猜，用 **Profiling** 数据说话（[性能调优](/tools/profiling)）。
+性能问题不要靠猜，用 **Profiling** 数据说话（[性能调优](https://revolutionla.github.io/AscendMate/tools/profiling)）。
 
 ```text
 性能慢在哪？
@@ -19,8 +19,8 @@
 
 | 现象 | 对策 |
 | --- | --- |
-| 单个算子慢 | 用 MindSpeed 优化层级 / Ascend C 自研（见 [算子开发](/ops/)） |
-| 通信占比高（多卡） | 调整张量/流水/数据并行（[MindSpeed](/training/mindspeed)） |
+| 单个算子慢 | 用 MindSpeed 优化层级 / Ascend C 自研（见 [算子开发](https://revolutionla.github.io/AscendMate/ops/)） |
+| 通信占比高（多卡） | 调整张量/流水/数据并行（[MindSpeed](https://revolutionla.github.io/AscendMate/training/mindspeed)） |
 | OOM | 减少 bs、重计算、优化器状态切分、Swap 机制 |
 | 整体吞吐低 | 并行策略、数据流水优化 |
 
@@ -32,18 +32,18 @@
 | 延迟高（decode） | 小 bs、低延迟模式（如 SGLang）、显存/KV 策略 |
 | OOM | 降低 max-batch/seq、KV 策略 |
 
-参考引擎页：[MindIE](/inference/mindie)、[vLLM](/inference/vllm-ascend)、[SGLang](/inference/sglang)。
+参考引擎页：[MindIE](https://revolutionla.github.io/AscendMate/inference/mindie)、[vLLM](https://revolutionla.github.io/AscendMate/inference/vllm-ascend)、[SGLang](https://revolutionla.github.io/AscendMate/inference/sglang)。
 
 ## 二、精度问题定位框架
 
 精度不对，先定位层级：
 
 1. **数据 / 预处理**差异 → 检查数据加载、归一化、tokenizer。
-2. **混合精度**丢失 → 先用 fp32 对比（[精度调试](/tools/precision-debug)）。
+2. **混合精度**丢失 → 先用 fp32 对比（[精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)）。
 3. **算子实现**差异 → 单算子对比昇腾 vs 标杆结果。
 4. **训练收敛**异常 → 随机种子、学习率、分布式一致性。
 
-官方工具：**精度调试工具**（对比昇腾算子与标杆算子结果），见 [精度调试](/tools/precision-debug)。
+官方工具：**精度调试工具**（对比昇腾算子与标杆算子结果），见 [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)。
 
 ## 三、注意版本配套对性能/精度的影响
 
@@ -52,9 +52,9 @@
 
 > [!TIP]
 > 性能问题交给 Profiling，精度问题交给精度调试工具，别靠猜。
-> 对比性能时用 AISBench 等基准工具，见 [资源导航](/resources/samples-models)。
+> 对比性能时用 AISBench 等基准工具，见 [资源导航](https://revolutionla.github.io/AscendMate/resources/samples-models)。
 
 ## 相关
 
-- [工具链全景](/tools/)
-- [问题定位 FAQ 总览](/faq/)
+- [工具链全景](https://revolutionla.github.io/AscendMate/tools/)
+- [问题定位 FAQ 总览](https://revolutionla.github.io/AscendMate/faq/)

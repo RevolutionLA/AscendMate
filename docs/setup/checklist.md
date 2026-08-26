@@ -71,11 +71,11 @@ python -c "import torch, torch_npu; print(torch.__version__, torch_npu.__version
 | 备注（离线/镜像等信息） |  |
 
 > [!TIP]
-> 环境自检全部通过后，你就可以放心进入业务了。若某一步失败，到 [问题定位 FAQ](/faq/setup-issues) 查对应报错。
+> 环境自检全部通过后，你就可以放心进入业务了。若某一步失败，到 [问题定位 FAQ](https://revolutionla.github.io/AscendMate/faq/setup-issues) 查对应报错。
 
 ## 下一步
 
 环境就绪后：
 
-- 想微调大模型 → [训练全景](/training/)
-- 想部署推理 → [推理全景](/inference/)
+- 想微调大模型 → [训练全景](https://revolutionla.github.io/AscendMate/training/)
+- 想部署推理 → [推理全景](https://revolutionla.github.io/AscendMate/inference/)

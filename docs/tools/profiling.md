@@ -34,16 +34,16 @@
 
 | 现象 | 可能的优化方向 |
 | --- | --- |
-| 单个算子慢 | 换融合算子、优化 Tile、思路见 [算子开发](/ops/) |
+| 单个算子慢 | 换融合算子、优化 Tile、思路见 [算子开发](https://revolutionla.github.io/AscendMate/ops/) |
 | 通信占比较高 | 调张量/流水并行、减小通信频次（MindSpeed 特性） |
 | 显存不足/OOM | 减 batch、重计算、优化器状态切分、KV Cache 管理 |
 | 吞吐低 | 连续批处理（推理）、增大并发/bs |
 | 数据加载慢 | 数据预处理异步、加大 num_workers |
 
-更多性能问题定位见 [性能与精度问题](/faq/perf-precision-issues)。
+更多性能问题定位见 [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues)。
 
 ## 相关
 
-- [工具链全景](/tools/)
-- [精度调试](/tools/precision-debug)
-- [MindStudio](/tools/mindstudio)
+- [工具链全景](https://revolutionla.github.io/AscendMate/tools/)
+- [精度调试](https://revolutionla.github.io/AscendMate/tools/precision-debug)
+- [MindStudio](https://revolutionla.github.io/AscendMate/tools/mindstudio)

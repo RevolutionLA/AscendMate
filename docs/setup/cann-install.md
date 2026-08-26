@@ -82,4 +82,4 @@ ls /usr/local/Ascend/ascend-toolkit/latest/*/lib64 2>/dev/null | head
 
 ## 验证
 
-`version.cfg` 存在且 `npu-smi` 正常 → 进入 [05 PyTorch + torch_npu 安装](/setup/torch-npu-install) 或 [06 MindSpore 安装](/setup/mindspore-install)。
+`version.cfg` 存在且 `npu-smi` 正常 → 进入 [05 PyTorch + torch_npu 安装](https://revolutionla.github.io/AscendMate/setup/torch-npu-install) 或 [06 MindSpore 安装](https://revolutionla.github.io/AscendMate/setup/mindspore-install)。

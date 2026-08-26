@@ -6,10 +6,10 @@
 
 | 问题类型 | 典型报错 / 现象 | 进入 |
 | --- | --- | --- |
-| **环境搭建类** | `npu-smi` 不识别、驱动装不上、CANN 报错、版本不配套 | [环境搭建类问题](/faq/setup-issues) |
-| **训练类** | torch_npu 报错、OOM、loss 异常、分布式训练失败 | [训练类问题](/faq/training-issues) |
-| **推理类** | 服务起不来、请求错误、并发/显存问题 | [推理类问题](/faq/inference-issues) |
-| **性能与精度** | 慢、吞吐低、精度不对、性能调优 | [性能与精度问题](/faq/perf-precision-issues) |
+| **环境搭建类** | `npu-smi` 不识别、驱动装不上、CANN 报错、版本不配套 | [环境搭建类问题](https://revolutionla.github.io/AscendMate/faq/setup-issues) |
+| **训练类** | torch_npu 报错、OOM、loss 异常、分布式训练失败 | [训练类问题](https://revolutionla.github.io/AscendMate/faq/training-issues) |
+| **推理类** | 服务起不来、请求错误、并发/显存问题 | [推理类问题](https://revolutionla.github.io/AscendMate/faq/inference-issues) |
+| **性能与精度** | 慢、吞吐低、精度不对、性能调优 | [性能与精度问题](https://revolutionla.github.io/AscendMate/faq/perf-precision-issues) |
 
 ## 通用排查步骤
 
@@ -17,7 +17,7 @@
 
 1. **看版本配套**：CANN、框架、驱动、固件是否配套？（本仓库反复强调的坑）
 2. **看设备状态**：`npu-smi info` 是否正常列出设备？
-3. **看环境变量**：是否正确 `source set_env.sh`？（见 [CANN](/setup/cann-install)）
+3. **看环境变量**：是否正确 `source set_env.sh`？（见 [CANN](https://revolutionla.github.io/AscendMate/setup/cann-install)）
 4. **看日志**：`dmesg`、`/var/log/npu/` 的 slog 日志报什么？
 5. **最小复现**：用最小脚本/最小模型复现，缩小范围。
 6. **查官方文档/FAQ**：昇腾官方文档中心、各开源项目的 FAQ 与 Issues。
@@ -37,4 +37,4 @@
 ```
 
 > [!TIP]
-> 大部分"装不上、跑不起来"都是**版本不配套**引起的。安装前务必确认配套表，见 [环境搭建总览](/setup/)。
+> 大部分"装不上、跑不起来"都是**版本不配套**引起的。安装前务必确认配套表，见 [环境搭建总览](https://revolutionla.github.io/AscendMate/setup/)。
