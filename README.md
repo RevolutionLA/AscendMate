@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
   <img src="docs/public/ascendmate.svg" width="96" alt="AscendMate" />
 </p>
 
@@ -91,3 +91,5 @@ npm run docs:build   # 构建静态站点
 
 - 本仓库为**开源整理项目**，内容基于公开的昇腾官方文档与开源项目整理，链接指向官方与开源项目，遵循各自许可证。
 - 代码/命令请以官方最新版本与配套为准；内容会持续更新，以 GitHub 仓库最新版本为准。
+
+<!-- 小雅网络验证标记 2026-08-26 12:50 -->
