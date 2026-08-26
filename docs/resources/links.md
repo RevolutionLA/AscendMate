@@ -13,7 +13,7 @@
 | PyTorch + torch_npu 安装 | torch_npu 二进制安装指南 | [打开](https://www.hiascend.com/document/detail/zh/Pytorch/730/configandinstg/instg/docs/zh/installation_guide/installation_via_binary_package.md) |
 | MindSpore 安装指南 | MindSpore 官方安装 | [打开](https://www.mindspore.cn/install) |
 
-📖 实操见 [环境搭建总览](/setup/)
+📖 实操见 [环境搭建总览](https://revolutionla.github.io/AscendMate/setup/)
 
 ## 二、昇腾硬件
 
@@ -30,7 +30,7 @@
 | Atlas 300I A2 | 推理卡文档 | [打开](https://support.huawei.com/enterprise/zh/ascend-computing/a300i-a2-pid-260323393) |
 | Atlas 200I DK A2 | 开发套件文档 | [打开](https://support.huawei.com/enterprise/zh/ascend-computing/atlas-200i-dk-a2-pid-254412173) |
 
-📖 硬件形态梳理见 [硬件产品全景](/hardware/)
+📖 硬件形态梳理见 [硬件产品全景](https://revolutionla.github.io/AscendMate/hardware/)
 
 ## 三、算子开发（CANN 硬件使能）
 
@@ -40,7 +40,7 @@
 | Triton 算子开发 | 基于 Triton 的开发/迁移/调试 | [GitCode](https://gitcode.com/Ascend/triton-ascend) |
 | catlass | catlass 环境安装、样例编译 | [GitCode](https://gitcode.com/cann/catlass/blob/master/docs/quickstart.md) |
 
-📖 实操见 [算子开发全景](/ops/)
+📖 实操见 [算子开发全景](https://revolutionla.github.io/AscendMate/ops/)
 
 ## 四、模型与镜像
 
@@ -60,7 +60,7 @@
 | MindSpeed | 基于昇腾的大模型加速库 | [GitCode](https://gitcode.com/Ascend/MindSpeed) |
 | LLaMA-Factory | 大模型微调框架（支持 NPU） | [GitHub](https://github.com/hiyouga/LlamaFactory/blob/main/README_zh.md) |
 
-📖 实操见 [训练全景](/training/)
+📖 实操见 [训练全景](https://revolutionla.github.io/AscendMate/training/)
 
 ## 六、推理相关
 
@@ -72,7 +72,7 @@
 | vLLM-Ascend | 使 vLLM 在昇腾运行的官方插件 | [快速开始](https://docs.vllm.ai/projects/ascend/zh-cn/latest/quick_start.html) |
 | SGLang-Kernel-NPU | SGLang 在昇腾的官方内核库 | [GitHub](https://github.com/sgl-project/sgl-kernel-npu) |
 
-📖 实操见 [推理全景](/inference/)
+📖 实操见 [推理全景](https://revolutionla.github.io/AscendMate/inference/)
 
 ## 七、工具链
 
@@ -82,7 +82,7 @@
 | 精度调试工具 | 对比昇腾算子与标杆算子结果 | [官方文档](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/850/devaids/ModelAccuracyAnalyzer/atlasaccuracy_16_1000.html) |
 | Profiling 工具 | 分析各阶段性能指标 | [官方文档](https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/850/devaids/Profiling/atlasprofiling_16_0001.html) |
 
-📖 实操见 [工具链全景](/tools/)
+📖 实操见 [工具链全景](https://revolutionla.github.io/AscendMate/tools/)
 
 ## 八、其他 / 常用
 
@@ -95,4 +95,4 @@
 | 资源下载 | CANN / 驱动 / 固件等软件下载 | [打开](https://www.hiascend.com/developer/download) |
 
 > [!NOTE]在线/离线
-> 表中部分资源在线版可直接使用；离线版需在服务器/可联网机器上提前下载，见 [Docker 镜像与离线部署](/setup/docker-offline)。
+> 表中部分资源在线版可直接使用；离线版需在服务器/可联网机器上提前下载，见 [Docker 镜像与离线部署](https://revolutionla.github.io/AscendMate/setup/docker-offline)。
