@@ -8,6 +8,9 @@ docs/.vitepress/cache/
 .tmp_preview/
 .tmp_preview_dist/
 
+# 编译缓存
+.cache/
+
 # 日志
 *.log
 
@@ -22,3 +25,13 @@ Thumbs.db
 # 本地环境
 .env
 .env.local
+
+# 签名证书与密钥（切勿提交）
+key/
+*.p12
+*.p7b
+*.cer
+*.csr
+*.jks
+*.keystore
+*.pem

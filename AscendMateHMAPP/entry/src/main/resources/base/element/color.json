@@ -1,0 +1,120 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FBFCFD"
+    },
+    {
+      "name": "page_bg",
+      "value": "#F4F6F8"
+    },
+    {
+      "name": "card_bg",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "bar_bg",
+      "value": "#8CFFFFFF"
+    },
+    {
+      "name": "brand",
+      "value": "#C8102E"
+    },
+    {
+      "name": "brand_soft",
+      "value": "#FBE9EC"
+    },
+    {
+      "name": "brand_press",
+      "value": "#A20D25"
+    },
+    {
+      "name": "accent",
+      "value": "#198754"
+    },
+    {
+      "name": "accent_soft",
+      "value": "#E8F4EC"
+    },
+    {
+      "name": "text_primary",
+      "value": "#15181E"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#5B6474"
+    },
+    {
+      "name": "text_tertiary",
+      "value": "#8B93A3"
+    },
+    {
+      "name": "divider",
+      "value": "#DFE4EA"
+    },
+    {
+      "name": "code_bg",
+      "value": "#E9EDF2"
+    },
+    {
+      "name": "code_fg",
+      "value": "#2C313C"
+    },
+    {
+      "name": "code_border",
+      "value": "#DFE4EA"
+    },
+    {
+      "name": "inline_code",
+      "value": "#A20D25"
+    },
+    {
+      "name": "quote_bg",
+      "value": "#EEF1F5"
+    },
+    {
+      "name": "callout_tip_bg",
+      "value": "#FBE9EC"
+    },
+    {
+      "name": "callout_info_bg",
+      "value": "#EEF1F5"
+    },
+    {
+      "name": "callout_warn_bg",
+      "value": "#FBF2E2"
+    },
+    {
+      "name": "callout_danger_bg",
+      "value": "#FBE9EC"
+    },
+    {
+      "name": "warn",
+      "value": "#B37212"
+    },
+    {
+      "name": "danger",
+      "value": "#C8102E"
+    },
+    {
+      "name": "deep_bg",
+      "value": "#101318"
+    },
+    {
+      "name": "chip_bg",
+      "value": "#E9EDF2"
+    },
+    {
+      "name": "ripple",
+      "value": "#0FC8102E"
+    },
+    {
+      "name": "guide_bg_top",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "guide_bg_bottom",
+      "value": "#F4F6F8"
+    }
+  ]
+}

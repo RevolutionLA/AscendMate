@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "昇腾之家主模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "昇腾智算离线知识库"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "昇腾之家"
+    }
+  ]
+}

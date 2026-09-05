@@ -1,0 +1,120 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#101318"
+    },
+    {
+      "name": "page_bg",
+      "value": "#101318"
+    },
+    {
+      "name": "card_bg",
+      "value": "#15191F"
+    },
+    {
+      "name": "bar_bg",
+      "value": "#9915191F"
+    },
+    {
+      "name": "brand",
+      "value": "#FF4D61"
+    },
+    {
+      "name": "brand_soft",
+      "value": "#2B1418"
+    },
+    {
+      "name": "brand_press",
+      "value": "#FF7A8A"
+    },
+    {
+      "name": "accent",
+      "value": "#2EA86B"
+    },
+    {
+      "name": "accent_soft",
+      "value": "#14251C"
+    },
+    {
+      "name": "text_primary",
+      "value": "#E7EAF0"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#A5ADBA"
+    },
+    {
+      "name": "text_tertiary",
+      "value": "#767F8F"
+    },
+    {
+      "name": "divider",
+      "value": "#232834"
+    },
+    {
+      "name": "code_bg",
+      "value": "#12161C"
+    },
+    {
+      "name": "code_fg",
+      "value": "#CDD3DD"
+    },
+    {
+      "name": "code_border",
+      "value": "#232834"
+    },
+    {
+      "name": "inline_code",
+      "value": "#FF8B9A"
+    },
+    {
+      "name": "quote_bg",
+      "value": "#181D24"
+    },
+    {
+      "name": "callout_tip_bg",
+      "value": "#2B1418"
+    },
+    {
+      "name": "callout_info_bg",
+      "value": "#191E26"
+    },
+    {
+      "name": "callout_warn_bg",
+      "value": "#2A2115"
+    },
+    {
+      "name": "callout_danger_bg",
+      "value": "#2B1418"
+    },
+    {
+      "name": "warn",
+      "value": "#E0A24E"
+    },
+    {
+      "name": "danger",
+      "value": "#FF4D61"
+    },
+    {
+      "name": "deep_bg",
+      "value": "#0E1116"
+    },
+    {
+      "name": "chip_bg",
+      "value": "#1A1F27"
+    },
+    {
+      "name": "ripple",
+      "value": "#1AFF4D61"
+    },
+    {
+      "name": "guide_bg_top",
+      "value": "#101318"
+    },
+    {
+      "name": "guide_bg_bottom",
+      "value": "#15191F"
+    }
+  ]
+}
