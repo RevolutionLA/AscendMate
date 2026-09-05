@@ -8,6 +8,12 @@
 /.cache
 /.clangd
 /build-profile.json5
+
+# 本地密钥/签名管理脚本（含密码与本地绝对路径，切勿提交）
+/gen_key.bat
+/run_gen_key.bat
+/check_alias.cmd
+/check_key.cmd
 /.clang-format
 /.clang-tidy
 **/.test
