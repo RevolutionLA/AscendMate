@@ -19,6 +19,7 @@
 ## 特性
 
 - **🤖 Ascend Assistant（亮点）**：配套的昇腾服务器助手 Skill，可用 AI 直接操作/查询/排障昇腾服务器（环境检测、排障、命令生成、部署引导、性能调优）。
+- **📱 鸿蒙 App 双端形态**：`AscendMateHMAPP/` 提供 HarmonyOS NEXT 原生离线手册 App，安装即用、全程离线（详见下方专节）。
 - **🔍 全站可检索**：VitePress 全文搜索，按关键词、报错、型号、版本快速定位。
 - **🗂️ 按场景找答案**：从「我要微调大模型」「我要做推理服务」「我要迁移 GPU 模型」等部署目标出发。
 - **🧱 从零到可运维**：覆盖交付整机的完整链路 —— 上电 → 系统 → 驱动 → CANN → 框架 → 业务 → 自检。
@@ -41,6 +42,16 @@ skills add https://github.com/RevolutionLA/ascend-assistant
 覆盖四类能力：**环境检测 + 排障 · 命令生成 · 部署引导 · 性能调优**，并与本手册深度联动。
 
 > 📖 完整说明见站内 [Ascend Assistant](https://revolutionla.github.io/AscendMate/skill/)；独立仓库为 [ascend-assistant](https://github.com/RevolutionLA/ascend-assistant)。
+
+## 📱 鸿蒙 App（AscendMateHMAPP）
+
+仓库内还藏着一个**HarmonyOS NEXT 原生离线手册 App** —— `AscendMateHMAPP/`，把整站内容装进手机、**全程离线可用**：
+
+- **完整 ArkTS 工程**：`entry/src/main/ets/` 下含页面、服务层、组件、数据模型（页面 / 检索 / 阅读 / 设置全套代码）。
+- **离线内容包**：`tools/build-content.mjs` 把 `docs/` 构建为 70+ 份 `doc_*.json` 打包进 App（`entry/src/main/resources/rawfile/`），不联网、无加载等待。
+- **9 份设计文档**：PRD、信息架构、UI/UX 规范、技术架构、使用指南等（`AscendMateHMAPP/docs/01-PRD.md` 起）。
+
+> 📖 App 详情见 [AscendMateHMAPP/README.md](AscendMateHMAPP/README.md) 与 [产品需求文档](AscendMateHMAPP/docs/01-PRD.md)。
 
 ## 🚀 快速开始
 
@@ -79,6 +90,8 @@ AscendMate/
 │   ├── scenes/              # 场景价值发现（行业方案/POC指南）
 │   ├── operations/          # 算力运营管理（利用率/调度/成本）
 │   └── contributing/      # 贡献指南
+├── AscendMateHMAPP/      # 📱 鸿蒙离线手册 App（ArkTS 工程 + rawfile 离线文档包 + 内容构建工具 tools/build-content.mjs）
+└── package.json          # VitePress 构建配置
 ```
 
 ## 🛠 本地开发

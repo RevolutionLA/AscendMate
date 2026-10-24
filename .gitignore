@@ -35,3 +35,6 @@ key/
 *.jks
 *.keystore
 *.pem
+
+# VitePress 构建中间产物（勿入库）
+docs/.vitepress/.temp/

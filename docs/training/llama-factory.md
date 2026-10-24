@@ -1,5 +1,7 @@
 # LLaMA-Factory 微调实操
 
+> 🗓 **验证环境**：未实测（内容整理自官方文档与开源项目 README，状态 `from-official-docs`） · **核对日期**：2026-10 · 版本配套以官方为准。
+
 > **什么时候读**：你想在昇腾 NPU 上**快速微调大模型**（SFT / LoRA / QLoRA / 全参），且希望有**开箱即用**的方案。
 
 [LLaMA-Factory](https://github.com/hiyouga/LlamaFactory) 支持百余种大模型的微调，提供命令行与 WebUI 两种方式，**原生支持昇腾 NPU**，是昇腾上微调大模型最省事的选择。

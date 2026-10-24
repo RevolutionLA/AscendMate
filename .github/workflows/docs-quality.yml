@@ -1,0 +1,39 @@
+name: docs-quality
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install
+        run: npm ci || npm install
+
+      # 硬门禁：VitePress 构建失败 = 死链/语法/配置错误，必须红。
+      - name: Build site (hard gate)
+        run: npm run docs:build
+
+      # 软门禁：可信度元数据覆盖率。当前是「报告 + 告警」，不判红；
+      # 覆盖率达到 80% 后再把 --strict 打开变成硬门禁（见 CONTRIBUTING.md）。
+      - name: Trust metadata coverage (soft gate)
+        run: |
+          set -e
+          count=$(find docs -name '*.md' | wc -l)
+          tagged=$(grep -rl "验证环境" docs --include='*.md' | wc -l)
+          if [ "$count" -eq 0 ]; then pct=0; else pct=$(( tagged * 100 / count )); fi
+          echo "可信度标注覆盖：$tagged / $count 篇（$pct%）"
+          echo "### 可信度标注覆盖：$tagged / $count 篇（$pct%）" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$pct" -lt 50 ]; then
+            echo "::warning::可信度标注覆盖率 $pct% 低于 50%，新文档请按 CONTRIBUTING.md 补「验证环境/验证日期」"
+          fi

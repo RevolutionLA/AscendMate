@@ -1,5 +1,7 @@
 # MindIE 服务化拉起
 
+> 🗓 **验证环境**：未实测（内容整理自官方文档，状态 `from-official-docs`） · **核对日期**：2026-10 · 版本配套以官方为准。
+
 > **什么时候读**：你要在昇腾上做**生产级高性能大模型推理服务**。
 
 [MindIE](https://www.hiascend.com/document/detail/zh/mindie/230/index/index.html) 是面向 AI 全场景的**推理加速套件**，深度定制于昇腾硬件，性能好、服务化能力强，是昇腾生产推理的主流选择之一。

@@ -1,5 +1,7 @@
 # vLLM-Ascend 部署
 
+> 🗓 **验证环境**：未实测（内容整理自官方文档，状态 `from-official-docs`） · **核对日期**：2026-10 · 版本配套以官方为准。
+
 > **什么时候读**：你想用成熟的 **vLLM** 生态，在昇腾 NPU 上快速部署 LLM 推理服务。
 
 [vllm-ascend](https://github.com/vllm-project/vllm-ascend) 是 vLLM 官方的昇腾后端插件，让类 Transformer、MoE、多模态等主流大模型能在昇腾 NPU 上无缝运行，并兼容 OpenAI API。**上手快、教程多，是新手推理首选。**
